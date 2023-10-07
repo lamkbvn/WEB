@@ -1,0 +1,17 @@
+.event{
+  background-color: rgb(229 229 229);
+
+  height: 40px;
+  width: 100%;
+
+  display: block;
+  text-align: center;
+
+  position: fixed;
+  top: 90px;
+  border: none;
+  border-top: 1px solid rgb(0, 0, 0);
+
+  padding-top: 5px;
+  
+}

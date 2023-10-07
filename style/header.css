@@ -1,0 +1,60 @@
+.header{
+  background-color: rgb(229 229 229);
+  display: flex;
+  justify-content: space-around;
+
+  height: 90px;
+  width: 100%;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+
+}
+
+.name-shop{
+  cursor: pointer;
+}
+
+.left-header{
+  font-size: 22px;
+  padding-top: 30px;
+  font-weight: bolder;
+  margin-left: 20px;
+}
+
+.middle-header{
+  font-size: 18px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.menu-shop{
+  text-align: center;
+  width: 100px;
+}
+
+.right-header{
+  display: flex;
+  align-items: center;
+}
+
+.icon-header{
+  width: 20px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.icon-header:hover {
+  background-color: rgb(255, 186, 125);
+}
+
+.menu-shop:hover{
+  color: rgb(232, 133, 47);
+  cursor: pointer;
+}
+
+
+
+
