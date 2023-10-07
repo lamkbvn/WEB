@@ -17,14 +17,14 @@
   margin-left: 20px;
 }
 
-.middle-header{
-  font-size: 18px;
-}
 
 .nav-link{
   display: flex;
   gap : 2.5em;
-  
+}
+
+.nav-link ul{
+  margin-block-end: 0;
 }
 
 .link-card , .link-card{
@@ -91,7 +91,7 @@
 
 .icon-header:hover {
   background-color: rgb(255, 186, 125);
-  width: 25px;
+  width: 50px;
 }
 
 
