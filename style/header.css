@@ -20,16 +20,16 @@
 
 .middle-header{
   font-size: 18px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap : 0.5em;
 }
 
 .nav-link{
   display: flex;
   gap : 2.5em;
   
+}
+
+.link-card , .link-card{
+  transition: all 0.5s;
 }
 
 .link-nav:hover{
