@@ -2,7 +2,9 @@
   background-color: rgb(229 229 229);
   display: flex;
   align-items: center;
+  justify-content: center;
   width: 100%;
+  gap : 10em;
   padding: 1.2rem 0;
 }
 
@@ -21,12 +23,62 @@
   display: flex;
   flex-direction: row;
   align-items: center;
+  gap : 0.5em;
 }
 
-.menu-shop{
-  text-align: center;
-  width: 100px;
+.nav-link{
+  display: flex;
+  gap : 2.5em;
+  
 }
+
+.link-nav:hover{
+  color: rgb(252, 105, 0);
+  font-size: 20px;
+  font-weight: bold;
+}
+.link-card:hover{
+  color: rgb(250, 47, 47);
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.home:hover .dropdown{
+  display: block;
+}
+
+.clothe:hover .dropdown{
+  display: block;
+}
+
+.page:hover .dropdown{
+  display: block;
+}
+
+.blog:hover .dropdown{
+  display: block;
+}
+
+
+.dropdown{
+  background-color: rgb(229 229 229);
+
+  display: none;
+
+  position: absolute;
+  top: 50px;
+  left : auto;
+
+  width: 100px;
+
+  border: 1px solid gray;
+}
+
+.dropdown ul li{
+  line-height: 25px;
+}
+
+
 
 .right-header{
   display: flex;
@@ -41,12 +93,9 @@
 
 .icon-header:hover {
   background-color: rgb(255, 186, 125);
+  width: 25px;
 }
 
-.menu-shop:hover{
-  color: rgb(232, 133, 47);
-  cursor: pointer;
-}
 
 
 
