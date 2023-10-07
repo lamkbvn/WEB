@@ -41,7 +41,7 @@
 
 .show-page{
   background-color: aliceblue;
-  margin-top: 50px;
+  margin-top: 80px;
   border: 1px solid black;
   padding: 8px;
 
@@ -55,10 +55,17 @@
   vertical-align: -0.3em;
 }
 
-.btn:hover {
+.btn-show-page:hover {
   margin-left: 10px;
 }
 
+.btn-link-show-page:hover{
+  margin-right: 10px;
+}
+
+.to-page:hover{
+  background-color: gray;
+}
 
 
 

@@ -1,8 +1,12 @@
+*{
+  margin: 0;
+}
+
 body{
   margin:  0;
   font-size: 18px;
-  height: 5000px;
-  padding-top: 130px;
+  height: 10000px;
+  padding-top: 100px;
 }
 
 a{
