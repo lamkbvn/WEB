@@ -1,15 +1,9 @@
 .header{
   background-color: rgb(229 229 229);
   display: flex;
-  justify-content: space-around;
-
-  height: 90px;
+  align-items: center;
   width: 100%;
-
-  position: absolute;
-  top: 0;
-  left: 0;
-
+  padding: 1.2rem 0;
 }
 
 .name-shop{
@@ -18,7 +12,6 @@
 
 .left-header{
   font-size: 22px;
-  padding-top: 30px;
   font-weight: bolder;
   margin-left: 20px;
 }
