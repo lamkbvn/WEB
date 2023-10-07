@@ -33,12 +33,12 @@
 
 .link-nav:hover{
   color: rgb(252, 105, 0);
-  font-size: 20px;
+  font-size: 18.5px;
   font-weight: bold;
 }
 .link-card:hover{
   color: rgb(250, 47, 47);
-  font-size: 25px;
+  font-size: 19px;
   font-weight: bold;
 }
 
@@ -65,7 +65,7 @@
   display: none;
 
   position: absolute;
-  top: 50px;
+  top: 30px;
   left : auto;
 
   width: 100px;
@@ -75,8 +75,8 @@
 
 .dropdown ul li{
   line-height: 25px;
+  text-align: left;
 }
-
 
 
 .right-header{
@@ -86,12 +86,13 @@
 
 .icon-header{
   padding: 10px;
+  width: auto;
   cursor: pointer;
 }
 
 .icon-header:hover {
   background-color: rgb(255, 186, 125);
-  width: 50px;
+  width: 40px;
 }
 
 
