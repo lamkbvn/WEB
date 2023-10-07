@@ -1,5 +1,5 @@
 .header{
-  background-color: rgb(229 229 229);
+  background-color: rgb(184, 181, 181);
   display: flex;
   justify-content: space-around;
 
@@ -11,7 +11,6 @@
   left: 0;
 
 }
-
 .name-shop{
   cursor: pointer;
 }
@@ -41,7 +40,6 @@
 }
 
 .icon-header{
-  width: 20px;
   padding: 10px;
   cursor: pointer;
 }
