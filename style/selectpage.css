@@ -55,17 +55,11 @@
   vertical-align: -0.3em;
 }
 
-.btn-show-page:hover {
-  margin-left: 10px;
-}
-
-.btn-link-show-page:hover{
-  margin-right: 10px;
-}
-
 .to-page:hover{
   background-color: gray;
 }
+
+
 
 
 
