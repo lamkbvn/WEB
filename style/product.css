@@ -6,3 +6,13 @@
 .nav-link{
     color: rgb(12, 12, 12) !important;
 }
+
+.heading-y {
+    font-weight: 500;
+    letter-spacing: .02em;
+    text-transform: uppercase;
+}
+
+.bg{
+    background-color: rgb(193, 195, 195) !important;
+}
