@@ -1,4 +1,26 @@
 .satiate-guest{
   height: 110px;
- background-color: aqua;
+  border: 1px solid black;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 12px;
+}
+
+.satiate{
+  display: flex;
+  padding-left: 50px;
+}
+.satiate-img{
+  width: 30px;
+}
+
+.satiate-text{
+  padding-left: 10px;
+}
+
+.satiate-text::first-line{
+  font-weight: bolder;
 }

@@ -1,11 +1,16 @@
 .header{
-  background-color: rgb(184, 181, 181);
+  background-color: rgb(255, 255, 255);
+
   display: flex;
   align-items: center;
   justify-content: center;
+
   width: 100%;
   gap : 10em;
   padding: 1.2rem 0;
+
+  border: none;
+  border-bottom: 1px solid gray;
 }
 .name-shop{
   cursor: pointer;
@@ -27,7 +32,11 @@
   margin-block-end: 0;
 }
 
-.link-card , .link-card{
+.link-nav {
+  transition: all 0.3s;
+}
+
+.link-card{
   transition: all 0.5s;
 }
 
@@ -60,7 +69,7 @@
 
 
 .dropdown{
-  background-color: rgb(229 229 229);
+  background-color: rgb(255, 255, 255);
 
   display: none;
 
@@ -84,16 +93,52 @@
   align-items: center;
 }
 
+
 .icon-header{
-  padding: 10px;
+  padding: 13px;
   width: auto;
   cursor: pointer;
+
+  background-repeat: no-repeat;
+  background-position: 50%;
 }
 
-.icon-header:hover {
-  background-color: rgb(255, 186, 125);
-  width: 40px;
+.icon-header:hover{
+  background-size: 25px;
 }
+
+.search{
+  background-image: url("../img/icon-header/search.svg");
+}
+
+.search:hover{
+  background-image:url("../img/icon-header/search-hover.svg");
+}
+
+.heart{
+  background-image: url("../img/icon-header/heart.svg");
+}
+
+.heart:hover{
+  background-image:url("../img/icon-header/heart-hover.svg");
+}
+
+.cart{
+  background-image: url("../img/icon-header/cart.svg");
+}
+
+.cart:hover{
+  background-image:url("../img/icon-header/cart-hover.svg");
+}
+
+.person{
+  background-image: url("../img/icon-header/person.svg");
+}
+
+.person:hover{
+  background-image:url("../img/icon-header/person-hover.svg");
+}
+
 
 
 
