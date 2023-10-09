@@ -13,7 +13,7 @@
 }
 
 .nav-product{
-  background-color: blue;
+  background-color: rgb(223, 181, 181);
   border: 1px solid black;
 
   width: 1200px;
@@ -21,13 +21,19 @@
   margin-right: 35px;
 
   display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  row-gap: 1em;
 }
 
 .product-item{
-  width: 33,3333333333%;
-  height: 350px;
+  display: block;
 
-  border: 1px solid black;
+  width: 24%;
+  height: 330px;
+
+  border: 1px solid rgb(247, 87, 87);
 }
 
 
