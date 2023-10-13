@@ -13,6 +13,7 @@
 
   border: none;
   border-bottom: 1px solid gray;
+
 }
 .name-shop{
   cursor: pointer;
@@ -24,7 +25,7 @@
   margin-left: 20px;
 }
 
-@media only screen and (max-width : 1000px)
+@media only screen and (max-width : 700px)
 {
   .middle-header{
     display: none;
@@ -43,21 +44,21 @@
 
 .link-nav {
   transition: all 0.3s;
+  font-weight: bold;
 }
 
 .link-card{
   transition: all 0.5s;
+  font-weight: 500;
 }
 
 .link-nav:hover{
   color: rgb(252, 105, 0);
-  font-size: 18.5px;
-  font-weight: bold;
+  transform: scale(1.2);
 }
+
 .link-card:hover{
   color: rgb(250, 47, 47);
-  font-size: 19px;
-  font-weight: bold;
 }
 
 .home:hover .dropdown{
@@ -83,7 +84,7 @@
   display: none;
 
   position: absolute;
-  top: 30px;
+  top: 38px;
   left : auto;
 
   width: 100px;
@@ -99,7 +100,6 @@
 
 .right-header{
   display: flex;
-  align-items: center;
 }
 
 

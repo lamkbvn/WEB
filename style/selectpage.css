@@ -4,6 +4,7 @@
   margin-top: 20px;
 
   margin-bottom: 15px;
+
 }
 
 .to-page-women-img{
@@ -68,11 +69,12 @@ background-image: url(../img/picture-to-page/kid.jpg)
 }
 
 .show-page:hover .btn-show-page{
-  margin-left: 10px;
+  transform: translateX(5px);
 }
 
 .to-page:hover .btn-show-page{
-  margin-left: 10px;
+  transform: translateX(5px);
+
 }
 
 .to-page:hover{
