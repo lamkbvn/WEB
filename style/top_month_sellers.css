@@ -1,0 +1,119 @@
+* {
+    box-sizing: border-box;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+img {
+    width: 100%;
+    height: 100%;
+}
+.top-month-sellers, .top-month-sellers .container, #top-items {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.top-month-sellers .container {
+    max-width: 1150px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.top-month-sellers .container .title-nav {
+    text-align: center;
+    padding: 20px;
+}
+.top-month-sellers .container .title-nav h2 {
+    font-size: 36px;
+}
+.top-month-sellers .container .title-nav .nav .nav-item {
+    text-decoration: none;
+    color: #121212;
+    font-weight: 600;
+    margin: 10px;
+    padding: 5px;
+}
+
+.top-month-sellers .container .title-nav .nav .nav-item:hover {
+    color: #ff6060;
+}
+
+.top-month-sellers .container .title-nav .nav .active-item {
+    color: #ff6060;
+    border-bottom: #ff6060 solid;
+}
+
+#top-items {
+    width: 100%;
+    flex-direction: row !important;    
+    flex-wrap: wrap;
+}
+#top-items .card {
+    margin: 20px;
+    width: 300px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+}
+#top-items .card .card-image {
+    position: relative;
+    height: 75%;
+}
+
+#top-items .card .card-image .action {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 25%;
+    opacity: 0;
+    background-color: rgba(0,0,0,0.35);
+}
+
+#top-items .card .card-image .action button {
+    color: white;
+    background-color: rgba(15,15,15,0.79);
+    border: black solid 0.1em;
+    margin: 10px;
+    font-size: medium;
+    padding: 5px;
+}
+
+#top-items .card .card-image:hover .action {
+    opacity: 1;
+}
+
+#top-items .card .card-info {
+    background-color: #f0f0f0;
+    height: 25%;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+#top-items .card .card-info * {
+    margin: 5px;
+}
+
+#top-items .card .card-info .categories {
+    color: #404040;
+    font-size: 0.875rem;
+}
+#top-items .card .card-info .product-name {
+    font-weight: 600;
+}
+#top-items .card .card-info .price {
+    color: #404040;
+}
+
+.top-month-sellers .container .more-items {
+    padding: 10px;
+}
+.top-month-sellers .container .more-items a {
+    text-decoration: none;
+    color: #121212;
+    border-bottom: #121212 solid 2px;
+    font-weight: 600;
+}
+.top-month-sellers .container .more-items a:hover {
+    border: none;
+}
