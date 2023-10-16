@@ -113,40 +113,9 @@
 }
 
 .icon-header:hover{
-  background-size: 25px;
+  background-color:rgb(252, 105, 0); ;
 }
 
-.search{
-  background-image: url("../img/icon-header/search.svg");
-}
-
-.search:hover{
-  background-image:url("../img/icon-header/search-hover.svg");
-}
-
-.heart{
-  background-image: url("../img/icon-header/heart.svg");
-}
-
-.heart:hover{
-  background-image:url("../img/icon-header/heart-hover.svg");
-}
-
-.cart{
-  background-image: url("../img/icon-header/cart.svg");
-}
-
-.cart:hover{
-  background-image:url("../img/icon-header/cart-hover.svg");
-}
-
-.person{
-  background-image: url("../img/icon-header/person.svg");
-}
-
-.person:hover{
-  background-image:url("../img/icon-header/person-hover.svg");
-}
 
 
 
