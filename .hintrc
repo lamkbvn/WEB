@@ -15,8 +15,13 @@
     "axe/forms": [
       "default",
       {
+<<<<<<< HEAD
         "label": "off",
         "select-name": "off"
+=======
+        "select-name": "off",
+        "label": "off"
+>>>>>>> master1
       }
     ]
   }
