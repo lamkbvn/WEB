@@ -3,11 +3,10 @@
 
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
 
   width: 100%;
 
-  gap : 10em;
   padding: 1.2rem 0;
 
 
@@ -15,21 +14,11 @@
   border-bottom: 1px solid gray;
 
 }
-.name-shop{
-  cursor: pointer;
-}
 
 .left-header{
   font-size: 22px;
   font-weight: bolder;
   margin-left: 20px;
-}
-
-@media only screen and (max-width : 700px)
-{
-  .middle-header{
-    display: none;
-  }
 }
 
 
@@ -102,24 +91,69 @@
   display: flex;
 }
 
+.main-right-header{
+  display: flex;
+  flex-direction: row;
+}
 
 .icon-header{
-  padding: 15px;
-  width: auto;
   cursor: pointer;
-
-  background-repeat: no-repeat;
-  background-position: 50%;
+  padding: 10px;
 }
 
 .icon-header:hover{
+<<<<<<< HEAD
   background-color:rgb(252, 105, 0); ;
+=======
+  background-color: rgb(252, 105, 0);
+}
+
+.icon-header:active{
+  background-color: aliceblue;
+}
+
+.side-bar-header{
+    display: none;
+}
+
+@media screen  and ( max-width : 980px){
+  .header{
+    font-size: 16px;
+  }
+}
+
+@media only screen and (max-width : 700px)
+{
+  .middle-header{
+    display: none;
+  }
+
+  .main-right-header{
+    display: none;
+  }
+
+  .side-bar-header{
+    display: block;
+    width: 50px;
+  }
+
+  .header{
+    justify-content:space-between;
+  }
+}
+
+.name-shop{
+cursor: pointer;
+>>>>>>> lam
 }
 
 
 
 
 
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> lam
