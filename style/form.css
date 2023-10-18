@@ -28,6 +28,74 @@
 
 .form{
       z-index: 10;
+
+      background-color: rgba(253, 253, 253,0.5);
+
+      width: 400px;
+      height : 500px;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+
+}
+
+.user-input{
+  display: flex;
+  flex-direction: column;
+
+  width: 70%;
+
+
+}
+.input{
+  background-color: rgb(199, 199, 199);
+  padding: 8px;
+  border: none;
+  border-radius: 8px;
+}
+
+.input::placeholder{
+  color: rgb(51, 51, 51);
+  font-weight: 100;
+  font-size: 18px;
+}
+
+.btn-signin{
+  margin-top: 20px;
+  background-color: orange;
+  padding: 6px;
+  border: none;
+  border-radius: 8px;
+}
+
+.btn-signin:hover{
+  background-color: rgb(255, 121, 4);
+}
+
+.btn-signin:active{
+  background-color:orange ;
+}
+
+.switch-login{
+  background-color: rgb(168, 166, 166);
+  border-radius: 10px;
+}
+
+.btnn{
+  background-color: rgba(168, 166, 166, 0.5);
+
+  width: 100px;
+  height: 45px;
+  margin: 0;
+
+  border: none;
+}
+
+.btn-active{
+  background-color: rgb(105, 103, 103);
+  border-radius: 10px;
 }
 
 .hidden-form{

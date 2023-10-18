@@ -32,6 +32,10 @@ hr{
   position: relative;
 }
 
+label{
+  margin-top: 8px;
+}
+
 /* .card {
   width: 113px;
   height: 113px;
