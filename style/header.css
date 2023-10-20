@@ -50,19 +50,12 @@
   color: rgb(250, 47, 47);
 }
 
-.home:hover .dropdown{
-  display: block;
-}
 
 .clothe:hover .dropdown{
   display: block;
 }
 
 .page:hover .dropdown{
-  display: block;
-}
-
-.blog:hover .dropdown{
   display: block;
 }
 

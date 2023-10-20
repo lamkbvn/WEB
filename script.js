@@ -5,6 +5,7 @@ let formType = document.querySelector('.form-type');
 let btnActive = document.querySelector('.btn-active');
 let btnLogin = document.querySelector('.btn-login');
 let btnRegister = document.querySelector('.btn-register');
+let input = document.querySelector('.input');
 
 let formSignin = `
       <label for="">Username</label>
@@ -31,8 +32,17 @@ function addHiddenForm(){
   sectionForm.classList.add('hidden-form');
 }
 
-person.addEventListener('click' ,removeHiddenForm);
-overlayForm.addEventListener('click' , addHiddenForm);
+person.addEventListener('click' ,
+  function (){
+    sectionForm.classList.remove('hidden-form');
+  }
+);
+overlayForm.addEventListener('click' ,
+function (){
+  sectionForm.classList.add('hidden-form');
+  input.value = '';
+}
+);
 
 btnLogin.addEventListener('click' ,
   function (){
