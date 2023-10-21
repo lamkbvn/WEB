@@ -22,23 +22,33 @@
   width: 100%;
   height: 100%;
 
-  backdrop-filter:  blur(5px);
+  backdrop-filter:  blur(10px);
 
 }
 
 .form{
       z-index: 10;
 
-      background-color: rgba(253, 253, 253,0.5);
+      background-color: rgba(253, 253, 253,0.3);
 
       width: 400px;
-      height : 500px;
+      height : 450px;
 
       display: flex;
       flex-direction: column;
       justify-content: space-around;
       align-items: center;
+      border-radius: 50px;
 
+      border-style: solid ;
+      border-color: rgba(253, 253, 253,0.3);
+      box-shadow: 1px 1px;
+      outline-color: rgba(253, 253, 253,0.3);
+}
+
+.announcement{
+  position: absolute;
+  top : 170px
 }
 
 .user-input{
@@ -50,10 +60,15 @@
 
 }
 .input{
-  background-color: rgb(199, 199, 199);
+  background-color: rgba(253, 253, 253,0.5);
   padding: 8px;
   border: none;
   border-radius: 8px;
+  box-shadow: 1px 1px;
+}
+
+.input:focus{
+  outline:  none;
 }
 
 .input::placeholder{
@@ -71,7 +86,7 @@
 }
 
 .btn-signin:hover{
-  background-color: rgb(255, 121, 4);
+  background-color: rgb(255, 121, 4,0.9);
 }
 
 .btn-signin:active{
@@ -79,8 +94,12 @@
 }
 
 .switch-login{
-  background-color: rgb(168, 166, 166);
+  background-color: rgb(168, 166, 166,0.5);
   border-radius: 10px;
+
+  position: absolute;
+  top : 510px
+
 }
 
 .btnn{
