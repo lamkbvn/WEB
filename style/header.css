@@ -3,11 +3,10 @@
 
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
 
   width: 100%;
 
-  gap : 10em;
   padding: 1.2rem 0;
 
 
@@ -15,21 +14,11 @@
   border-bottom: 1px solid gray;
 
 }
-.name-shop{
-  cursor: pointer;
-}
 
 .left-header{
   font-size: 22px;
   font-weight: bolder;
   margin-left: 20px;
-}
-
-@media only screen and (max-width : 700px)
-{
-  .middle-header{
-    display: none;
-  }
 }
 
 
@@ -61,19 +50,12 @@
   color: rgb(250, 47, 47);
 }
 
-.home:hover .dropdown{
-  display: block;
-}
 
 .clothe:hover .dropdown{
   display: block;
 }
 
 .page:hover .dropdown{
-  display: block;
-}
-
-.blog:hover .dropdown{
   display: block;
 }
 
@@ -102,53 +84,57 @@
   display: flex;
 }
 
+.main-right-header{
+  display: flex;
+  flex-direction: row;
+}
 
 .icon-header{
-  padding: 15px;
-  width: auto;
   cursor: pointer;
-
-  background-repeat: no-repeat;
-  background-position: 50%;
+  padding: 10px;
 }
 
 .icon-header:hover{
-  background-size: 25px;
+  background-color: rgb(252, 105, 0);
 }
 
-.search{
-  background-image: url("../img/icon-header/search.svg");
+.icon-header:active{
+  background-color: aliceblue;
 }
 
-.search:hover{
-  background-image:url("../img/icon-header/search-hover.svg");
+.side-bar-header{
+    display: none;
 }
 
-.heart{
-  background-image: url("../img/icon-header/heart.svg");
+@media screen  and ( max-width : 980px){
+  .header{
+    font-size: 16px;
+  }
 }
 
-.heart:hover{
-  background-image:url("../img/icon-header/heart-hover.svg");
+@media only screen and (max-width : 700px)
+{
+  .middle-header{
+    display: none;
+  }
+
+  .main-right-header{
+    display: none;
+  }
+
+  .side-bar-header{
+    display: block;
+    width: 50px;
+  }
+
+  .header{
+    justify-content:space-between;
+  }
 }
 
-.cart{
-  background-image: url("../img/icon-header/cart.svg");
+.name-shop{
+cursor: pointer;
 }
-
-.cart:hover{
-  background-image:url("../img/icon-header/cart-hover.svg");
-}
-
-.person{
-  background-image: url("../img/icon-header/person.svg");
-}
-
-.person:hover{
-  background-image:url("../img/icon-header/person-hover.svg");
-}
-
-
 
 
 

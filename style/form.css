@@ -1,0 +1,122 @@
+.form-login{
+  position: fixed;
+  top : 0;
+
+  width: 100%;
+  height: 100%;
+
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  z-index: 5;
+}
+
+.overlay-form{
+  position: absolute;
+
+
+  width: 100%;
+  height: 100%;
+
+  backdrop-filter:  blur(10px);
+
+}
+
+.form{
+      z-index: 10;
+
+      background-color: rgba(253, 253, 253,0.3);
+
+      width: 400px;
+      height : 450px;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      border-radius: 50px;
+
+      border-style: solid ;
+      border-color: rgba(253, 253, 253,0.3);
+      box-shadow: 1px 1px;
+      outline-color: rgba(253, 253, 253,0.3);
+}
+
+.announcement{
+  position: absolute;
+  top : 170px
+}
+
+.user-input{
+  display: flex;
+  flex-direction: column;
+
+  width: 70%;
+
+
+}
+.input{
+  background-color: rgba(253, 253, 253,0.5);
+  padding: 8px;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 1px 1px;
+}
+
+.input:focus{
+  outline:  none;
+}
+
+.input::placeholder{
+  color: rgb(51, 51, 51);
+  font-weight: 100;
+  font-size: 18px;
+}
+
+.btn-signin{
+  margin-top: 20px;
+  background-color: orange;
+  padding: 6px;
+  border: none;
+  border-radius: 8px;
+}
+
+.btn-signin:hover{
+  background-color: rgb(255, 121, 4,0.9);
+}
+
+.btn-signin:active{
+  background-color:orange ;
+}
+
+.switch-login{
+  background-color: rgb(168, 166, 166,0.5);
+  border-radius: 10px;
+
+  position: absolute;
+  top : 510px
+
+}
+
+.btnn{
+  background-color: rgba(168, 166, 166, 0.5);
+
+  width: 100px;
+  height: 45px;
+  margin: 0;
+
+  border: none;
+}
+
+.btn-active{
+  background-color: rgb(105, 103, 103);
+  border-radius: 10px;
+}
+
+.hidden-form{
+  display: none;
+}
