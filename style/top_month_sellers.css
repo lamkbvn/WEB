@@ -5,7 +5,7 @@
 .top-month-sellers img {
     width: 100%;
     height: 100%;
-}
+} */
 .top-month-sellers, .top-month-sellers .container, #top-items {
     display: flex;
     flex-direction: column;
