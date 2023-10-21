@@ -1,0 +1,25 @@
+div.collection
+{
+    text-align: center;
+    padding: 60px;
+}
+h6.color{
+    color: gray;
+}
+div.linkshop1
+{
+    
+    background-size: cover;
+    min-height: 400px;
+    padding-top: 50%;
+}
+div.linkshop2
+{
+    
+    background-size: cover;
+    min-width: 500px;
+    min-height: 400px;
+    padding-top: 19%;
+    padding-right: 40%;
+    padding-left: 5%;
+}
