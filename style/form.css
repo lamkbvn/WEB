@@ -13,6 +13,7 @@
   justify-content: center;
 
   z-index: 5;
+
 }
 
 .overlay-form{
@@ -36,8 +37,8 @@
 
       display: flex;
       flex-direction: column;
-      justify-content: space-around;
       align-items: center;
+      justify-content: space-around;
       border-radius: 50px;
 
       border-style: solid ;
@@ -46,22 +47,37 @@
       outline-color: rgba(253, 253, 253,0.3);
 }
 
+.row1{
+  height: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 .announcement{
-  position: absolute;
-  top : 170px
+    margin-top: 20px;
+    text-align: center;
+}
+
+.row2{
+  display: flex;
+  
+  height: 300px;
 }
 
 .user-input{
   display: flex;
   flex-direction: column;
 
-  width: 70%;
+  width: 75%;
 
 
 }
 .input{
   background-color: rgba(253, 253, 253,0.5);
-  padding: 8px;
+  font-size: 20px;
+  padding: 12px;
+
   border: none;
   border-radius: 8px;
   box-shadow: 1px 1px;
@@ -80,7 +96,7 @@
 .btn-signin{
   margin-top: 20px;
   background-color: orange;
-  padding: 6px;
+  padding: 13px;
   border: none;
   border-radius: 8px;
 }
@@ -95,26 +111,25 @@
 
 .switch-login{
   background-color: rgb(168, 166, 166,0.5);
-  border-radius: 10px;
 
-  position: absolute;
-  top : 510px
-
+  border-bottom-right-radius: 8px;
+  border-bottom-left-radius: 8px;
 }
 
 .btnn{
   background-color: rgba(168, 166, 166, 0.5);
 
-  width: 100px;
+  width: 195px;
   height: 45px;
   margin: 0;
 
-  border: none;
+  border-top: none;
+  border-bottom-right-radius: 8px;
+  border-bottom-left-radius: 8px;
 }
 
 .btn-active{
   background-color: rgb(105, 103, 103);
-  border-radius: 10px;
 }
 
 .hidden-form{
