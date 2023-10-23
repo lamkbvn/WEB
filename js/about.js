@@ -16,7 +16,7 @@ const textRow4 =[
   `Darrell Baker, 20 May 2023`
 ]
 
-let indexActive = 0;
+//let indexActive = 0;
 let i = 0 ;
     setInterval(() => {
           ++i;
@@ -35,7 +35,7 @@ let i = 0 ;
           //   row3.style.animation = 'slide-right 0.3s';
           //   row4.style.animation = 'slide-right 0.3s';
           // }
-          indexActive =i ;
+          //indexActive =i ;
           row3.style.transition ='animation 0.5s';
           row4.style.transition ='animation 0.5s';
           row3.innerHTML = textRow3[i];
@@ -45,4 +45,5 @@ let i = 0 ;
             row4.style.animation = '';
           }, 350
           );
-    },10000);
+    },6000);
+

@@ -102,6 +102,7 @@
 }
 #top-items .card .card-info .price {
     color: #404040;
+    text-decoration: line-through;
 }
 
 .top-month-sellers .container .more-items {
