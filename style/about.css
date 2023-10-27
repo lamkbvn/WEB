@@ -1,0 +1,579 @@
+body{
+  text-wrap: wrap;
+}
+
+
+.section-0{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+
+  
+  position: fixed;
+  top : 80px;
+  border-bottom: 1px solid black;
+  z-index: 50;
+}
+
+.section-0 .container{
+  width: 1100px;
+  z-index: 10;
+  
+}
+
+.section-0  span{
+  color: rgb(0, 123, 231);
+  cursor: pointer;
+}
+
+.img{
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+}
+/* start section 1 */
+.section-1{
+    height: 400px;
+    display: flex;
+    justify-content: center;
+
+    margin-top: 120px;
+}
+
+.img-1{
+
+  background-image: url(../img/blog-img/cover-21.jpg);
+
+  width: 1100px;
+  height: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen  and (max-width  : 1000px ){
+        .img-1{
+          width: 700px;
+        }
+}
+
+.text-img-1{
+  z-index: 1;
+  font-size: 30px;
+  color: aliceblue;
+
+  text-align: center;
+
+  width: 280px;
+}
+/* end section 1 */
+
+/* start section 2 */
+.page-about .section-2{
+  width: 100%;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  margin-bottom: 30px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+}
+
+.section-2 .container{
+  width: 1100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+.img-2-3{
+  display: flex;
+  height: 470px;
+}
+
+.page-about .img-2{
+  background-image: url(../img/blog-img/2.jpg);
+
+
+  width: 250px;
+  height: 350px;
+
+  position: relative;
+  left : 30px;
+
+}
+
+.page-about .img-3{
+  background-image: url(../img/blog-img/3.jpg);
+
+  width: 300px;
+  height: 400px;
+
+  position: relative;
+  top:45px;
+  right: 45px;
+}
+
+.page-about .text-img-2-3{
+  width: 370px;
+  word-spacing: 7px;
+}
+
+.page-about .section-2 .text-head{
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.page-about .section-2 .text-title{
+  font-size: 27px;
+  font-weight: bolder;
+  margin-bottom: 20px;
+}
+
+.page-about .section-2 .text-content-1{
+  margin-bottom: 40px;
+}
+/* end section 2 */
+
+/* start section 3 */
+.page-about .section-3{
+
+  font-size:  22px;
+  background-color: rgb(128, 128, 128,0.1);
+
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+}
+
+.page-about .section-3 .container{
+    width: 100%px;
+    height: 500px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.page-about .section-3 .text-title{
+  margin-bottom: 30px;
+  font-weight: bolder;
+  font-size: 24px;
+}
+
+.page-about .section-3 .text-content{
+  display: flex;
+  justify-content: space-between;
+  word-spacing: 1px;
+  font-size: 18px;
+  column-gap: 25px;
+
+}
+
+.page-about .section-3 .text-content-1-2{
+  width: 400px;
+
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.page-about .section-3 .text-content-1{
+  margin-bottom: 40px;
+}
+
+.page-about .section-3 .text-content-2{
+  margin-bottom: 25px;
+}
+
+
+.page-about .section-3 .text-content-3-4{
+  width: 400px;
+
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+
+.page-about .section-3 .text-content-3{
+  margin-bottom: 40px;
+}
+
+.page-about .section-3 .go-to-home{
+  width: 150px;
+  height: 50px;
+
+  background-color: black;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  cursor: pointer;
+
+}
+
+.page-about .section-3 .go-to-home a{
+  color: aliceblue;
+  font-size: 20px;
+}
+
+.page-about .section-3 .go-to-home img{
+  width: 30px;
+  height: 30px;
+
+  transition: transform 0.5s;
+}
+
+.page-about .section-3 .go-to-home:hover img{
+  transform: translateX(10px);
+}
+
+/* end section 3 */
+
+
+
+/* start section 4 */
+.page-about .section-4{
+  margin-bottom: 30px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.page-about .section-4 .container{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  width: 100%;
+  height: 490px;
+
+}
+
+.page-about .img-4-5{
+  display: flex;
+}
+
+.page-about .img-4{
+  background-image: url(../img/blog-img/4.jpg);
+
+
+  width: 250px;
+  height: 350px;
+
+  position: relative;
+
+}
+
+.page-about .img-5{
+  background-image: url(../img/blog-img/5.jpg);
+
+  width: 300px;
+  height: 400px;
+
+  position: relative;
+  top: 45px;
+  left : 80px;
+  z-index: 1;
+}
+
+.page-about .text-img-4-5{
+  
+  display: flex;
+  flex-direction: column;
+
+  width: 370px;
+  word-spacing: 7px;
+}
+
+.page-about .section-4 .text-head{
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.page-about .section-4 .text-title{
+  font-size: 27px;
+  font-weight: bolder;
+  margin-bottom: 20px;
+}
+
+.page-about .section-4 .text-content-1{
+  margin-bottom: 40px;
+}
+/* end section 4 */
+
+
+
+/* start section 5 */
+.page-about .section-5{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin-bottom: 20px;
+}
+
+.page-about .section-5 .container{
+
+  font-size: 26px;
+
+  background-color: rgb(255, 0, 0,0.7);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 100px;
+}
+
+.page-about .text-section-5{
+    width: 720px;
+    height: 100%;
+    text-align: center;
+}
+/* end section 5 */
+
+
+/* start section 6 */
+.page-about .section-6{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.page-about .section-6 .container{
+  width: 1100px;
+  height: 960px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.page-about .img-6{
+  background-image: url(../img/blog-img/6.jpg);
+
+  width: 443px;
+  height: 508px;
+
+  margin-left: 8px;
+  margin-right: 8px;
+}
+
+.page-about .img-7{
+  background-image: url(../img/blog-img/7.jpg);
+
+  width: 443px;
+  height: 320px;
+
+  margin-left: 8px;
+  margin-right: 8px;
+  margin-top: 20px;
+}
+
+.page-about .img-8{
+  background-image: url(../img/blog-img/8.jpg);
+
+  width: 443px;
+  height: 320px;
+
+  margin-left: 8px;
+  margin-right: 8px;
+}
+
+.page-about .img-9{
+  background-image: url(../img/blog-img/9.jpg);
+
+  width: 443px;
+  height: 508px;
+
+  margin-left: 8px;
+  margin-right: 8px;
+  margin-top: 20px;
+}
+/* end section 6 */
+
+
+
+/* start section 7 */
+.page-about .section-7{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+
+  margin-bottom: 50px;
+
+  font-size: 25px;
+
+}
+
+.page-about .section-7 .container{
+  width: 90%;
+  height: 500px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  row-gap: 1em;
+
+}
+
+.page-about .section-7 .row-3{
+  width: 700px;
+  height: 181px;
+  text-align: center;
+}
+
+@keyframes slide-left {
+  from{transform: translateX(0px);}
+  1%{transform: translateX(400px);}
+  to{transform: translateX(0px);}
+}
+
+@keyframes slide-right {
+  from{transform: translateX(0px);}
+  1%{transform: translateX(-400px);}
+  to{transform: translateX(0px);}
+}
+
+.page-about .section-7 .row-5{
+  display: flex;
+  column-gap: 0.5em;
+}
+
+.page-about .section-7 .btn1{
+  width: 10px !important;
+  height: 10px !important;
+  background-color: aliceblue;
+  border-radius: 15px;
+  border-style: solid;
+  border-color: black;
+  cursor: pointer;
+
+  transition: width 0.5s;
+
+}
+.page-about .section-7 .active1{
+  width: 30px !important;
+}
+/* end section 7 */
+
+@media screen and (800px <=width <=1000px ){
+  .section-2 .container{
+    display:  flex;
+    flex-direction: column;
+  }
+
+  .img-2-3{
+    border-bottom: 1px solid gainsboro;
+  }
+
+  .text-img-2-3{
+    margin-top: 15px;
+  }
+
+
+  .page-about .section-3 .text-content-1-2{
+    width: 300px;
+  }
+
+  .page-about .section-3 .text-content-3-4{
+    width: 300px;
+  }
+
+  .page-about .section-4 .container{
+    flex-direction: column;
+
+    margin-top: 20px;
+    height: 1000px;
+  }
+
+  .page-about .img-6{
+      width: 383px;
+      height: 458px;
+  }
+
+  .page-about .img-7{
+    width: 383px;
+    height: 270px;
+  }
+
+  .page-about .img-8{
+    width: 383px;
+    height: 270px;
+  }
+
+  .page-about .img-9{
+    width: 383px;
+    height: 458px;
+  }
+
+
+}
+
+@media screen and (width < 800px) {
+  .section-2 .container{
+    display:  flex;
+    flex-direction: column;
+  }
+
+  .img-2-3{
+    border-bottom: 1px solid gainsboro;
+  }
+
+  .text-img-2-3{
+    margin-top: 15px;
+  }
+
+
+  .page-about .section-3 .text-content-1-2{
+    width: 300px;
+  }
+
+  .page-about .section-3 .text-content-3-4{
+    width: 300px;
+  }
+
+  .page-about .section-4 .container{
+    flex-direction: column;
+
+    margin-top: 20px;
+    height: 1000px;
+  }
+
+
+  .page-about .img-6{
+    width: 303px;
+  height: 358px;
+}
+
+.page-about .img-7{
+  width: 303px;
+  height: 170px;
+}
+
+.page-about .img-8{
+  width: 303px;
+  height: 170px;
+}
+
+.page-about .img-9{
+  width: 303px;
+  height: 358px;
+}
+
+.page-about .section-7 .row-3{
+  width: 500px;
+  height: 250px;
+}
+}

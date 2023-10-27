@@ -25,8 +25,8 @@ background-image: url(../img/picture-to-page/kid.jpg)
   background-repeat: no-repeat!important;
   background-size: cover!important;
   
-  width: 506px;
-  height: 470px;
+  width: 33.33%;
+  height: 420px;
   cursor: pointer;
 
   display: flex;
@@ -34,13 +34,29 @@ background-image: url(../img/picture-to-page/kid.jpg)
   align-items: center;
 }
 
+@media   (max-width: 900px) {
+  .to-page{
+    width: 50%;
+  }
+  
+}
+
+@media (max-width: 700px){
+  .to-page{
+    width:  100%;
+    height: 600px;
+  }
+}
+
 .name-page{
   float: left;
-  margin-top: 215px;
+  margin-top: 155px;
   font-size: 65px;
   font-weight: bolder;
   color: #ffffff;
   text-shadow: 5px 5px black ;
+
+  transition:  transform 0.5s;
 }
 
 .show-page{
@@ -64,10 +80,16 @@ background-image: url(../img/picture-to-page/kid.jpg)
 
   width: 20px;
   height: 20px;
+
+  transition:  transform 0.5s;
 }
 
 .to-page:hover{
   background-color: gray;
+}
+
+.to-page:hover .name-page{
+  transform: scale(1.2);
 }
 
 .show-page:hover .btn-show-page{

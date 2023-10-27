@@ -12,7 +12,7 @@
   align-items: center;
   justify-content: center;
 
-  z-index: 5;
+  z-index: 500;
 
 }
 
@@ -76,7 +76,7 @@
 .input{
   background-color: rgba(253, 253, 253,0.5);
   font-size: 20px;
-  padding: 12px;
+  padding: 5px;
 
   border: none;
   border-radius: 8px;
@@ -96,7 +96,7 @@
 .btn-signin{
   margin-top: 20px;
   background-color: orange;
-  padding: 13px;
+  padding: 5px;
   border: none;
   border-radius: 8px;
 }

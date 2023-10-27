@@ -6,6 +6,7 @@ let btnActive = document.querySelector('.btn-active');
 let btnLogin = document.querySelector('.btn-login');
 let btnRegister = document.querySelector('.btn-register');
 let input = document.querySelector('.input');
+let body = document.querySelector('body');
 
 let formSignin = `
       <label for="">Username</label>
@@ -35,12 +36,14 @@ function addHiddenForm(){
 person.addEventListener('click' ,
   function (){
     sectionForm.classList.remove('hidden-form');
+    body.style.overflow = 'hidden';
   }
 );
 overlayForm.addEventListener('click' ,
 function (){
   sectionForm.classList.add('hidden-form');
   input.value = '';
+  body.style.overflow = '';
 }
 );
 
@@ -59,3 +62,54 @@ btnRegister.addEventListener('click' ,
     formType.innerHTML = formSignup;
   }
 )
+const switchPageAbout = document.querySelector('.about');
+const pageMain = document.querySelector('.page-main');
+const pageAbout = document.querySelector('.page-about');
+const returnHome = document.querySelector('.return-home');
+
+
+switchPageAbout.addEventListener('click' ,
+  function () {
+    pageMain.classList.add('hidden-form');
+    pageAbout.classList.remove('hidden-form');
+  }
+)
+
+returnHome.addEventListener('click' ,
+  function () {
+    pageMain.classList.remove('hidden-form');
+    pageAbout.classList.add('hidden-form');
+  }
+)
+
+let cart = document.querySelector('.cart');
+let sectionCart = document.querySelector('.section-cart');
+let overlayCart = document.querySelector('.overlay-cart');
+let exitCart = document.querySelector('.row-1-col-2');
+let formCart = document.querySelector('.form-cart');
+
+
+
+cart.addEventListener('click' ,
+  function () {
+    sectionCart.classList.remove('hidden-form');
+    body.style.overflow = 'hidden';
+  }
+)
+
+overlayCart.addEventListener('click' ,
+  function () {
+    sectionCart.classList.add('hidden-form');
+    body.style.overflow = '';
+
+  }
+)
+
+exitCart.addEventListener('click' ,
+  function () {
+    sectionCart.classList.add('hidden-form');
+    body.style.overflow = '';
+  }
+)
+
+
