@@ -1,0 +1,188 @@
+
+.section-cart{
+}
+
+
+
+.container-cart{
+  position: fixed;
+  top : 0;
+
+  margin: 0;
+  padding: 0;
+
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+
+  z-index: 100;
+}
+
+.overlay-cart{
+  opacity: 0.3;
+  background-color: rgb(0, 0, 0);
+  width: 100%;
+  height: 100%;
+
+  position: absolute;
+  left : 0 ;
+  right: 0;
+}
+
+.abc{
+  transform: translateX(500px);
+}
+
+.form-cart{
+
+  position: absolute;
+  right: 0;
+  width: 500px;
+  height: 100%;
+  min-width: 500px;
+  background-color: rgb(255, 255, 255);
+  transition: transform .6s ease-in-out ;
+  overflow: auto;
+  z-index: 100000;
+}
+
+
+.form-cart-end{
+  transform: translateX(100%);
+}
+
+
+
+.form-cart .row-1{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  height: 70px;
+
+  text-align: center;
+  font-size: 24px;
+
+  border-bottom: 1px solid gainsboro;
+  
+}
+
+.form-cart .row-1-col-1{
+  width: 100%;
+}
+
+.form-cart .row-1-col-2{
+  width: 40px;
+
+  cursor: pointer;
+
+  font-size: 40px;
+
+}
+
+.form-cart .row-2 .product-cart{
+  display: flex;
+  flex-direction: column;
+}
+
+.form-cart .item-cart{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+  border-bottom: 1px solid gainsboro;
+
+}
+
+.form-cart .img-item-cart{
+  width: 110px;
+  height: 130px;
+}
+
+.form-cart .infor-item-cart{
+  width: 280px;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  letter-spacing: 1.5px;
+
+  font-size: 15px;
+}
+
+.form-cart .quantity-item-cart{
+  width: 50px;
+  height: 30px;
+}
+
+.form-cart .remove-item-cart{
+  font-size: 35px;
+  cursor: pointer;
+}
+
+.form-cart .row-3{
+  display: flex;
+  justify-content: space-between;
+
+  padding: 20px;
+
+  background-color: gainsboro;
+}
+
+.form-cart .row-4{
+  width: 100%;
+  height: 130px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 18px;
+
+  margin-top: 20px;
+}
+
+.form-cart .buy-product-cart{
+  height: 60px;
+  width: 200px;
+  
+  color: white;
+  background-color: black;
+
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid black;
+}
+
+
+.form-cart .display-product-cart{
+
+  margin-top: 15px;
+
+  height: 50px;
+  width: 200px;
+
+  color: rgb(0, 0, 0);
+  background-color: rgb(255, 255, 255);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+
+  border: 1px solid black;
+}
+
+.form-cart .display-product-cart:hover{
+  background-color: rgb(0, 0, 0);
+  color: white;
+}

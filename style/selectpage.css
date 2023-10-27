@@ -34,6 +34,20 @@ background-image: url(../img/picture-to-page/kid.jpg)
   align-items: center;
 }
 
+@media   (max-width: 900px) {
+  .to-page{
+    width: 50%;
+  }
+  
+}
+
+@media (max-width: 700px){
+  .to-page{
+    width:  100%;
+    height: 600px;
+  }
+}
+
 .name-page{
   float: left;
   margin-top: 155px;

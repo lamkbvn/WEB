@@ -13,6 +13,12 @@
   border: none;
   border-bottom: 1px solid gray;
 
+  position:fixed;
+  top : 0;
+  left: 0;
+
+  z-index: 2;
+
 }
 
 .left-header{
@@ -27,10 +33,6 @@
   gap : 2.5em;
 }
 
-.nav-link ul{
-  margin-block-end: 0;
-}
-
 .link-nav {
   transition: all 0.3s;
   font-weight: bold;
@@ -39,6 +41,7 @@
 .link-card{
   transition: all 0.5s;
   font-weight: 500;
+  cursor: pointer;
 }
 
 .link-nav:hover{
@@ -136,7 +139,7 @@
 cursor: pointer;
 }
 
-
-
-
-
+#head-page{
+  position: absolute;
+  top : 0;
+}

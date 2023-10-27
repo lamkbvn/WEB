@@ -43,7 +43,7 @@
 
 #top-items {
     width: 100%;
-    flex-direction: row !important;    
+    flex-direction: row !important;
     flex-wrap: wrap;
 }
 #top-items .card {

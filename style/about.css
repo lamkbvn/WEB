@@ -1,26 +1,35 @@
 body{
-  height: 4000px;
   text-wrap: wrap;
 }
 
+
 .section-0{
+  width: 100%;
   display: flex;
   justify-content: center;
+
+  
+  position: fixed;
+  top : 80px;
+  border-bottom: 1px solid black;
+  z-index: 50;
 }
 
 .section-0 .container{
   width: 1100px;
-  padding: 20px;
+  z-index: 10;
+  
 }
 
-.section-0 .container a{
+.section-0  span{
   color: rgb(0, 123, 231);
+  cursor: pointer;
 }
 
 .img{
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 100%;
+  background-size: cover;
 
 }
 /* start section 1 */
@@ -28,6 +37,8 @@ body{
     height: 400px;
     display: flex;
     justify-content: center;
+
+    margin-top: 120px;
 }
 
 .img-1{
@@ -35,10 +46,17 @@ body{
   background-image: url(../img/blog-img/cover-21.jpg);
 
   width: 1100px;
+  height: 100%;
 
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+@media screen  and (max-width  : 1000px ){
+        .img-1{
+          width: 700px;
+        }
 }
 
 .text-img-1{
@@ -53,7 +71,7 @@ body{
 /* end section 1 */
 
 /* start section 2 */
-.section-2{
+.page-about .section-2{
   width: 100%;
 
   display: flex;
@@ -73,11 +91,13 @@ body{
   align-items: center;
 }
 
+
 .img-2-3{
   display: flex;
+  height: 470px;
 }
 
-.img-2{
+.page-about .img-2{
   background-image: url(../img/blog-img/2.jpg);
 
 
@@ -85,11 +105,11 @@ body{
   height: 350px;
 
   position: relative;
-  left : 100px;
+  left : 30px;
 
 }
 
-.img-3{
+.page-about .img-3{
   background-image: url(../img/blog-img/3.jpg);
 
   width: 300px;
@@ -97,83 +117,97 @@ body{
 
   position: relative;
   top:45px;
+  right: 45px;
 }
 
-.text-img-2-3{
+.page-about .text-img-2-3{
   width: 370px;
   word-spacing: 7px;
 }
 
-.section-2 .text-head{
+.page-about .section-2 .text-head{
   font-size: 14px;
   margin-bottom: 10px;
 }
 
-.section-2 .text-title{
+.page-about .section-2 .text-title{
   font-size: 27px;
   font-weight: bolder;
   margin-bottom: 20px;
 }
 
-.section-2 .text-content-1{
+.page-about .section-2 .text-content-1{
   margin-bottom: 40px;
 }
 /* end section 2 */
 
 /* start section 3 */
-.section-3{
-  width: 100%;
-  height: 500px;
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
+.page-about .section-3{
 
   font-size:  22px;
   background-color: rgb(128, 128, 128,0.1);
 
   padding-top: 60px;
   padding-bottom: 60px;
+
 }
 
-.section-3 .text-title{
+.page-about .section-3 .container{
+    width: 100%px;
+    height: 500px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.page-about .section-3 .text-title{
   margin-bottom: 30px;
   font-weight: bolder;
   font-size: 24px;
 }
 
-.section-3 .text-content{
+.page-about .section-3 .text-content{
   display: flex;
-  justify-content: space-around;
-  align-items: center;
-
-  
+  justify-content: space-between;
+  word-spacing: 1px;
+  font-size: 18px;
+  column-gap: 25px;
 
 }
 
-.section-3 .text-content-1-2{
+.page-about .section-3 .text-content-1-2{
   width: 400px;
+
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
 }
 
-.section-3 .text-content-1{
+.page-about .section-3 .text-content-1{
   margin-bottom: 40px;
 }
 
-.section-3 .text-content-2{
+.page-about .section-3 .text-content-2{
   margin-bottom: 25px;
 }
 
 
-.section-3 .text-content-3-4{
+.page-about .section-3 .text-content-3-4{
   width: 400px;
+
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
 }
 
-.section-3 .text-content-3{
+
+.page-about .section-3 .text-content-3{
   margin-bottom: 40px;
 }
 
-.section-3 .go-to-home{
+.page-about .section-3 .go-to-home{
   width: 150px;
   height: 50px;
 
@@ -187,48 +221,48 @@ body{
 
 }
 
-.section-3 .go-to-home a{
+.page-about .section-3 .go-to-home a{
   color: aliceblue;
   font-size: 20px;
 }
 
-.section-3 .go-to-home img{
+.page-about .section-3 .go-to-home img{
   width: 30px;
   height: 30px;
 
   transition: transform 0.5s;
 }
 
-.section-3 .go-to-home:hover img{
+.page-about .section-3 .go-to-home:hover img{
   transform: translateX(10px);
 }
 
 /* end section 3 */
 
+
+
 /* start section 4 */
-.section-4{
-  width: 100%;
-
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-
+.page-about .section-4{
   margin-bottom: 30px;
   padding-top: 60px;
   padding-bottom: 60px;
 }
 
-.section-4 div{
+.page-about .section-4 .container{
   display: flex;
   justify-content: space-around;
   align-items: center;
+
+  width: 100%;
+  height: 490px;
+
 }
 
-.img-4-5{
+.page-about .img-4-5{
   display: flex;
 }
 
-.img-4{
+.page-about .img-4{
   background-image: url(../img/blog-img/4.jpg);
 
 
@@ -239,7 +273,7 @@ body{
 
 }
 
-.img-5{
+.page-about .img-5{
   background-image: url(../img/blog-img/5.jpg);
 
   width: 300px;
@@ -251,7 +285,7 @@ body{
   z-index: 1;
 }
 
-.text-img-4-5{
+.page-about .text-img-4-5{
   
   display: flex;
   flex-direction: column;
@@ -260,24 +294,26 @@ body{
   word-spacing: 7px;
 }
 
-.section-4 .text-head{
+.page-about .section-4 .text-head{
   font-size: 14px;
   margin-bottom: 10px;
 }
 
-.section-4 .text-title{
+.page-about .section-4 .text-title{
   font-size: 27px;
   font-weight: bolder;
   margin-bottom: 20px;
 }
 
-.section-4 .text-content-1{
+.page-about .section-4 .text-content-1{
   margin-bottom: 40px;
 }
 /* end section 4 */
 
+
+
 /* start section 5 */
-.section-5{
+.page-about .section-5{
   display: flex;
   justify-content: center;
   align-items: center;
@@ -285,7 +321,7 @@ body{
   margin-bottom: 20px;
 }
 
-.section-5 .container{
+.page-about .section-5 .container{
 
   font-size: 26px;
 
@@ -298,21 +334,22 @@ body{
   padding: 100px;
 }
 
-.text-section-5{
+.page-about .text-section-5{
     width: 720px;
-    height: 108px;
+    height: 100%;
     text-align: center;
 }
 /* end section 5 */
 
+
 /* start section 6 */
-.section-6{
+.page-about .section-6{
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.section-6 .container{
+.page-about .section-6 .container{
   width: 1100px;
   height: 960px;
   display: flex;
@@ -321,7 +358,7 @@ body{
 
 }
 
-.img-6{
+.page-about .img-6{
   background-image: url(../img/blog-img/6.jpg);
 
   width: 443px;
@@ -331,7 +368,7 @@ body{
   margin-right: 8px;
 }
 
-.img-7{
+.page-about .img-7{
   background-image: url(../img/blog-img/7.jpg);
 
   width: 443px;
@@ -342,7 +379,7 @@ body{
   margin-top: 20px;
 }
 
-.img-8{
+.page-about .img-8{
   background-image: url(../img/blog-img/8.jpg);
 
   width: 443px;
@@ -352,7 +389,7 @@ body{
   margin-right: 8px;
 }
 
-.img-9{
+.page-about .img-9{
   background-image: url(../img/blog-img/9.jpg);
 
   width: 443px;
@@ -364,8 +401,10 @@ body{
 }
 /* end section 6 */
 
+
+
 /* start section 7 */
-.section-7{
+.page-about .section-7{
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -377,9 +416,9 @@ body{
 
 }
 
-.section-7 .container{
+.page-about .section-7 .container{
   width: 90%;
-  height: 400px;
+  height: 500px;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
@@ -389,9 +428,9 @@ body{
 
 }
 
-.row-3{
+.page-about .section-7 .row-3{
   width: 700px;
-  height: 100px;
+  height: 181px;
   text-align: center;
 }
 
@@ -407,23 +446,134 @@ body{
   to{transform: translateX(0px);}
 }
 
-.section-7 .row-5{
+.page-about .section-7 .row-5{
   display: flex;
   column-gap: 0.5em;
 }
 
-.section-7 .btn{
-  width: 10px;
-  height: 10px;
+.page-about .section-7 .btn1{
+  width: 10px !important;
+  height: 10px !important;
   background-color: aliceblue;
   border-radius: 15px;
   border-style: solid;
+  border-color: black;
   cursor: pointer;
 
   transition: width 0.5s;
 
 }
-.section-7 .active{
-  width: 30px;
+.page-about .section-7 .active1{
+  width: 30px !important;
 }
 /* end section 7 */
+
+@media screen and (800px <=width <=1000px ){
+  .section-2 .container{
+    display:  flex;
+    flex-direction: column;
+  }
+
+  .img-2-3{
+    border-bottom: 1px solid gainsboro;
+  }
+
+  .text-img-2-3{
+    margin-top: 15px;
+  }
+
+
+  .page-about .section-3 .text-content-1-2{
+    width: 300px;
+  }
+
+  .page-about .section-3 .text-content-3-4{
+    width: 300px;
+  }
+
+  .page-about .section-4 .container{
+    flex-direction: column;
+
+    margin-top: 20px;
+    height: 1000px;
+  }
+
+  .page-about .img-6{
+      width: 383px;
+      height: 458px;
+  }
+
+  .page-about .img-7{
+    width: 383px;
+    height: 270px;
+  }
+
+  .page-about .img-8{
+    width: 383px;
+    height: 270px;
+  }
+
+  .page-about .img-9{
+    width: 383px;
+    height: 458px;
+  }
+
+
+}
+
+@media screen and (width < 800px) {
+  .section-2 .container{
+    display:  flex;
+    flex-direction: column;
+  }
+
+  .img-2-3{
+    border-bottom: 1px solid gainsboro;
+  }
+
+  .text-img-2-3{
+    margin-top: 15px;
+  }
+
+
+  .page-about .section-3 .text-content-1-2{
+    width: 300px;
+  }
+
+  .page-about .section-3 .text-content-3-4{
+    width: 300px;
+  }
+
+  .page-about .section-4 .container{
+    flex-direction: column;
+
+    margin-top: 20px;
+    height: 1000px;
+  }
+
+
+  .page-about .img-6{
+    width: 303px;
+  height: 358px;
+}
+
+.page-about .img-7{
+  width: 303px;
+  height: 170px;
+}
+
+.page-about .img-8{
+  width: 303px;
+  height: 170px;
+}
+
+.page-about .img-9{
+  width: 303px;
+  height: 358px;
+}
+
+.page-about .section-7 .row-3{
+  width: 500px;
+  height: 250px;
+}
+}

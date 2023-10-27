@@ -16,6 +16,8 @@ p{
 
 body{
   font-size: 18px;
+  margin-top: 90px;
+  scroll-behavior: smooth;
 }
 
 a{
