@@ -4,13 +4,14 @@
 }
 
 .container-search .overlay-search{
-  position: absolute;
+  position: fixed;
   top: 0;
+  bottom: 0;
 
   width: 100%;
   height: 100%;
 
-  z-index: 50;
+  z-index: 500;
 
   background-color: black;
 
@@ -19,11 +20,12 @@
 }
 
 .container-search .form-search{
-  position: absolute;
-  top : 0;
+  position: fixed;
+  top: 0;
+  bottom: 0;
   right: 0;
 
-  z-index: 55;
+  z-index: 500;
 
   width: 500px;
   height: 100%;
@@ -73,7 +75,7 @@
 .container-search #select-type-clothe{
   width: 400px;
   height: 50px;
-  padding: 15px;
+  padding: 12px;
 }
 
 .container-search .row-2-row-2{
