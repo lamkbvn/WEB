@@ -84,9 +84,11 @@ returnHome.addEventListener('click' ,
 
 let cart = document.querySelector('.cart');
 let sectionCart = document.querySelector('.section-cart');
-let overlayCart = document.querySelector('.overlay-cart');
-let exitCart = document.querySelector('.row-1-col-2');
+let overlayScreen = document.querySelectorAll('.overlay');
+let exitBtn = document.querySelectorAll('.exit');
 let formCart = document.querySelector('.form-cart');
+const search =document.querySelector('.search');
+const sectionSearch =document.querySelector('.section-search');
 
 
 
@@ -97,19 +99,36 @@ cart.addEventListener('click' ,
   }
 )
 
-overlayCart.addEventListener('click' ,
+search.addEventListener('click',
+  function () {
+    sectionSearch.classList.remove('hidden-form');
+    body.style.overflow = 'hidden';
+  }
+)
+
+for(overlay of overlayScreen){
+  overlay.addEventListener('click' ,
   function () {
     sectionCart.classList.add('hidden-form');
+    sectionSearch.classList.add('hidden-form');
     body.style.overflow = '';
 
   }
 )
+}
 
-exitCart.addEventListener('click' ,
+for(exit of exitBtn) {
+  exit.addEventListener('click' ,
   function () {
     sectionCart.classList.add('hidden-form');
+    sectionSearch.classList.add('hidden-form');
     body.style.overflow = '';
   }
 )
+}
+
+
+
+
 
 
