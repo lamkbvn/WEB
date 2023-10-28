@@ -56,7 +56,17 @@
 
 }
 
-.row1{
+.form .container .exit{
+  position: absolute;
+  top : 0;
+  right: 0;
+  width: 40px;
+  height: 40px;
+  font-size: 40px;
+  cursor: pointer;
+}
+
+.form .row1{
   height: 120px;
   display: flex;
   align-items: center;

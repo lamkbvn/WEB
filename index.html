@@ -59,7 +59,7 @@
                         <div class="dropdown">
                             <ul>
                                 <li class="link-card about"><a href="#head-page">About</a></li>
-                                <li class="link-card"><a href="contact_us.html">Contact us</a></li>
+                                <li class="link-card"><a href="#head-page">Contact us</a></li>
                             </ul>
                         </div>
                     </li>
@@ -67,8 +67,8 @@
                         <a href="" class="link-nav">Blog</a>
                         <div class="dropdown">
                             <ul>
-                                <li class="link-card blogs"><a href="./blog.html">Blog</a></li>
-                                <li class="link-card"><a href="blog-post.html">Blog post</a></li>
+                                <li class="link-card blogs"><a href="#head-page">Blog</a></li>
+                                <li class="link-card"><a href="#head-page">Blog post</a></li>
                             </ul>
                         </div>
                     </li>
@@ -78,7 +78,10 @@
         <div class="right-header">
             <div class="main-right-header">
                 <img src="img/icon-header/search.svg" alt="" class="icon-header search">
-                <img src="img/icon-header/person.svg" alt="" class="icon-header person">
+                <div class="user">
+                    <img src="img/icon-header/person.svg" alt="" class="icon-header person">
+                    <div class="name-user"></div>
+                </div>
                 <img src="img/icon-header/cart.svg" alt="" class="icon-header cart">
             </div>
             <img src="img/icon-header/side-bar.svg" alt="" class=" icon-header side-bar-header">
@@ -96,10 +99,11 @@
                         <div class="announcement">
                             Welcom to Shop Clothe
                         </div>
+                        <div class="exit">&times;</div>
                     </div>
                     <div class="row2 user-input  form-type">
-                        <label for="">Username</label>
-                        <input type="text" id="username" class="input" placeholder="Enter username">
+                        <label for="">Account name</label>
+                        <input type="text" id="accountname" class="input" placeholder="Enter account name">
                         <label for="">Password</label>
                         <input type="text" id="password" class="input" placeholder="Enter password">
                         <button class="btn-signin">Sign in</button>
@@ -262,8 +266,8 @@
         </div>
     </section>
 
-
-    <section class="page-main" id="page-main">
+    <!-- PAGE MAIN -->
+    <section class="page-main">
         <div class="select-page">
             <div class="to-page-women-img to-page">
                 <p class="name-page">Women</p>
@@ -587,7 +591,8 @@
 
     </section>
 
-    <section class="page-about hidden-form" id="page-about">
+    <!-- PAGE ABOUT -->
+    <section class="page-about hidden-form">
         <div class="section-0">
             <div class="container">
                 <span class="return-home"><a href="#head-page">Home</a></span>&nbsp;&nbsp;>&nbsp;&nbsp;About
@@ -740,6 +745,15 @@
 
         </section>
     </section>
+
+    <!-- PAGE CONTACT US -->
+    <section class="page-contact-us hidden-form"></section>
+
+    <!-- PAGE BLOG -->
+    <section class="page-blog hidden-form"></section>
+
+    <!-- PAGE BLOG POST -->
+    <section class="page-blog-post hidden-form"></section>
 
     <section class="py-12 bg-light">
         <div class="container">
