@@ -184,7 +184,7 @@
 
 #top-items .card .card-info .price-label {
     font-size: large;
-    color: #000;    
+    color: #000;
 }
 
 #top-items .card .card-info .price:has(.sale-price-label) .price-label {
