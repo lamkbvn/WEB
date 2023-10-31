@@ -1,10 +1,10 @@
-// if(document.readyState === 'loading') {
-//   document.addEventListener('DOMContentLoaded',ready);
-// }
-// else {
-//   ready();
-// }
-// function ready()
+if(document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded',ready);
+}
+else {
+  ready();
+}
+function ready()
 {
     let removeItemCarts = document.querySelectorAll('.remove-item-cart');
     for (let i = 0; i < removeItemCarts.length; i++) {
