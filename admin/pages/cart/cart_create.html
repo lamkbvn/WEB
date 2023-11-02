@@ -401,7 +401,7 @@
                                 </div>
                                 <!-- /.card-header -->
                                 <!-- form start -->
-                                <form action="" id="quickForm">
+                                <form action="cart_list.html" id="quickForm">
                                     <div class="card-body">
                                         <div class="form-group">
                                             <label for="productName">Product name</label>
@@ -426,13 +426,13 @@
                                     <div class="card-body">
                                         <div class="form-group">
                                             <label for="total">Total</label>
-                                            <input type="text" name="total" class="form-control"
+                                            <input type="number" name="total" class="form-control"
                                                 id="total" placeholder="Enter Total price" required>
                                         </div>
                                     </div>
                                     <!-- /.card-body -->
                                     <div class="card-footer">
-                                        <button type="submit" class="btn btn-primary"><a href="cart_list.html" style="color: aliceblue;">Submit</a></button>
+                                        <button type="submit" class="btn btn-primary"><a style="color: aliceblue;">Submit</a></button>
                                     </div>
                                 </form>
                             </div>
@@ -471,6 +471,31 @@
     <!-- REQUIRED SCRIPTS -->
 
     <!-- jQuery -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function(){
+
+       
+        var priceInput = document.getElementById("price");
+        var quantityInput = document.getElementById("quantity");
+        var totalInput = document.getElementById("total");
+    
+        priceInput.addEventListener("input", Total);
+        quantityInput.addEventListener("input", Total);
+    
+        function Total() {
+            var price = parseFloat(priceInput.value) || 0;
+            var quantity = parseInt(quantityInput.value) || 0;
+
+            var total = price * quantity;
+    
+       
+            totalInput.value = total.toFixed(2); 
+        }
+    
+        Total();
+    })
+    </script>
+
     <script src="../../plugins/jquery/jquery.min.js"></script>
     <!-- Bootstrap 4 -->
     <script src="../../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -482,6 +507,7 @@
     <!-- AdminLTE for demo purposes -->
     <script src="../../dist/js/demo.js"></script>
     <!-- Page specific script -->
+    <script src="../../js/cart/cart_create.js"></script>
     <script>
         $(function () {
             // $.validator.setDefaults({

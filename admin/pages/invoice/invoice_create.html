@@ -401,7 +401,14 @@
                                 </div>
                                 <!-- /.card-header -->
                                 <!-- form start -->
-                                <form action="" id="quickForm">
+                                <form action="invoice_list.html" id="quickForm">
+                                    <div class="card-body">
+                                        <div class="form-group">
+                                            <label for="customerID">Customer ID</label>
+                                            <input type="text" name="customerID" class="form-control"
+                                                id="customerID" placeholder="Enter Customer ID" required>
+                                        </div>
+                                    </div>
                                     <div class="card-body">
                                         <div class="form-group">
                                             <label for="cartID">Cart ID</label>
@@ -412,13 +419,13 @@
                                     <div class="card-body">
                                         <div class="form-group">
                                             <label for="created">Created date</label>
-                                            <input type="datetime" name="created" class="form-control"
-                                                id="created" placeholder="Enter Created Date" required>
+                                            <input type="date" name="created" class="form-control"
+                                                id="created" required>
                                         </div>
                                     </div>
                                     <!-- /.card-body -->
                                     <div class="card-footer">
-                                        <button type="submit" class="btn btn-primary"><a href="invoice_list.html" style="color: aliceblue;">Submit</a></button>
+                                        <button type="submit" class="btn btn-primary"><a style="color: aliceblue;">Submit</a></button>
                                     </div>
                                 </form>
                             </div>
@@ -468,6 +475,7 @@
     <!-- AdminLTE for demo purposes -->
     <script src="../../dist/js/demo.js"></script>
     <!-- Page specific script -->
+    <script src="../../js/invoice/invoice_create.js"></script>
     <script>
         $(function () {
             // $.validator.setDefaults({

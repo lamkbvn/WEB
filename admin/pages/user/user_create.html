@@ -402,7 +402,25 @@
                                 </div>
                                 <!-- /.card-header -->
                                 <!-- form start -->
-                                <form action="" id="quickForm">
+                                <form action="user_list.html" id="quickForm">
+                                    <div class="card-body">
+                                        <div class="form-group">
+                                            <label for="customerID">Customer ID</label>
+                                            <input type="number" name="customerID" class="form-control" id="customerID"
+                                                placeholder="Enter Customer ID" required>
+                                        </div>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="form-group">
+                                            <label for="level">Level</label>
+                                           <Select id="level" class="form-control" required>
+                                                <option value="">Choose Level</option>
+                                                <option value="Customer">Customer</option>
+                                                <option value="Admin">Admin</option>
+                                                <option value="Supper Admin">Super Admin</option>
+                                           </Select>
+                                        </div>
+                                    </div>
                                     <div class="card-body">
                                         <div class="form-group">
                                             <label for="username">User Name</label>
@@ -419,7 +437,7 @@
                                     </div>
                                     <!-- /.card-body -->
                                     <div class="card-footer">
-                                        <button type="submit" class="btn btn-primary"><a href="user_list.html"
+                                        <button type="submit" class="btn btn-primary"><a
                                                 style="color: aliceblue;">Submit</a></button>
                                     </div>
                                 </form>
@@ -470,6 +488,7 @@
     <!-- AdminLTE for demo purposes -->
     <script src="../../dist/js/demo.js"></script>
     <!-- Page specific script -->
+    <script src="../../js/user/user_create.js"></script>
     <script>
         $(function () {
             // $.validator.setDefaults({
