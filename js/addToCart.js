@@ -55,13 +55,12 @@
 
 function updateTotalPrice(){
   let changeTotalPrice = document.querySelector('.totalprice');
-  if(document.querySelectorAll('.item-cart')== null){
+  if(document.querySelectorAll('.item-cart') == null){
     changeTotalPrice.innerHTML = '0';
     numberProductInCart[0].innerHTML = '0' ;
     numberProductInCart[1].innerHTML = `0` ;
-    return ;
   }
-
+  else{
   let itemCart = document.querySelectorAll('.item-cart');
   let priceItemCarts = document.querySelectorAll('.price-item-cart');
   let totalPrice = 0;
@@ -74,6 +73,7 @@ function updateTotalPrice(){
 
   numberProductInCart[0].innerHTML = `${itemCart.length}` ;
   numberProductInCart[1].innerHTML = `(${itemCart.length})` ;
+}
 }
 
 updateTotalPrice();
