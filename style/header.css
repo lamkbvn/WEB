@@ -91,18 +91,56 @@
   display: flex;
 }
 
+.user-header{
+  display: flex;
+  justify-content: center;
+  border: none;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+}
+
+.user-header .name-user{
+  padding-top: 5px;
+  padding-right: 10px;
+}
+
+.cart-header .number-product-in-cart{
+  position: relative;
+  left : -12px;
+  bottom: 5px;
+  font-size: 18px;
+}
+
 .main-right-header{
   display: flex;
   flex-direction: row;
 }
 
-.icon-header{
+.main-right-header .search-header:hover {
+  background-color: rgb(252, 105, 0);
   cursor: pointer;
-  padding: 10px;
 }
 
-.icon-header:hover{
+.main-right-header .user-header:hover {
   background-color: rgb(252, 105, 0);
+  cursor: pointer;
+}
+
+.main-right-header .cart-header:hover {
+  background-color: rgb(252, 105, 0);
+  cursor: pointer;
+}
+
+
+.icon-header{
+  padding: 10px;
+  width: 36px;
+  cursor: pointer;
+}
+
+
+.header .btn-sign-out{
+  border-left: 1px solid black;
 }
 
 .icon-header:active{
