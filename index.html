@@ -32,6 +32,7 @@
     <script defer src="js/about.js"></script>
     <script defer src="js/switchPage.js"></script>
     <script defer src="js/addToCart.js" async></script>
+    <script defer src="js/loginuser-loginadmin.js"></script>
     <link rel="stylesheet" href="style/search.css">
 </head>
 
@@ -79,12 +80,20 @@
         </div>
         <div class="right-header">
             <div class="main-right-header">
-                <img src="img/icon-header/search.svg" alt="" class="icon-header search">
-                <div class="user">
+                <div class="search-header ">
+                    <img src="img/icon-header/search.svg" alt="" class="icon-header search">
+                </div>
+                <div class="user-header ">
                     <img src="img/icon-header/person.svg" alt="" class="icon-header person">
                     <div class="name-user"></div>
                 </div>
-                <img src="img/icon-header/cart.svg" alt="" class="icon-header cart">
+                <div class="cart-header ">
+                    <img src="img/icon-header/cart.svg" alt="" class="icon-header cart">
+                    <span class="number-product-in-cart">0</span>
+                </div>
+                <div class="sign-out">
+                    <img src="img/iconlogin/sign-out.svg" alt="" class="icon-header btn-sign-out hidden-form">
+                </div>
             </div>
             <img src="img/icon-header/side-bar.svg" alt="" class=" icon-header side-bar-header">
         </div>
@@ -104,11 +113,19 @@
                         <div class="exit">&times;</div>
                     </div>
                     <div class="row2 user-input  form-type">
-                        <label for="">Account name</label>
-                        <input type="text" id="accountname" class="input" placeholder="Enter account name">
-                        <label for="">Password</label>
-                        <input type="text" id="password" class="input" placeholder="Enter password">
+                        <div class="account">
+                            <label for="">Account name</label>
+                            <input type="text" id="accountname" class="input input-accountname"
+                                placeholder="Enter account name" maxlength="25">
+                        </div>
+                        <div class="password">
+                            <label for="">Password</label>
+                            <input type="password" id="password" class="input input-password"
+                                placeholder="Enter password" maxlength="25">
+                            <img src="img/iconlogin/hidden-pass.svg" alt="" class="hidden-password">
+                        </div>
                         <button class="btn-signin">Sign in</button>
+                        <div class="invalid-account hidden-form">asdasd</div>
                     </div>
                     <div class="switch-login">
                         <button class="btnn btn-login btn-active">Login</button>
@@ -127,6 +144,7 @@
                 <div class="row-1">
                     <div class="row-1-col-1">
                         Your Cart
+                        <span class="number-product-in-cart">(4)</span>
                     </div>
                     <div class="row-1-col-2 exit">
                         &times;
@@ -134,24 +152,7 @@
                 </div>
                 <div class="row-2">
                     <ul class="product-cart">
-                        <li class="item-cart">
-                            <img src="img/product/product-6.jpg" alt="" class="img-item-cart">
-                            <div class="infor-item-cart">
-                                <div class="name-item-cart">${name}</div>
-                                <div class="price-item-cart">$5000</div>
-                                <input type="number" class="quantity-item-cart" value="1">
-                            </div>
-                            <div class="remove-item-cart" id="remove-item-cart">&times;</div>
-                        </li>
-                        <li class="item-cart">
-                            <img src="img/product/product-6.jpg" alt="" class="img-item-cart">
-                            <div class="infor-item-cart">
-                                <div class="name-item-cart">${name}</div>
-                                <div class="price-item-cart">$5000</div>
-                                <input type="number" class="quantity-item-cart" value="1">
-                            </div>
-                            <div class="remove-item-cart" id="remove-item-cart">&times;</div>
-                        </li>
+                        <!-- product in cart -->
                     </ul>
                 </div>
                 <div class="row-3">

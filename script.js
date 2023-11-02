@@ -1,43 +1,19 @@
-let person =document.querySelector('.person');
+let person =document.querySelector('.user-header');
 let sectionForm = document.querySelector('.section-form');
 let overlayForm = document.querySelector('.overlay-form');
-let formType = document.querySelector('.form-type');
 let btnActive = document.querySelector('.btn-active');
-let btnLogin = document.querySelector('.btn-login');
-let btnRegister = document.querySelector('.btn-register');
+
 let input = document.querySelector('.input');
 let body = document.querySelector('body');
 let exitBtn = document.querySelectorAll('.exit');
 
-let formSignin = `
-      <label for="">Account name</label>
-      <input type="text" id="username" class="input" placeholder="Enter account name">
-      <label for="">Password</label>
-      <input type="text" id="password" class="input" placeholder="Enter password">
-      <button class="btn-signin">Sign in</button>
-`
-let formSignup = `
-      <label for="">User name</label>
-      <input type="text" id="username" class="input" placeholder="Enter user name">
-      <label for="">Account name</label>
-      <input type="text" id="address" class="input" placeholder="Enter account name">
-      <label for="">Password</label>
-      <input type="text" id="password" class="input" placeholder="Enter password">
-      <button class="btn-signin">Sign up</button>
-`
-
-function removeHiddenForm() {
-  sectionForm.classList.remove('hidden-form');
-}
-
-function addHiddenForm(){
-  sectionForm.classList.add('hidden-form');
-}
 
 person.addEventListener('click' ,
   function (){
-    sectionForm.classList.remove('hidden-form');
-    body.style.overflow = 'hidden';
+    if(sectionForm.classList.contains('hidden-form')){
+      sectionForm.classList.remove('hidden-form');
+      body.style.overflow = 'hidden';
+    }
   }
 );
 overlayForm.addEventListener('click' ,
@@ -59,27 +35,11 @@ for(exit of exitBtn) {
 )
 }
 
-btnLogin.addEventListener('click' ,
-  function (){
-    btnLogin.classList.add('btn-active');
-    btnRegister.classList.remove('btn-active');
-    formType.innerHTML = formSignin;
-  }
-)
-
-btnRegister.addEventListener('click' ,
-  function (){
-    btnLogin.classList.remove('btn-active');
-    btnRegister.classList.add('btn-active');
-    formType.innerHTML = formSignup;
-  }
-)
-
-let cart = document.querySelector('.cart');
+let cart = document.querySelector('.cart-header');
 let sectionCart = document.querySelector('.section-cart');
 let overlayScreen = document.querySelectorAll('.overlay');
 let formCart = document.querySelector('.form-cart');
-const search =document.querySelector('.search');
+const search =document.querySelector('.search-header');
 const sectionSearch =document.querySelector('.section-search');
 
 
@@ -104,7 +64,6 @@ for(overlay of overlayScreen){
     sectionCart.classList.add('hidden-form');
     sectionSearch.classList.add('hidden-form');
     body.style.overflow = '';
-
   }
 )
 }
