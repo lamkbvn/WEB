@@ -59,15 +59,23 @@
 
 function updateTotalPrice(){
   let priceItemCarts = document.querySelectorAll('.price-item-cart');
+  if(priceItemCarts  == null){
+    numberProductInCart[0].innerHTML = '0' ;
+    numberProductInCart[1].innerHTML = `0` ;
+    return ;
+  }
   let totalPrice = 0;
   for(let i = 0; i < priceItemCarts.length; i++){
     let price = Number(priceItemCarts[i].textContent.slice(1));
   totalPrice += price;
   }
   let changeTotalPrice = document.querySelector('.totalprice');
-  changeTotalPrice.innerHTML = '$'  +  totalPrice;
+  if(changeTotalPrice != null)
+    changeTotalPrice.innerHTML = '$'  +  totalPrice;
   let productCart = document.querySelector('.product-cart');
-  let itemCart = productCart.querySelectorAll('.item-cart');
+  let itemCart;
+  if(productCart.querySelectorAll('.item-cart') != null)
+    itemCart = productCart.querySelectorAll('.item-cart');
   numberProductInCart[0].innerHTML = itemCart.length ;
   numberProductInCart[1].innerHTML = `(${itemCart.length})` ;
 }
