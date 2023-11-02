@@ -1,0 +1,160 @@
+
+.section-search {
+
+}
+
+.container-search .overlay-search{
+  position: fixed;
+  top: 0;
+  bottom: 0;
+
+  width: 100%;
+  height: 100%;
+
+  z-index: 500;
+
+  background-color: black;
+
+  opacity: 0.6;
+  transition: transform 0.5s;
+}
+
+.container-search .form-search{
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+
+  z-index: 500;
+
+  width: 500px;
+  height: 100%;
+
+  background-color: white;
+
+  overflow: scroll;
+}
+
+.container-search .row-1{
+  display: flex;
+  align-items: center;
+  height: 70px;
+
+  text-align: center;
+  font-size: 18px;
+
+  border: none;
+
+  border-bottom: 1px solid gainsboro;
+}
+
+.container-search .row-1-col-1{
+    width: 450px;
+
+}
+
+.container-search .row-1-col-2{
+  flex : 1;
+  font-size: 35px;
+    color: #b7b1b1;
+  cursor: pointer;
+}
+
+.container-search .row-2{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding : 32px;
+
+  border: none;
+
+  border-bottom: 1px solid gainsboro;
+}
+
+.container-search #select-type-clothe{
+  width: 400px;
+  height: 50px;
+  padding: 12px;
+}
+
+.container-search .row-2-row-2{
+  display: flex;
+  width: 400px;
+  border: 1px solid black;
+
+  margin-top: 25px;
+}
+
+.container-search .content-search{
+    width : 350px;
+    height : 50px;
+    padding : 15px;
+
+    border: none;
+    outline: none;
+}
+
+.container-search .outline-btn-search{
+  flex: 1;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.container-search .btn-search{
+  width: 16px;
+  height: 16px;
+
+}
+
+.container-search .row-3{
+  padding: 18px;
+}
+
+.container-search .row-3-row-1{
+  margin-bottom: 15px;
+}
+
+.container-search .infor-product-search{
+  height: 150px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  border-top: 2px solid gainsboro;
+}
+
+.container-search .img-product-search{
+  width: 110px;
+}
+
+.container-search .text-product-search{
+  flex: 1;
+  padding-left: 30px;
+}
+
+.container-search .row-3-row-3{
+  font-size: 20px;
+  font-weight: bolder;
+
+  display: flex;
+  align-items: center;
+
+  width: 150px;
+  height: 50px;
+
+  cursor: pointer;
+}
+
+.container-search .row-3-row-3:hover .icon-view-more{
+  transform: translateX(10px);
+}
+
+.container-search .icon-view-more{
+  width: 30px;
+  height: 30px;
+  transition: transform 0.5s;
+}

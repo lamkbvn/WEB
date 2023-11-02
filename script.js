@@ -1,42 +1,19 @@
-let person =document.querySelector('.person');
+let person =document.querySelector('.user-header');
 let sectionForm = document.querySelector('.section-form');
 let overlayForm = document.querySelector('.overlay-form');
-let formType = document.querySelector('.form-type');
 let btnActive = document.querySelector('.btn-active');
-let btnLogin = document.querySelector('.btn-login');
-let btnRegister = document.querySelector('.btn-register');
+
 let input = document.querySelector('.input');
 let body = document.querySelector('body');
+let exitBtn = document.querySelectorAll('.exit');
 
-let formSignin = `
-      <label for="">Username</label>
-      <input type="text" id="username" class="input" placeholder="Enter username">
-      <label for="">Password</label>
-      <input type="text" id="password" class="input" placeholder="Enter password">
-      <button class="btn-signin">Sign in</button>
-`
-let formSignup = `
-      <label for="">Username</label>
-      <input type="text" id="username" class="input" placeholder="Enter username">
-      <label for="">Email address</label>
-      <input type="text" id="address" class="input" placeholder="Enter email address">
-      <label for="">Password</label>
-      <input type="text" id="password" class="input" placeholder="Enter password">
-      <button class="btn-signin">Sign up</button>
-`
-
-function removeHiddenForm() {
-  sectionForm.classList.remove('hidden-form');
-}
-
-function addHiddenForm(){
-  sectionForm.classList.add('hidden-form');
-}
 
 person.addEventListener('click' ,
   function (){
-    sectionForm.classList.remove('hidden-form');
-    body.style.overflow = 'hidden';
+    if(sectionForm.classList.contains('hidden-form')){
+      sectionForm.classList.remove('hidden-form');
+      body.style.overflow = 'hidden';
+    }
   }
 );
 overlayForm.addEventListener('click' ,
@@ -47,46 +24,23 @@ function (){
 }
 );
 
-btnLogin.addEventListener('click' ,
-  function (){
-    btnLogin.classList.add('btn-active');
-    btnRegister.classList.remove('btn-active');
-    formType.innerHTML = formSignin;
-  }
-)
-
-btnRegister.addEventListener('click' ,
-  function (){
-    btnLogin.classList.remove('btn-active');
-    btnRegister.classList.add('btn-active');
-    formType.innerHTML = formSignup;
-  }
-)
-const switchPageAbout = document.querySelector('.about');
-const pageMain = document.querySelector('.page-main');
-const pageAbout = document.querySelector('.page-about');
-const returnHome = document.querySelector('.return-home');
-
-
-switchPageAbout.addEventListener('click' ,
+for(exit of exitBtn) {
+  exit.addEventListener('click' ,
   function () {
-    pageMain.classList.add('hidden-form');
-    pageAbout.classList.remove('hidden-form');
+    sectionCart.classList.add('hidden-form');
+    sectionSearch.classList.add('hidden-form');
+    sectionForm.classList.add('hidden-form');
+    body.style.overflow = '';
   }
 )
+}
 
-returnHome.addEventListener('click' ,
-  function () {
-    pageMain.classList.remove('hidden-form');
-    pageAbout.classList.add('hidden-form');
-  }
-)
-
-let cart = document.querySelector('.cart');
+let cart = document.querySelector('.cart-header');
 let sectionCart = document.querySelector('.section-cart');
-let overlayCart = document.querySelector('.overlay-cart');
-let exitCart = document.querySelector('.row-1-col-2');
+let overlayScreen = document.querySelectorAll('.overlay');
 let formCart = document.querySelector('.form-cart');
+const search =document.querySelector('.search-header');
+const sectionSearch =document.querySelector('.section-search');
 
 
 
@@ -97,19 +51,25 @@ cart.addEventListener('click' ,
   }
 )
 
-overlayCart.addEventListener('click' ,
+search.addEventListener('click',
   function () {
-    sectionCart.classList.add('hidden-form');
-    body.style.overflow = '';
-
+    sectionSearch.classList.remove('hidden-form');
+    body.style.overflow = 'hidden';
   }
 )
 
-exitCart.addEventListener('click' ,
+for(overlay of overlayScreen){
+  overlay.addEventListener('click' ,
   function () {
     sectionCart.classList.add('hidden-form');
+    sectionSearch.classList.add('hidden-form');
     body.style.overflow = '';
   }
 )
+}
+
+
+
+
 
 

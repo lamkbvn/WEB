@@ -30,7 +30,10 @@
     <link rel="stylesheet" href="style/cart.css">
     <script defer src="script.js"></script>
     <script defer src="js/about.js"></script>
-
+    <script defer src="js/switchPage.js"></script>
+    <script defer src="js/addToCart.js" async></script>
+    <script defer src="js/loginuser-loginadmin.js"></script>
+    <link rel="stylesheet" href="style/search.css">
 </head>
 
 <body>
@@ -48,10 +51,9 @@
                         <a href="#" class="link-nav">Clothe</a>
                         <div class="dropdown">
                             <ul>
-                                <li><a href="" class="link-card">Blouses</a></li>
-                                <li><a href="" class="link-card">Jackets</a></li>
-                                <li><a href="" class="link-card">Shirts</a></li>
-                                <li><a href="" class="link-card">T-shirts</a></li>
+                                <li><a href="" class="link-card">Women</a></li>
+                                <li><a href="" class="link-card">Men</a></li>
+                                <li><a href="" class="link-card">Kids</a></li>
                             </ul>
                         </div>
                     </li>
@@ -65,42 +67,70 @@
                         </div>
                     </li>
                     <li class="nav-link blog">
-                        <a href="./blog.html" class="link-nav">Blog</a>
+                        <a href="" class="link-nav">Blog</a>
+                        <div class="dropdown">
+                            <ul>
+                                <li class="link-card blogs"><a href="#head-page">Blog</a></li>
+                                <li class="link-card"><a href="#head-page">Blog post</a></li>
+                            </ul>
+                        </div>
                     </li>
                 </ul>
             </div>
         </div>
         <div class="right-header">
             <div class="main-right-header">
-                <img src="img/icon-header/search.svg" alt="" class="icon-header search">
-                <img src="img/icon-header/person.svg" alt="" class="icon-header person">
-                <img src="img/icon-header/cart.svg" alt="" class="icon-header cart">
+                <div class="search-header ">
+                    <img src="img/icon-header/search.svg" alt="" class="icon-header search">
+                </div>
+                <div class="user-header ">
+                    <img src="img/icon-header/person.svg" alt="" class="icon-header person">
+                    <div class="name-user"></div>
+                </div>
+                <div class="cart-header ">
+                    <img src="img/icon-header/cart.svg" alt="" class="icon-header cart">
+                    <span class="number-product-in-cart">0</span>
+                </div>
+                <div class="sign-out">
+                    <img src="img/iconlogin/sign-out.svg" alt="" class="icon-header btn-sign-out hidden-form">
+                </div>
             </div>
             <img src="img/icon-header/side-bar.svg" alt="" class=" icon-header side-bar-header">
         </div>
     </div>
     <div id="head-page"></div>
+
     <!-- FORM LOGIN -->
     <section class="section-form hidden-form">
         <div class="form-login ">
-            <div class="overlay-form">
-            </div>
+            <div class="overlay-form"></div>
             <div class="form">
-                <div class="row1">
-                    <div class="announcement">
-                        Welcom to Shop Clothe
+                <div class="container">
+                    <div class="row1">
+                        <div class="announcement">
+                            Welcom to Shop Clothe
+                        </div>
+                        <div class="exit">&times;</div>
+                    </div>
+                    <div class="row2 user-input  form-type">
+                        <div class="account">
+                            <label for="">Account name</label>
+                            <input type="text" id="accountname" class="input input-accountname"
+                                placeholder="Enter account name" maxlength="25">
+                        </div>
+                        <div class="password">
+                            <label for="">Password</label>
+                            <input type="password" id="password" class="input input-password"
+                                placeholder="Enter password" maxlength="25">
+                            <img src="img/iconlogin/hidden-pass.svg" alt="" class="hidden-password">
+                        </div>
+                        <button class="btn-signin">Sign in</button>
+                        <div class="invalid-account hidden-form">asdasd</div>
                     </div>
                     <div class="switch-login">
                         <button class="btnn btn-login btn-active">Login</button>
                         <button class="btnn btn-register ">Register</button>
                     </div>
-                </div>
-                <div class="row2 user-input  form-type">
-                    <label for="">Username</label>
-                    <input type="text" id="username" class="input" placeholder="Enter username">
-                    <label for="">Password</label>
-                    <input type="text" id="password" class="input" placeholder="Enter password">
-                    <button class="btn-signin">Sign in</button>
                 </div>
             </div>
         </div>
@@ -109,70 +139,20 @@
     <!-- FORM CART -->
     <section class="section-cart hidden-form">
         <div class="container-cart">
-            <div class="overlay-cart"></div>
+            <div class="overlay-cart overlay"></div>
             <div class="form-cart">
                 <div class="row-1">
                     <div class="row-1-col-1">
                         Your Cart
+                        <span class="number-product-in-cart">(4)</span>
                     </div>
-                    <div class="row-1-col-2">
+                    <div class="row-1-col-2 exit">
                         &times;
                     </div>
                 </div>
                 <div class="row-2">
                     <ul class="product-cart">
-                        <li class="item-cart">
-                            <img src="img/product/product-6.jpg" alt="" class="img-item-cart">
-                            <div class="infor-item-cart">
-                                <div class="name-item-cart">Cotton floral print Dress</div>
-                                <div class="price-item-cart">$50</div>
-                                <select class="quantity-item-cart">
-                                    <option value="1">1</option>
-                                    <option value="1">2</option>
-                                    <option value="1">3</option>
-                                </select>
-                            </div>
-                            <div class="remove-item-cart">&times;</div>
-                        </li>
-                        <li class="item-cart">
-                            <img src="img/product/product-6.jpg" alt="" class="img-item-cart">
-                            <div class="infor-item-cart">
-                                <div class="name-item-cart">Cotton floral print Dress</div>
-                                <div class="price-item-cart">$50</div>
-                                <select class="quantity-item-cart">
-                                    <option value="1">1</option>
-                                    <option value="1">2</option>
-                                    <option value="1">3</option>
-                                </select>
-                            </div>
-                            <div class="remove-item-cart">&times;</div>
-                        </li>
-                        <li class="item-cart">
-                            <img src="img/product/product-6.jpg" alt="" class="img-item-cart">
-                            <div class="infor-item-cart">
-                                <div class="name-item-cart">Cotton floral print Dress</div>
-                                <div class="price-item-cart">$50</div>
-                                <select class="quantity-item-cart">
-                                    <option value="1">1</option>
-                                    <option value="1">2</option>
-                                    <option value="1">3</option>
-                                </select>
-                            </div>
-                            <div class="remove-item-cart">&times;</div>
-                        </li>
-                        <li class="item-cart">
-                            <img src="img/product/product-6.jpg" alt="" class="img-item-cart">
-                            <div class="infor-item-cart">
-                                <div class="name-item-cart">Cotton floral print Dress</div>
-                                <div class="price-item-cart">$50</div>
-                                <select class="quantity-item-cart">
-                                    <option value="1">1</option>
-                                    <option value="1">2</option>
-                                    <option value="1">3</option>
-                                </select>
-                            </div>
-                            <div class="remove-item-cart">&times;</div>
-                        </li>
+                        <!-- product in cart -->
                     </ul>
                 </div>
                 <div class="row-3">
@@ -192,9 +172,71 @@
             </div>
         </div>
     </section>
+    <!-- FORM SEARCH -->
+    <section class="section-search hidden-form">
+        <div class="container-search">
+            <div class="overlay-search overlay"></div>
+            <div class="form-search">
+                <div class="row-1">
+                    <div class="row-1-col-1">
+                        Search Product
+                    </div>
+                    <div class="row-1-col-2 exit">
+                        &times;
+                    </div>
+                </div>
 
+                <div class="row-2">
+                    <div class="row-2-row-1">
+                        <select name="" id="select-type-clothe">
+                            <option value="1">All Clothe</option>
+                            <option value="1">Women</option>
+                            <option value="1">Men</option>
+                            <option value="1">Kid</option>
+                        </select>
+                        <div class="row-2-row-2">
+                            <input type="text" class="content-search" placeholder="Enter name product ">
+                            <div class="outline-btn-search">
+                                <img src="img/icon-header/search.svg" alt="" class="btn-search">
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-    <section class="page-main" id="page-main">
+                <div class="row-3">
+                    <div class="row-3-row-1">
+                        Search result :
+                    </div>
+                    <div class="row-3-row-2">
+                        <div class="infor-product-search">
+                            <a href="product.html" class="infor-product-search">
+                                <img src="img/product/product-6.jpg" alt="" class="img-product-search">
+                                <div class="text-product-search">
+                                    <div class="name-product-search">Name product</div>
+                                    <div class="price-product-search">$50</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="infor-product-search">
+                            <a href="product.html" class="infor-product-search">
+                                <img src="img/product/product-6.jpg" alt="" class="img-product-search">
+                                <div class="text-product-search">
+                                    <div class="name-product-search">Name product</div>
+                                    <div class="price-product-search">$50</div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="row-3-row-3">
+                        View more <img src="img/show-page/arrow-right-short.svg" alt="" class="icon-view-more">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PAGE MAIN -->
+    <section class="page-main">
         <div class="select-page">
             <div class="to-page-women-img to-page">
                 <p class="name-page">Women</p>
@@ -305,103 +347,222 @@
 
                 </div>
                 <div id="top-items">
-                    <div class="card">
+                    <div class="card product-sale">
                         <div class="card-image">
-                            <a href="product.html">
+                            <div class="badge">
+                                <span class="sale-badge">SALE</span>
+                            </div>
+                            <a>
                                 <div class="action">
-                                    <button class="add-to-cart">Add to cart</button>
-                                    <button class="buy">Buy</button>
-                                </div>
-                                <img src="img/product/product-1.jpg" alt="top-month-sellers1">
-                            </a>
-                        </div>
-                        <div class="card-info">
-                            <div class="categories">Bags</div>
-                            <div class="product-name">Zip Bag</div>
-                            <div class="price">$50.00</div>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-image">
-                            <a href="product.html">
-                                <div class="action">
-                                    <button class="add-to-cart">Add to cart</button>
-                                    <button class="buy">Buy</button>
-                                </div>
-                                <img src="img/product/product-2.jpg" alt="top-month-sellers2">
-                            </a>
-                        </div>
-                        <div class="card-info">
-                            <div class="categories">Jeans</div>
-                            <div class="product-name">White Jeans</div>
-                            <div class="price">$60.00</div>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-image">
-                            <a href="product.html">
-                                <div class="action">
-                                    <button class="add-to-cart">Add to cart</button>
-                                    <button class="buy">Buy</button>
-                                </div>
-                                <img src="img/product/product-3.jpg" alt="top-month-sellers3">
-                            </a>
-                        </div>
-                        <div class="card-info">
-                            <div class="categories">Dresses</div>
-                            <div class="product-name">Yellow Dress</div>
-                            <div class="price">$45.50</div>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-image">
-                            <a href="product.html">
-                                <div class="action">
-                                    <button class="add-to-cart">Add to cart</button>
-                                    <button class="buy">Buy</button>
-                                </div>
-                                <img src="img/product/product-4.jpg" alt="top-month-sellers4">
-                            </a>
-                        </div>
-                        <div class="card-info">
-                            <div class="categories">Sweaters</div>
-                            <div class="product-name">Red Sweater</div>
-                            <div class="price">$69.99</div>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-image">
-                            <a href="product.html">
-                                <div class="action">
-                                    <button class="add-to-cart">Add to cart</button>
-                                    <button class="buy">Buy</button>
-                                </div>
-                                <img src="img/product/product-5.jpg" alt="top-month-sellers5">
-                            </a>
-                        </div>
-                        <div class="card-info">
-                            <div class="categories">Shoes</div>
-                            <div class="product-name">Leather Sandals</div>
-                            <div class="price">$129.00</div>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-image">
-                            <a href="product.html">
-                                <div class="action">
-                                    <button class="add-to-cart">Add to cart</button>
-                                    <button class="buy">Buy</button>
+                                    <button class="action-bt add-sale-to-cart">
+                                        Add to cart
+                                        <img src="img/icon-normal/add-to-cart-icon.svg" alt="">
+                                    </button>
+                                    <button class="action-bt">
+                                        Wishlist
+                                        <img src="img/icon-normal/wishlist-icon.svg" alt="">
+                                    </button>
                                 </div>
                                 <img src="img/product/product-6.jpg" alt="top-month-sellers6">
                             </a>
                         </div>
                         <div class="card-info">
-                            <div class="categories">Dresses</div>
-                            <div class="product-name">Floral Dress</div>
-                            <div class="price">$40.00</div>
+                            <div class="categories">
+                                <a class="categories-label" href="">
+                                    Dresses
+                                </a>
+                            </div>
+                            <div class="product-name product-sale-name">
+                                <a class="product-name-label" href="">
+                                    Pink Dress
+                                </a>
+                            </div>
+                            <div class="price">
+                                <span class="price-label product-normal-price">$40.00</span>
+                                <span class="sale-price-label product-sale-price">$35.00</span>
+                            </div>
                         </div>
                     </div>
-
+                    <div class="card product-sale">
+                        <div class="card-image">
+                            <div class="badge">
+                                <span class="sale-badge">SALE</span>
+                            </div>
+                            <a>
+                                <div class="action">
+                                    <button class="action-bt add-sale-to-cart">
+                                        Add to cart
+                                        <img src="img/icon-normal/add-to-cart-icon.svg" alt="">
+                                    </button>
+                                    <button class="action-bt">
+                                        Wishlist
+                                        <img src="img/icon-normal/wishlist-icon.svg" alt="">
+                                    </button>
+                                </div>
+                                <img src="img/product/product-6.jpg" alt="top-month-sellers6">
+                            </a>
+                        </div>
+                        <div class="card-info">
+                            <div class="categories">
+                                <a class="categories-label" href="">
+                                    Dresses 1
+                                </a>
+                            </div>
+                            <div class="product-name product-sale-name">
+                                <a class="product-name-label" href="">
+                                    Pink Dress 1
+                                </a>
+                            </div>
+                            <div class="price">
+                                <span class="price-label product-normal-price">$40.00</span>
+                                <span class="sale-price-label product-sale-price">$35.00</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card product-sale">
+                        <div class="card-image">
+                            <div class="badge">
+                                <span class="sale-badge">SALE</span>
+                            </div>
+                            <a>
+                                <div class="action">
+                                    <button class="action-bt add-sale-to-cart">
+                                        Add to cart
+                                        <img src="img/icon-normal/add-to-cart-icon.svg" alt="">
+                                    </button>
+                                    <button class="action-bt">
+                                        Wishlist
+                                        <img src="img/icon-normal/wishlist-icon.svg" alt="">
+                                    </button>
+                                </div>
+                                <img src="img/product/product-6.jpg" alt="top-month-sellers6">
+                            </a>
+                        </div>
+                        <div class="card-info">
+                            <div class="categories">
+                                <a class="categories-label" href="">
+                                    Dresses 2
+                                </a>
+                            </div>
+                            <div class="product-name product-sale-name">
+                                <a class="product-name-label" href="">
+                                    Pink Dress 2
+                                </a>
+                            </div>
+                            <div class="price">
+                                <span class="price-label product-normal-price">$40.00</span>
+                                <span class="sale-price-label product-sale-price">$35.00</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card product-sale">
+                        <div class="card-image">
+                            <div class="badge">
+                                <span class="sale-badge">SALE</span>
+                            </div>
+                            <a>
+                                <div class="action">
+                                    <button class="action-bt add-sale-to-cart">
+                                        Add to cart
+                                        <img src="img/icon-normal/add-to-cart-icon.svg" alt="">
+                                    </button>
+                                    <button class="action-bt">
+                                        Wishlist
+                                        <img src="img/icon-normal/wishlist-icon.svg" alt="">
+                                    </button>
+                                </div>
+                                <img src="img/product/product-6.jpg" alt="top-month-sellers6">
+                            </a>
+                        </div>
+                        <div class="card-info">
+                            <div class="categories">
+                                <a class="categories-label" href="">
+                                    Dresses 3
+                                </a>
+                            </div>
+                            <div class="product-name product-sale-name">
+                                <a class="product-name-label" href="">
+                                    Pink Dress 3
+                                </a>
+                            </div>
+                            <div class="price">
+                                <span class="price-label product-normal-price">$40.00</span>
+                                <span class="sale-price-label product-sale-price">$35.00</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card product-sale">
+                        <div class="card-image">
+                            <div class="badge">
+                                <span class="sale-badge">SALE</span>
+                            </div>
+                            <a>
+                                <div class="action">
+                                    <button class="action-bt add-sale-to-cart">
+                                        Add to cart
+                                        <img src="img/icon-normal/add-to-cart-icon.svg" alt="">
+                                    </button>
+                                    <button class="action-bt">
+                                        Wishlist
+                                        <img src="img/icon-normal/wishlist-icon.svg" alt="">
+                                    </button>
+                                </div>
+                                <img src="img/product/product-6.jpg" alt="top-month-sellers6">
+                            </a>
+                        </div>
+                        <div class="card-info">
+                            <div class="categories">
+                                <a class="categories-label" href="">
+                                    Dresses 4
+                                </a>
+                            </div>
+                            <div class="product-name product-sale-name">
+                                <a class="product-name-label" href="">
+                                    Pink Dress 4
+                                </a>
+                            </div>
+                            <div class="price">
+                                <span class="price-label product-normal-price">$40.00</span>
+                                <span class="sale-price-label product-sale-price">$35.00</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card product-sale">
+                        <div class="card-image">
+                            <div class="badge">
+                                <span class="sale-badge">SALE</span>
+                            </div>
+                            <a>
+                                <div class="action">
+                                    <button class="action-bt add-sale-to-cart">
+                                        Add to cart
+                                        <img src="img/icon-normal/add-to-cart-icon.svg" alt="">
+                                    </button>
+                                    <button class="action-bt">
+                                        Wishlist
+                                        <img src="img/icon-normal/wishlist-icon.svg" alt="">
+                                    </button>
+                                </div>
+                                <img src="img/product/product-6.jpg" alt="top-month-sellers6">
+                            </a>
+                        </div>
+                        <div class="card-info">
+                            <div class="categories">
+                                <a class="categories-label" href="">
+                                    Dresses 5
+                                </a>
+                            </div>
+                            <div class="product-name product-sale-name">
+                                <a class="product-name-label" href="">
+                                    Pink Dress 5
+                                </a>
+                            </div>
+                            <div class="price">
+                                <span class="price-label product-normal-price">$40.00</span>
+                                <span class="sale-price-label product-sale-price">$35.00</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="more-items">
                     <a href="">Discover more</a>
@@ -411,7 +572,8 @@
 
     </section>
 
-    <section class="page-about hidden-form" id="page-about">
+    <!-- PAGE ABOUT -->
+    <section class="page-about hidden-form">
         <div class="section-0">
             <div class="container">
                 <span class="return-home"><a href="#head-page">Home</a></span>&nbsp;&nbsp;>&nbsp;&nbsp;About
