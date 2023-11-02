@@ -44,11 +44,6 @@
         name : productSaleName,
         price : productSalePrice
       }
-
-      if(account[indexAccountnameCur].cart == null)
-      {
-        account[indexAccountnameCur].cart =[];
-      }
       account[indexAccountnameCur].cart.unshift(updateCartUSer);
       loadDataCart();
       }
@@ -59,26 +54,25 @@
 
 
 function updateTotalPrice(){
-  let priceItemCarts = document.querySelectorAll('.price-item-cart');
-  if(priceItemCarts  == null){
+  let changeTotalPrice = document.querySelector('.totalprice');
+  if(document.querySelectorAll('.item-cart')== null){
+    changeTotalPrice.innerHTML = '0';
     numberProductInCart[0].innerHTML = '0' ;
     numberProductInCart[1].innerHTML = `0` ;
     return ;
   }
+
+  let itemCart = document.querySelectorAll('.item-cart');
+  let priceItemCarts = document.querySelectorAll('.price-item-cart');
   let totalPrice = 0;
   for(let i = 0; i < priceItemCarts.length; i++){
     let price = Number(priceItemCarts[i].textContent.slice(1));
   totalPrice += price;
   }
-  let changeTotalPrice = document.querySelector('.totalprice');
   if(changeTotalPrice != null)
     changeTotalPrice.innerHTML = '$'  +  totalPrice;
-  let productCart = document.querySelector('.product-cart');
-  let itemCart;
-  if(productCart.textContent == null)
-    return;
-  itemCart = productCart.querySelectorAll('.item-cart');
-  numberProductInCart[0].innerHTML = itemCart.length ;
+
+  numberProductInCart[0].innerHTML = `${itemCart.length}` ;
   numberProductInCart[1].innerHTML = `(${itemCart.length})` ;
 }
 
@@ -93,7 +87,9 @@ function removeItemCart(event) {
 function loadDataCart(){
   if(account[indexAccountnameCur].cart == null)
     return;
+  ///delete all data old
   productCart.innerHTML = '';
+  ////load data new
   for(let i = 0 ; i < account[indexAccountnameCur].cart.length ; i++)
   {
     let newItemCart = document.createElement('li');
