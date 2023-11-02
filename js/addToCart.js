@@ -23,12 +23,13 @@
     function addSaleToCart(event) {
       if(isSignIn){
         let btnAddClicked = event.target;
+        //get infor name and price of product
       let parentBtnAdd =btnAddClicked.parentElement.parentElement.parentElement.parentElement.parentElement;
       let productSaleName =parentBtnAdd.querySelector('.product-sale-name').textContent.trim();
       let productSalePrice = parentBtnAdd.querySelector('.product-sale-price').textContent;
       let productCart = document.querySelector('.product-cart');
       let itemCart = productCart.querySelectorAll('.item-cart');
-      // console.log(productSaleName ,productSalePrice);
+
       for(let i = 0; i < itemCart.length; i++){
         let name = itemCart[i].querySelector('.name-item-cart').textContent;
         let price = itemCart[i].querySelector('.price-item-cart').textContent;
@@ -74,8 +75,9 @@ function updateTotalPrice(){
     changeTotalPrice.innerHTML = '$'  +  totalPrice;
   let productCart = document.querySelector('.product-cart');
   let itemCart;
-  if(productCart.querySelectorAll('.item-cart') != null)
-    itemCart = productCart.querySelectorAll('.item-cart');
+  if(productCart.textContent == null)
+    return;
+  itemCart = productCart.querySelectorAll('.item-cart');
   numberProductInCart[0].innerHTML = itemCart.length ;
   numberProductInCart[1].innerHTML = `(${itemCart.length})` ;
 }
