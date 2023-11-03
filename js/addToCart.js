@@ -41,10 +41,15 @@
         //get infor name and price of product
       let parentBtnAdd =btnAddClicked.parentElement.parentElement.parentElement.parentElement.parentElement;
       let productSaleName =parentBtnAdd.querySelector('.product-sale-name').textContent.trim();
-      let productSalePrice = parentBtnAdd.querySelector('.product-sale-price').textContent;
+      let typeSale = parentBtnAdd.querySelector('.sale-badge');
+      let productSalePrice;
+      if(typeSale.textContent == 'SALE')
+        productSalePrice  = parentBtnAdd.querySelector('.product-sale-price').textContent;
+      if(typeSale.textContent == 'NORMAL')
+        productSalePrice  = parentBtnAdd.querySelector('.product-normal-price').textContent;
+      console.log(typeSale.textContent);
       let productCart = document.querySelector('.product-cart');
       let itemCart = productCart.querySelectorAll('.item-cart');
-
       for(let i = 0; i < itemCart.length; i++){
         let name = itemCart[i].querySelector('.name-item-cart').textContent;
         let price = itemCart[i].querySelector('.price-item-cart').textContent;

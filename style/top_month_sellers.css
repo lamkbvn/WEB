@@ -159,6 +159,11 @@
     opacity: 1;
 }
 
+#top-items .card .card-image a {
+    width: 300px !important;
+    height: 300px !important;
+}
+
 #top-items .card .card-info {
     background-color: #fdfdfd;
     flex-grow: 1;
