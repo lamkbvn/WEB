@@ -13,6 +13,21 @@
       btnRemove.addEventListener('click',removeItemCart);
     }
 
+    function removeItemCart(event) {
+      let btnRemoveClicked = event.target;
+      let nameProductRemove = btnRemoveClicked.parentElement.querySelector('.name-item-cart').textContent;
+      for(let i = 0; i < account[indexAccountnameCur].cart.length; i++) {
+        if(nameProductRemove == account[indexAccountnameCur].cart[i].name){
+          for(let j = i ; j <  account[indexAccountnameCur].cart.length - 1; j++)
+            account[indexAccountnameCur].cart[j] = account[indexAccountnameCur].cart[j+1];
+          account[indexAccountnameCur].cart.pop();
+          break;
+        }
+      }
+      btnRemoveClicked.parentElement.remove();
+      updateTotalPrice();
+    }
+
     let addSalesToCart = document.querySelectorAll('.add-sale-to-cart');
     for(let i = 0; i < addSalesToCart.length; i++){
       let btnAddSaletoCart = addSalesToCart[i];
@@ -42,7 +57,8 @@
 
       let updateCartUSer = {
         name : productSaleName,
-        price : productSalePrice
+        price : productSalePrice,
+        quantity : 1
       }
       account[indexAccountnameCur].cart.unshift(updateCartUSer);
       loadDataCart();
@@ -54,35 +70,30 @@
 
 
 function updateTotalPrice(){
-  let changeTotalPrice = document.querySelector('.totalprice');
   if(document.querySelectorAll('.item-cart') == null){
     changeTotalPrice.innerHTML = '0';
     numberProductInCart[0].innerHTML = '0' ;
     numberProductInCart[1].innerHTML = `0` ;
+    return;
   }
-  else{
+
+  let changeTotalPrice = document.querySelector('.totalprice');
   let itemCart = document.querySelectorAll('.item-cart');
   let priceItemCarts = document.querySelectorAll('.price-item-cart');
+  let quantityItemCarts = document.querySelectorAll('.quantity-item-cart');
   let totalPrice = 0;
   for(let i = 0; i < priceItemCarts.length; i++){
-    let price = Number(priceItemCarts[i].textContent.slice(1));
-  totalPrice += price;
+    let price = Number(priceItemCarts[i].textContent.slice(1)) * Number(quantityItemCarts[i].textContent);
+    totalPrice += price;
   }
-  if(changeTotalPrice != null)
-    changeTotalPrice.innerHTML = '$'  +  totalPrice;
-
+  changeTotalPrice.innerHTML = '$'  +  totalPrice;
   numberProductInCart[0].innerHTML = `${itemCart.length}` ;
   numberProductInCart[1].innerHTML = `(${itemCart.length})` ;
-}
 }
 
 updateTotalPrice();
         
-function removeItemCart(event) {
-  let btnRemoveClicked = event.target;
-  btnRemoveClicked.parentElement.remove();
-  updateTotalPrice();
-}
+
 
 function loadDataCart(){
   if(account[indexAccountnameCur].cart == null)
@@ -99,15 +110,64 @@ function loadDataCart(){
     <div class="infor-item-cart">
         <div class="name-item-cart">${account[indexAccountnameCur].cart[i].name}</div>
         <div class="price-item-cart">${account[indexAccountnameCur].cart[i].price}</div>
-        <input type="number" class="quantity-item-cart" value="1">
+        <div class="edit-quantity">
+          <img src="img/iconcart/minus.svg" alt="" class="btn-edit-quantity minus">
+          <div class="quantity-item-cart">
+            ${account[indexAccountnameCur].cart[i].quantity}
+          </div>
+          <img src="img/iconcart/plus.svg" alt="" class="btn-edit-quantity plus">
+        </div>
     </div>
     <div class="remove-item-cart" id="remove-item-cart">&times;</div>`;
     newItemCart.querySelector('.remove-item-cart').addEventListener('click',removeItemCart);
+    newItemCart.querySelector('.minus').addEventListener('click',minusQuantityClick);
+    newItemCart.querySelector('.plus').addEventListener('click',plusQuantityClick);
     productCart.insertAdjacentElement('beforeend' ,newItemCart);
     updateTotalPrice();
   }
 }
 
+let minusQuantity = document.querySelectorAll('.minus');
+let plusQuantity = document.querySelectorAll('.plus');
+
+
+for( let i =0; i < minusQuantity.length ; i++) {
+  minusQuantity[i].addEventListener('click',minusQuantityClick);
+  plusQuantity[i].addEventListener('click',plusQuantityClick);
+}
+
+
+function minusQuantityClick(event){
+  let btnMinus = event.target;
+  let parenBtnMinus =btnMinus.parentElement;
+  let quantitys = parenBtnMinus.querySelector('.quantity-item-cart');
+  let cvQuantitysNumber = Number(quantitys.textContent);
+  if( cvQuantitysNumber == 0)
+    return;
+  --cvQuantitysNumber;
+  quantitys.innerHTML = `${cvQuantitysNumber}`;
+  updateQuantityClick();
+  updateTotalPrice();
+}
+
+function plusQuantityClick(event) {
+  let btnPlus = event.target;
+  let parenBtnPlus =btnPlus.parentElement;
+  let quantitys = parenBtnPlus.querySelector('.quantity-item-cart');
+  let cvQuantitysNumber = Number(quantitys.textContent);
+  ++cvQuantitysNumber;
+  quantitys.innerHTML = `${cvQuantitysNumber}`;
+  updateQuantityClick();
+  updateTotalPrice();
+}
+
+function updateQuantityClick(){
+  let minusQuantity1 = document.querySelectorAll('.minus');
+  let Quantity1 = document.querySelectorAll('.quantity-item-cart');
+  for( let i =0; i < minusQuantity1.length ; i++) {
+    account[indexAccountnameCur].cart[i].quantity = Quantity1[i].textContent;
+  }
+}
 
 
 
