@@ -37,8 +37,12 @@
 
 
     function addSaleToCart(event) {
-      if(isSignIn){
-        let btnAddClicked = event.target;
+      if(!isSignIn)
+        {
+          alert('Please Sign in');
+          return;
+        }
+      let btnAddClicked = event.target;
         //get infor name and price of product
       let parentBtnAdd =btnAddClicked.parentElement.parentElement.parentElement.parentElement.parentElement;
       let productSaleName =parentBtnAdd.querySelector('.product-sale-name').textContent.trim();
@@ -48,7 +52,6 @@
         productSalePrice  = parentBtnAdd.querySelector('.product-sale-price').textContent;
       if(typeSale.textContent == 'NORMAL')
         productSalePrice  = parentBtnAdd.querySelector('.product-normal-price').textContent;
-      console.log(typeSale.textContent);
       let productCart = document.querySelector('.product-cart');
       let itemCart = productCart.querySelectorAll('.item-cart');
       for(let i = 0; i < itemCart.length; i++){
@@ -66,14 +69,11 @@
         price : productSalePrice,
         quantity : 1
       }
-      account[indexAccountnameCur].cart.unshift(updateCartUSer);
+      if(indexAccountnameCur != -1)
+        account[indexAccountnameCur].cart.unshift(updateCartUSer);
       loadDataCart();
       saveData();
       }
-      else{
-        alert('Please Sign in');
-      }
-    }
 
 
 function updateTotalPrice(){
@@ -103,7 +103,7 @@ updateTotalPrice();
 
 
 function loadDataCart(){
-  if(account[indexAccountnameCur].cart == null)
+  if(indexAccountnameCur == -1)
     return;
   ///delete all data old
   productCart.innerHTML = '';

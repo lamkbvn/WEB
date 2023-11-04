@@ -69,10 +69,10 @@ let btnSignIn = document.querySelector('.btn-signin');
 let nameUser = document.querySelector('.name-user');
 let btnSignOut = document.querySelector('.btn-sign-out');
 
-let indexAccountnameCur = localStorage.getItem("indexAccountnameCur") || -1;
-let isSignIn =Boolean(localStorage.getItem("isSignIn")) || false;
+let indexAccountnameCur = JSON.parse(localStorage.getItem("indexAccountnameCur")) || -1;
+let isSignIn = Boolean(JSON.parse(localStorage.getItem("isSignIn"))) || false;
 
-if(isSignIn && indexAccountnameCur != -1){
+if(indexAccountnameCur != -1){
             body.style.overflow = '';
             nameUser.innerHTML = account[indexAccountnameCur].username;
             btnSignOut.classList.remove('hidden-form');
@@ -83,15 +83,16 @@ btnSignIn.addEventListener('click',enterPage);
 
 function enterPage(){
   invalidAccount.classList.remove('hidden-form');
-  if(account.length == 0){
-    invalidAccount.innerHTML ='Account name no exist/';
-    return;
-  }
   if(inputAccountName.value =='' || inputPassword.value == '')
   {
     invalidAccount.innerHTML = 'You must enter account name and password before chose sign in';
+    return;
   }
-  else{
+  if(!AccountNameExist())
+  {
+    invalidAccount.innerHTML ='Account name no exist/';
+    return;
+  }
     for(let i = 0; i < account.length; i++){
       if(account[i].accountname == inputAccountName.value && account[i].password == inputPassword.value)
           {
@@ -109,17 +110,18 @@ function enterPage(){
             localStorage.setItem("isSignIn", isSignIn);
           }
       else{
-        if(account[i].accountname != inputAccountName.value && account[i].password == inputPassword.value)
-          invalidAccount.innerHTML ='Account name no exist/';
-        else
         if( account[i].accountname == inputAccountName.value && account[i].password != inputPassword.value)
           invalidAccount.innerHTML ='Password wrong/';
-        else{
-          invalidAccount.innerHTML ='Account name and Password Wrong/';
-        }
       }
     }
-  }
+  
+}
+
+function AccountNameExist(){
+  for(let i = 0; i < account.length; i++)
+    if(account[i].accountname == inputAccountName.value)
+      return true;
+  return false;
 }
 
 let hiddenPass = true;
