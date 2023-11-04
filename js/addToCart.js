@@ -26,6 +26,7 @@
       }
       btnRemoveClicked.parentElement.remove();
       updateTotalPrice();
+      saveData();
     }
 
     let addSalesToCart = document.querySelectorAll('.add-sale-to-cart');
@@ -67,6 +68,7 @@
       }
       account[indexAccountnameCur].cart.unshift(updateCartUSer);
       loadDataCart();
+      saveData();
       }
       else{
         alert('Please Sign in');

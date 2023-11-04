@@ -58,14 +58,7 @@ btnRegister.addEventListener('click' ,
   }
 )
 
-const account = [
-  {
-    username : 'mai phuc lam',
-    accountname : 'lampro',
-    password : '123',
-    cart : []
-  }
-];
+const account = JSON.parse(localStorage.getItem("account")) || [];
 
 let formLogin = document.querySelector('.form');
 let inputAccountName =  document.querySelector('.input-accountname');
@@ -76,13 +69,24 @@ let btnSignIn = document.querySelector('.btn-signin');
 let nameUser = document.querySelector('.name-user');
 let btnSignOut = document.querySelector('.btn-sign-out');
 
-let indexAccountnameCur;
-let isSignIn = false;
+let indexAccountnameCur = localStorage.getItem("indexAccountnameCur") || -1;
+let isSignIn =Boolean(localStorage.getItem("isSignIn")) || false;
+
+if(isSignIn){
+            body.style.overflow = '';
+            nameUser.innerHTML = account[indexAccountnameCur].username;
+            btnSignOut.classList.remove('hidden-form');
+            loadDataCart();
+}
 
 btnSignIn.addEventListener('click',enterPage);
 
 function enterPage(){
   invalidAccount.classList.remove('hidden-form');
+  if(account.length == 0){
+    invalidAccount.innerHTML ='Account name no exist/';
+    return;
+  }
   if(inputAccountName.value =='' || inputPassword.value == '')
   {
     invalidAccount.innerHTML = 'You must enter account name and password before chose sign in';
@@ -101,10 +105,12 @@ function enterPage(){
             indexAccountnameCur = i;
             isSignIn = true;
             loadDataCart();
+            localStorage.setItem("indexAccountnameCur", indexAccountnameCur);
+            localStorage.setItem("isSignIn", isSignIn);
           }
       else{
         if(account[i].accountname != inputAccountName.value && account[i].password == inputPassword.value)
-          invalidAccount.innerHTML ='Account name wrong/';
+          invalidAccount.innerHTML ='Account name no exist/';
         else
         if( account[i].accountname == inputAccountName.value && account[i].password != inputPassword.value)
           invalidAccount.innerHTML ='Password wrong/';
@@ -144,8 +150,11 @@ function signOutNow(){
   invalidAccount.classList.add('hidden-form');
   indexAccountnameCur = -1;
   isSignIn =false;
+  localStorage.setItem("indexAccountnameCur", indexAccountnameCur);
+  localStorage.setItem("isSignIn", isSignIn);
   productCart.innerHTML = '';
   updateTotalPrice();
+  saveData();
 }
 
 // SIGN UP
@@ -183,6 +192,10 @@ function signUp(){
       invalidAccount.innerHTML = 'Enter full infor of you before sign up';
       return;
     }
+  if(!checkAccountNameSignUp(inputAccountName.value)){
+    invalidAccount.innerHTML = 'Account name accept a->z , A->Z , 0->9 ';
+    return;
+  }
   let newAccount = {
     username : inputUsername.value,
     accountname : inputAccountName.value,
@@ -198,11 +211,21 @@ function signUp(){
       }
 
   account.push(newAccount);
+  saveData();
   invalidAccount.innerHTML = 'Sign up sucess.Return Login';
 }
 
+function checkAccountNameSignUp(inputAccountName){
+    for(let i = 0; i < inputAccountName.length; i++){
+      let c = inputAccountName.charCodeAt(i);
+      if( c <= 47 || (c >= 58 && c <= 64) || (c >= 91 && c <= 96) || c >= 123)
+        return 0;
+    }
+    return 1;
+}
 
 
-
-
-
+function saveData() {
+  localStorage.removeItem("account");
+  localStorage.setItem("account", JSON.stringify(account));
+}
