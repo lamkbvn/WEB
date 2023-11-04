@@ -72,7 +72,7 @@ let btnSignOut = document.querySelector('.btn-sign-out');
 let indexAccountnameCur = localStorage.getItem("indexAccountnameCur") || -1;
 let isSignIn =Boolean(localStorage.getItem("isSignIn")) || false;
 
-if(isSignIn){
+if(isSignIn && indexAccountnameCur != -1){
             body.style.overflow = '';
             nameUser.innerHTML = account[indexAccountnameCur].username;
             btnSignOut.classList.remove('hidden-form');
