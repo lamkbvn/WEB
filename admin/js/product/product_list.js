@@ -40,9 +40,9 @@ function showproduct() {
         newRow.appendChild(cell1);
         newRow.appendChild(cell2);
         newRow.appendChild(cell3);
+        newRow.appendChild(cell6);
         newRow.appendChild(cell4);
         newRow.appendChild(cell5);
-        newRow.appendChild(cell6);
         newRow.appendChild(cell7);
         newRow.appendChild(cell8);
 
