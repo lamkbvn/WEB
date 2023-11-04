@@ -69,7 +69,7 @@ let btnSignIn = document.querySelector('.btn-signin');
 let nameUser = document.querySelector('.name-user');
 let btnSignOut = document.querySelector('.btn-sign-out');
 
-let indexAccountnameCur = JSON.parse(localStorage.getItem("indexAccountnameCur")) || -1;
+let indexAccountnameCur = localStorage.getItem("indexAccountnameCur")|| -1;
 let isSignIn = Boolean(JSON.parse(localStorage.getItem("isSignIn"))) || false;
 
 if(indexAccountnameCur != -1){
