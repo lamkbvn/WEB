@@ -58,7 +58,7 @@ btnRegister.addEventListener('click' ,
   }
 )
 
-const account = JSON.parse(localStorage.getItem("account")) || [];
+const account =[];
 
 let formLogin = document.querySelector('.form');
 let inputAccountName =  document.querySelector('.input-accountname');
@@ -69,8 +69,8 @@ let btnSignIn = document.querySelector('.btn-signin');
 let nameUser = document.querySelector('.name-user');
 let btnSignOut = document.querySelector('.btn-sign-out');
 
-let indexAccountnameCur = localStorage.getItem("indexAccountnameCur")|| -1;
-let isSignIn = Boolean(JSON.parse(localStorage.getItem("isSignIn"))) || false;
+let indexAccountnameCur = -1;
+let isSignIn = false;
 
 if(indexAccountnameCur != -1){
             body.style.overflow = '';
@@ -156,7 +156,6 @@ function signOutNow(){
   localStorage.setItem("isSignIn", isSignIn);
   productCart.innerHTML = '';
   updateTotalPrice();
-  saveData();
 }
 
 // SIGN UP
@@ -213,7 +212,6 @@ function signUp(){
       }
 
   account.push(newAccount);
-  saveData();
   invalidAccount.innerHTML = 'Sign up sucess.Return Login';
 }
 
@@ -224,10 +222,4 @@ function checkAccountNameSignUp(inputAccountName){
         return 0;
     }
     return 1;
-}
-
-
-function saveData() {
-  localStorage.removeItem("account");
-  localStorage.setItem("account", JSON.stringify(account));
 }

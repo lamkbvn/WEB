@@ -1,0 +1,299 @@
+.main{
+  
+}
+
+body{
+  height: 700px;
+}
+
+.page-cart .back-home{
+  margin-left: 250px;
+  margin-right: 250px;
+  font-size: 16px;
+}
+
+.page-cart .name-page-cart{
+  font-size: 36px;
+  width: 100%;
+  text-align: center;
+  padding: 32px;
+}
+
+.page-cart .product-in-cart{
+  width: 100%;
+  display: flex;
+  justify-items: center;
+}
+
+.page-cart .product-in-cart .container{
+  width: 1100px;
+  height: 400px;
+  display: flex;
+  justify-content: space-around;
+
+
+}
+
+.page-cart .product-in-cart .table-product{
+  width: 650px;
+  display: flex;
+  flex-direction: column;
+  
+  font-size: 20px;
+}
+
+.page-cart .product-in-cart .table-product .item-table{
+  width: 100%;
+  height: 200px;
+  display: flex;
+  padding: 16px;
+
+  border-bottom: 1px solid gainsboro;
+}
+
+.page-cart .product-in-cart .table-product img{
+  width: 150px;
+  height: 150px;
+
+  object-position: -10px;
+}
+
+.page-cart  .product-in-cart .table-product .infor-product{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.page-cart  .product-in-cart .table-product .quantity-product{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 20px;
+}
+
+.page-cart  .product-in-cart .table-product .edit-quantity{
+  display: flex;
+  align-items: center;
+  column-gap: 5px;
+  width: 350px;
+}
+
+.page-cart  .product-in-cart .table-product .btn-edit-quantity{
+  width: 16px;
+  height: 16px;
+  object-position: 0;
+  cursor: pointer;
+  border: 1px solid black;
+}
+
+.page-cart  .product-in-cart .table-product .remove-item{
+  cursor: pointer;
+}
+
+.page-cart  .product-in-cart .table-product .code-sale{
+  margin-top: 30px;
+}
+
+.page-cart  .product-in-cart .table-product .code-sale input{
+  height: 50px;
+  padding: 16px;
+}
+
+.page-cart  .product-in-cart .table-product .container-code{
+  display: flex;
+}
+
+.page-cart  .product-in-cart .table-product .btn-apply{
+  border: 1px solid black;
+  width: 80px;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-left: 20px;
+  cursor: pointer;
+}
+
+.page-cart  .product-in-cart .table-product .btn-apply:hover{
+  background-color: black;
+  color: white;
+}
+
+
+
+.page-cart .product-in-cart .table-checkout{
+  width: 320px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.product-in-cart .table-checkout .row-1{
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid gray;
+  width: 100%;
+  height: 60px;
+
+  padding: 16px;
+}
+
+.product-in-cart .table-checkout .text-row-1{
+  display: flex;
+  font-size: 16px;
+  height: 60px;
+}
+
+.product-in-cart .table-checkout .btn-checkout{
+  width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+  transition: all 0.5s;
+}
+
+.product-in-cart .table-checkout .btn-checkout:hover{
+  background-color: black;
+  color: white;
+  cursor: pointer;
+}
+
+.page-cart .checkout{
+  position:fixed;
+  top: 0;
+  left : 0;
+  width: 100%;
+  height: 100%;
+
+  z-index: 20;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.page-cart .overlay{
+  position:absolute;
+  top: 0;
+  left : 0;
+  background-color: black;
+  opacity: 0.7;
+  width: 100%;
+  height: 100%;
+}
+
+.page-cart .form-checkout{
+  position: absolute;
+  width: 600px;
+  height: 650px;
+
+  background-color: rgb(255, 255, 255);
+
+  z-index: 20;
+
+  
+}
+
+.page-cart .form-checkout .exit-form{
+  font-size: 25px;
+  position :fixed;
+  top: 20px;
+  right:  470px;
+  cursor: pointer;
+}
+
+.page-cart .form-checkout .container{
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+.page-cart .form-checkout input{
+  height: 40px;
+  padding: 10px;
+  width: 200px;
+  margin-bottom: 10px;
+}
+
+.page-cart .name-guest{
+  display: flex;
+  column-gap: 10px;
+}
+
+.page-cart .infor-guest input{
+  width: 410px;
+  margin-bottom: 10px;
+}
+
+.page-cart td{
+  border: 1px solid;
+  padding: 12px;
+  font-size: 14px;
+}
+
+.page-cart .select-td{
+  display: flex;
+  align-items: center;
+  width: 150px;
+  height: 100%;
+}
+
+.page-cart td input[type = "radio"]{
+  width: 16px;
+}
+
+.page-cart td .text{
+  text-align: center;
+  width: 100px;
+}
+
+.page-cart .form-checkout .btn-checkout{
+  width: 300px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+  transition: all 0.5s;
+  margin-top: 12px;
+}
+
+.page-cart .form-checkout .btn-checkout:hover{
+  background-color: black;
+  color: white;
+  cursor: pointer;
+}
+
+.page-cart .code-update{
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+}
+
+.page-cart .btn-update{
+  width: 150px;
+  height: 50px;
+  border: 1px solid black;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.page-cart .btn-update:hover{
+  background-color: black;
+  color: white;
+  cursor: pointer;
+}
+
+
+.page-cart .hidden-form{
+  display: none;
+}

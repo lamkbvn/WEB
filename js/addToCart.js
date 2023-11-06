@@ -26,11 +26,11 @@
       }
       btnRemoveClicked.parentElement.remove();
       updateTotalPrice();
-      saveData();
+      loadProductCart();
     }
 
-    let addSalesToCart = document.querySelectorAll('.add-sale-to-cart');
-    for(let i = 0; i < addSalesToCart.length; i++){
+  let addSalesToCart = document.querySelectorAll('.add-sale-to-cart');
+  for(let i = 0; i < addSalesToCart.length; i++){
       let btnAddSaletoCart = addSalesToCart[i];
       btnAddSaletoCart.addEventListener('click',addSaleToCart);
     }
@@ -72,7 +72,6 @@
       if(indexAccountnameCur != -1)
         account[indexAccountnameCur].cart.unshift(updateCartUSer);
       loadDataCart();
-      saveData();
       }
 
 
