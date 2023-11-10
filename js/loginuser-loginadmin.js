@@ -71,28 +71,34 @@ let btnSignOut = document.querySelector('.btn-sign-out');
 
 let indexAccountnameCur = -1;
 let isSignIn = false;
-
-if(indexAccountnameCur != -1){
-            body.style.overflow = '';
-            nameUser.innerHTML = account[indexAccountnameCur].username;
-            btnSignOut.classList.remove('hidden-form');
-            loadDataCart();
-}
+let isSignInAdmin = false;
 
 btnSignIn.addEventListener('click',enterPage);
 
 function enterPage(){
+  console.log(inputAccountName.value + ' ' + inputPassword.value);
   invalidAccount.classList.remove('hidden-form');
   if(inputAccountName.value =='' || inputPassword.value == '')
   {
     invalidAccount.innerHTML = 'You must enter account name and password before chose sign in';
     return;
   }
+
+  if(inputAccountName.value == `admin` && inputPassword.value == `admin`)
+  {
+    sectionForm.classList.add('hidden-form');
+    window.location = 'admin/admin.html';
+    isSignInAdmin = true;
+    return;
+  }
+
   if(!AccountNameExist())
   {
     invalidAccount.innerHTML ='Account name no exist/';
     return;
   }
+
+
     for(let i = 0; i < account.length; i++){
       if(account[i].accountname == inputAccountName.value && account[i].password == inputPassword.value)
           {
@@ -106,14 +112,20 @@ function enterPage(){
             indexAccountnameCur = i;
             isSignIn = true;
             loadDataCart();
-            localStorage.setItem("indexAccountnameCur", indexAccountnameCur);
-            localStorage.setItem("isSignIn", isSignIn);
           }
       else{
         if( account[i].accountname == inputAccountName.value && account[i].password != inputPassword.value)
           invalidAccount.innerHTML ='Password wrong/';
       }
     }
+
+    setTimeout(() => {
+      if(isSignIn)
+      alert(`Welcome , ${account[indexAccountnameCur].username}`);
+    if(isSignInAdmin)
+      alert(`Welcome , Admin`);
+    }, 300);
+    
   
 }
 
