@@ -168,8 +168,6 @@
   align-items: center;
   text-align: center;
   font-size: 18px;
-
-  margin-top: 20px;
 }
 
 .form-cart .buy-product-cart{
@@ -191,10 +189,8 @@
 
 .form-cart .display-product-cart{
 
-  margin-top: 15px;
-
-  height: 50px;
-  width: 200px;
+  height: 40px;
+  width: 250px;
 
   color: rgb(0, 0, 0);
   background-color: rgb(255, 255, 255);

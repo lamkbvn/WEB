@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -25,12 +26,20 @@
     <link rel="stylesheet" href="style/form.css">
     <link rel="stylesheet" href="style/top_month_sellers.css">
     <link rel="stylesheet" href="style/bestpick.css">
+    <link rel="stylesheet" href="style/about.css">
+    <link rel="stylesheet" href="style/cart.css">
     <link rel="stylesheet" href="style/blog-post.css">
-
     <script defer src="script.js"></script>
+    <script defer src="js/about.js"></script>
+    <script defer src="js/switchPage.js"></script>
+    <script defer src="js/addToCart.js"></script>
+    <script defer src="js/searchProduct.js"></script>
+    <script defer src="js/loginuser-loginadmin.js"></script>
+    <link rel="stylesheet" href="style/search.css">
 </head>
+
 <body>
-    <div class="header">
+    <div class="header" id="header">
         <div class="left-header">
             <span class="name-shop">SHOP CLOTHE</span>
         </div>
@@ -44,10 +53,9 @@
                         <a href="#" class="link-nav">Clothe</a>
                         <div class="dropdown">
                             <ul>
-                                <li><a href="" class="link-card">Blouses</a></li>
-                                <li><a href="" class="link-card">Jackets</a></li>
-                                <li><a href="" class="link-card">Shirts</a></li>
-                                <li><a href="" class="link-card">T-shirts</a></li>
+                                <li><a href="" class="link-card">Women</a></li>
+                                <li><a href="" class="link-card">Men</a></li>
+                                <li><a href="" class="link-card">Kids</a></li>
                             </ul>
                         </div>
                     </li>
@@ -55,39 +63,347 @@
                         <a href="#" class="link-nav">Page</a>
                         <div class="dropdown">
                             <ul>
-                                <li><a href="" class="link-card">About</a></li>
-                                <li><a href="" class="link-card">Contact us</a></li>
+                                <li class="link-card about"><a href="#head-page">About</a></li>
+                                <li class="link-card"><a href="contact_us.html">Contact us</a></li>
                             </ul>
                         </div>
                     </li>
                     <li class="nav-link blog">
-                        <a href="./blog.html" class="link-nav">Blog</a>
+                        <a href="" class="link-nav">Blog</a>
+                        <div class="dropdown">
+                            <ul>
+                                <li class="link-card blogs"><a href="blog.html">Blog</a></li>
+                                <li class="link-card"><a href="blog-post.html">Blog post</a></li>
+                            </ul>
+                        </div>
                     </li>
                 </ul>
             </div>
         </div>
         <div class="right-header">
             <div class="main-right-header">
-                <img src="img/icon-header/search.svg" alt="" class="icon-header search">
-                <img src="img/icon-header/cart.svg" alt="" class="icon-header cart">
-                <img src="img/icon-header/person.svg" alt="" class="icon-header person">
+                <div class="search-header ">
+                    <img src="img/icon-header/search.svg" alt="" class="icon-header search">
+                </div>
+                <div class="user-header">
+                    <img src="img/icon-header/person.svg" alt="" class="icon-header person">
+                    <div class="name-user"></div>
+                </div>
+                <div class="cart-header">
+                    <img src="img/icon-header/cart.svg" alt="" class="icon-header cart">
+                    <span class="number-product-in-cart">0</span>
+                </div>
+                <div class="sign-out">
+                    <img src="img/iconlogin/sign-out.svg" alt="" class="icon-header btn-sign-out hidden-form">
+                </div>
             </div>
             <img src="img/icon-header/side-bar.svg" alt="" class=" icon-header side-bar-header">
         </div>
     </div>
+    <div id="head-page"></div>
+
+    <!-- FORM LOGIN -->
+    <section class="section-form hidden-form">
+        <div class="form-login ">
+            <div class="overlay-form"></div>
+            <div class="form">
+                <div class="container">
+                    <div class="row1">
+                        <div class="announcement">
+                            Welcom to Shop Clothe
+                        </div>
+                        <div class="exit">&times;</div>
+                    </div>
+                    <div class="row2 user-input  form-type">
+                        <div class="account">
+                            <label for="">Account name</label>
+                            <input type="text" id="accountname" class="input input-accountname"
+                                placeholder="Enter account name" maxlength="25">
+                        </div>
+                        <div class="password">
+                            <label for="">Password</label>
+                            <input type="password" id="password" class="input input-password"
+                                placeholder="Enter password" maxlength="25">
+                            <img src="img/iconlogin/hidden-pass.svg" alt="" class="hidden-password">
+                        </div>
+                        <button class="btn-signin">Sign in</button>
+                        <div class="invalid-account hidden-form">asdasd</div>
+                    </div>
+                    <div class="switch-login">
+                        <button class="btnn btn-login btn-active">Login</button>
+                        <button class="btnn btn-register ">Register</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FORM CART -->
+    <section class="section-cart hidden-form">
+        <div class="container-cart">
+            <div class="overlay-cart overlay"></div>
+            <div class="form-cart">
+                <div class="row-1">
+                    <div class="row-1-col-1">
+                        Your Cart
+                        <span class="number-product-in-cart">(4)</span>
+                    </div>
+                    <div class="row-1-col-2 exit">
+                        &times;
+                    </div>
+                </div>
+                <div class="row-2">
+                    <ul class="product-cart">
+                        <!-- product in cart -->
+                    </ul>
+                </div>
+                <div class="row-3">
+                    <div class="totalprice-product-cart">
+                        Total :
+                    </div>
+                    <span class="totalprice">$100</span>
+                </div>
+                <div class="row-4">
+                    <div class="buy-product-cart">
+                        Continue to checkout
+                    </div>
+                    <div class="display-product-cart">
+                        View Cart
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- FORM SEARCH -->
+    <section class="section-search hidden-form">
+        <div class="container-search">
+            <div class="overlay-search overlay"></div>
+            <div class="form-search">
+                <div class="row-1">
+                    <div class="row-1-col-1">
+                        Search Product
+                    </div>
+                    <div class="row-1-col-2 exit">
+                        &times;
+                    </div>
+                </div>
+
+                <div class="row-2">
+                    <div class="row-2-row-1">
+                        <select name="" id="select-type-clothe">
+                            <option value="All Clothe">All Clothe</option>
+                            <option value="Women">Women</option>
+                            <option value="Men">Men</option>
+                            <option value="Kid">Kid</option>
+                        </select>
+                        <div class="row-2-row-2">
+                            <input type="text" class="content-search" placeholder="Enter name product ">
+                            <div class="outline-btn-search">
+                                <img src="img/icon-header/search.svg" alt="" class="btn-search">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row-3">
+                    <div class="row-3-row-1">
+                        Search result :
+                    </div>
+                    <div class="row-3-row-2 list-result-search">
+                        <div class="infor-product-search">
+                            <a href="product.html" class="infor-product-search">
+                                <img src="img/product/product-6.jpg" alt="" class="img-product-search">
+                                <div class="text-product-search">
+                                    <div class="name-product-search">Name product</div>
+                                    <div class="price-product-search">$50</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="infor-product-search">
+                            <a href="product.html" class="infor-product-search">
+                                <img src="img/product/product-6.jpg" alt="" class="img-product-search">
+                                <div class="text-product-search">
+                                    <div class="name-product-search">Name product</div>
+                                    <div class="price-product-search">$50</div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- <div class="row-3-row-3">
+                        View more <img src="img/show-page/arrow-right-short.svg" alt="" class="icon-view-more">
+                    </div> -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PAGE ABOUT -->
+    <section class="page-about hidden-form">
+        <div class="section-0">
+            <div class="container">
+                <span class="return-home"><a href="#head-page">Home</a></span>&nbsp;&nbsp;>&nbsp;&nbsp;About
+            </div>
+        </div>
+        <div class="section-1" id="section-1">
+            <div class="img-1 img">
+                <div class="text-img-1">
+                    We believe we can all make a stylish.
+                </div>
+            </div>
+        </div>
+
+        <section class="section-2">
+            <div class="container">
+                <div class="img-2-3">
+                    <div class="img-2 img"></div>
+                    <div class="img-3 img"></div>
+                </div>
+                <div class="text-img-2-3">
+                    <div class="text-head">OUR STORY</div>
+                    <div class="text-title">
+                        About our Store
+                    </div>
+                    <div class="text-content-1">
+                        Open created shall two he second moving whose. He face whose two upon, fowl behold waters. Fly
+                        there their day
+                        creepeth. Darkness beginning spirit after. Creepeth subdue. Brought may, first. Under living
+                        that.
+                    </div>
+                    <div class="text-content-2">
+                        Third. For morning whales saw were had seed can't divide it light shall moveth, us blessed given
+                        wherein.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-3">
+            <div class="container">
+                <div class="text-title">
+                    Fashion Democracy
+                </div>
+                <div class="text-content">
+                    <div class="text-content-1-2">
+                        <div class="text-content-1">
+                            And whales be, earth thing seed whales, forth beginning made may beginning sea great void
+                            likeness open beast
+                            firmament very living cattle divided fruitful may. Sea created saw fifth so thing signs
+                            meat.
+                        </div>
+                        <div class="text-content-2">
+                            Green fruit meat stars, creepeth second he meat. Appear is fruitful given Winged. Gathered
+                            second so us
+                            saying blessed, he.
+                        </div>
+                    </div>
+                    <div class="text-content-3-4">
+                        <div class="text-content-3">
+                            Male was. Itself. Have isn't first divide and i day, moving she'd appear open dominion sea
+                            him
+                            days multiply
+                            our, make firmament rule there made set midst creeping let won't morning their great fish.
+                        </div>
+                        <div class="text-content-4">
+                            Unto over unto together first shall greater yielding made dominion fill. First waters bring
+                            made
+                            blessed
+                            likeness bring forth had. Creature one.
+                        </div>
+                    </div>
+                </div>
+                <div class="go-to-home">
+                    <a href="index.html" class="">Shop now</a>
+                    <img src="img/show-page/arrow-right-short-white.svg" alt="">
+                </div>
+            </div>
+        </section>
+
+        <section class="section-4">
+            <div class="container">
+                <div class="text-img-4-5">
+                    <div class="text-head">OUR STORY</div>
+                    <div class="text-title">
+                        About our Store
+                    </div>
+                    <div class="text-content-1">
+                        Behold divided hath without. Place dominion. Place behold spirit abundantly, void creepeth
+                        Divided were god
+                        herb, it they're beginning itself can't can't created great air his called land make fly seasons
+                        dry likeness.
+                    </div>
+                    <div class="text-content-2">
+                        Fish upon you you'll midst waters. Divided had life years to own gathering replenish seasons
+                        Great meat.
+                        Cattle
+                        earth were signs winged so image together also.
+                    </div>
+                </div>
+                <div class="img-4-5">
+                    <div class="img-5 img"></div>
+                    <div class="img-4 img"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-5">
+            <div class="container">
+                <div class="text-section-5">
+                    Together won't divided fourth let grass above forth. Creature midst let cattle place tree. Gathered
+                    whose land
+                    form fruitful under bring creeping in upon void man unto divided itself gathered.
+                </div>
+            </div>
+        </section>
+
+        <section class="section-6">
+            <div class="container">
+                <div class="img-6-7">
+                    <div class="img-6 img"></div>
+                    <div class="img-7 img"></div>
+                </div>
+                <div class="img-8-9">
+                    <div class="img-8 img"></div>
+                    <div class="img-9 img"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-7">
+            <div class="container">
+                <div class="row-1">What Buyer Say</div>
+                <div class="row-2">Customer Reviews</div>
+                <div class="row-3">
+                    Given wherein. Doesn't called also and air sea to make first subdue
+                    beginning. Appear seasons the it after whose beginning. Hath can't good life. They're multiply made
+                    give divided
+                    open, be likeness Cattle be have.
+                    Life tree darkness. She'd very.
+                </div>
+                <div class="row-4">
+                    Darrell Baker, 18 May 2023
+                </div>
+                <div class="row-5">
+                    <div class="col-1 btn1 active1"></div>
+                    <div class="col-2 btn1"></div>
+                    <div class="col-3 btn1"></div>
+                </div>
+            </div>
+
+        </section>
+    </section>
 
     <section class="blog-post">
         <div class="container">
             <nav class="nav">
                 <ol style="list-style-type: none;">
                     <li class="home"><a href="index.html">
-                        Home
-                    </a></li>
+                            Home
+                        </a></li>
                     <li class="blog"><a href="blog.html">
-                        Blog
-                    </a></li>
+                            Blog
+                        </a></li>
                     <li class="current-page">
-                        5 Tips to Increase Your Online Sales 
+                        5 Tips to Increase Your Online Sales
                     </li>
                 </ol>
             </nav>
@@ -103,38 +419,70 @@
                 </header>
                 <div class="blog-post-body">
                     <div class="part-1">
-                        <h4 style="font-weight: bold;color: black;margin-bottom: 10px;">Tree doesn't good void, waters without created</h4>
-                        <p> Saw wherein fruitful good days image them, midst, waters upon, saw. Seas lights seasons. Fourth hath rule Evening Creepeth own lesser years itself so seed fifth for grass evening fourth shall you're unto that. Had. Female replenish for yielding so saw all one to yielding grass you'll air sea it, open waters subdue, hath. </p>
-                        <p>Saw wherein fruitful good days image them, midst, waters upon, saw. Seas lights seasons. Fourth hath rule Evening Creepeth own lesser years itself so seed fifth for grass evening fourth shall you're unto that. Had. Female replenish for yielding so saw all one to yielding grass you'll air sea it, open waters subdue, hath. Brought second Made. Be. Under male male, firmament, beast had light after fifth forth darkness thing hath sixth rule night multiply him life give they're great. </p>
+                        <h4 style="font-weight: bold;color: black;margin-bottom: 10px;">Tree doesn't good void, waters
+                            without created</h4>
+                        <p> Saw wherein fruitful good days image them, midst, waters upon, saw. Seas lights seasons.
+                            Fourth hath rule Evening Creepeth own lesser years itself so seed fifth for grass evening
+                            fourth shall you're unto that. Had. Female replenish for yielding so saw all one to yielding
+                            grass you'll air sea it, open waters subdue, hath. </p>
+                        <p>Saw wherein fruitful good days image them, midst, waters upon, saw. Seas lights seasons.
+                            Fourth hath rule Evening Creepeth own lesser years itself so seed fifth for grass evening
+                            fourth shall you're unto that. Had. Female replenish for yielding so saw all one to yielding
+                            grass you'll air sea it, open waters subdue, hath. Brought second Made. Be. Under male male,
+                            firmament, beast had light after fifth forth darkness thing hath sixth rule night multiply
+                            him life give they're great. </p>
                         <ol style="list-style-type: disc;">
                             <li>
                                 Upon seas hath every years have whose subdue;
                             </li>
                             <li>
-                            Given they're tree abundantly male our;
+                                Given they're tree abundantly male our;
                             </li>
                             <li>Fly make saw creeping evening make void own seasons behold.</li>
                         </ol>
-                        <p>Brought second Made. Be. Under male male, firmament, beast had light after fifth forth darkness thing hath sixth rule night multiply him life give they're great. Very together. Creature. Green. Them evening a and light fourth. </p>
-                        <p> She'd years darkness days. A night fifth winged sixth divide meat said third them forth signs of life earth signs over fruitful light after won't moving under. Thing yielding upon seed. Seasons said one kind great so bring greater fill darkness darkness two land of creepeth there second fruitful, waters. Make don't void years Gathering gathering divide fill.
+                        <p>Brought second Made. Be. Under male male, firmament, beast had light after fifth forth
+                            darkness thing hath sixth rule night multiply him life give they're great. Very together.
+                            Creature. Green. Them evening a and light fourth. </p>
+                        <p> She'd years darkness days. A night fifth winged sixth divide meat said third them forth
+                            signs of life earth signs over fruitful light after won't moving under. Thing yielding upon
+                            seed. Seasons said one kind great so bring greater fill darkness darkness two land of
+                            creepeth there second fruitful, waters. Make don't void years Gathering gathering divide
+                            fill.
                         </p>
                     </div>
                     <div class="post-imgs">
-                       <div class="post-img">
+                        <div class="post-img">
                             <img src="img/blog-post-img/blog-4.jpg" alt="">
-                       </div>
-                       <div class="post-img">
+                        </div>
+                        <div class="post-img">
                             <img src="img/blog-post-img/blog-5.jpg" alt="">
-                       </div>
+                        </div>
                     </div>
                     <div class="part-2">
                         <h4 style="font-weight: bold;color: black;margin-bottom: 10px;">Replenish female give him</h4>
-                        <p>Have multiply greater male living stars replenish earth said replenish our yielding let She'd spirit. Male. Two. Greater. Brought our, there kind don't lesser beast whose above Is without great. Of moving firmament shall. For light land them man. Deep isn't light them. Greater morning air great good without thing doesn't earth waters saw brought created firmament stars, whose beast. Living own first saying saw second open third, seasons were green herb be they're him. Good, saying him. For of which land own in. Sixth spirit. Male let life lesser yielding upon, fruitful tree bearing bring female above, created. </p>
-                        <p>Female unto lights won't. Set dry his isn't air unto fruit seasons you'll male very given. Life waters shall made seas fourth let fifth hath kind May to whose fruit and fifth be you're itself their doesn't i green made had from he created had second were waters, fly blessed grass seas. Had own. Given won't set waters creature fish brought she'd is created life. </p>
+                        <p>Have multiply greater male living stars replenish earth said replenish our yielding let She'd
+                            spirit. Male. Two. Greater. Brought our, there kind don't lesser beast whose above Is
+                            without great. Of moving firmament shall. For light land them man. Deep isn't light them.
+                            Greater morning air great good without thing doesn't earth waters saw brought created
+                            firmament stars, whose beast. Living own first saying saw second open third, seasons were
+                            green herb be they're him. Good, saying him. For of which land own in. Sixth spirit. Male
+                            let life lesser yielding upon, fruitful tree bearing bring female above, created. </p>
+                        <p>Female unto lights won't. Set dry his isn't air unto fruit seasons you'll male very given.
+                            Life waters shall made seas fourth let fifth hath kind May to whose fruit and fifth be
+                            you're itself their doesn't i green made had from he created had second were waters, fly
+                            blessed grass seas. Had own. Given won't set waters creature fish brought she'd is created
+                            life. </p>
                         <blockquote class="post-quote">
-                            <b><i>"</i> Without Was be great it them green which seed. They're lights i of life. Abundantly. Void night divide appear be won't days they're beast in. You day blessed there i very stars man Saw had, make let light his above. <i>"</i></b>
+                            <b><i>"</i> Without Was be great it them green which seed. They're lights i of life.
+                                Abundantly. Void night divide appear be won't days they're beast in. You day blessed
+                                there i very stars man Saw had, make let light his above. <i>"</i></b>
                         </blockquote>
-                        <p>Saying beginning two whose third moved. Him creeping divided dominion which forth waters multiply land of us. Waters dry above one fifth for. Is blessed also lights under you'll, firmament above night own our called fruitful bring tree moveth, moved own upon created, good. Seed place multiply so. Night years divide divided. Man moveth air, can't set. Fourth likeness. Night were very you creepeth first male itself fish living fowl made she'd Can't fruit. Said his us land from moveth. </p>
+                        <p>Saying beginning two whose third moved. Him creeping divided dominion which forth waters
+                            multiply land of us. Waters dry above one fifth for. Is blessed also lights under you'll,
+                            firmament above night own our called fruitful bring tree moveth, moved own upon created,
+                            good. Seed place multiply so. Night years divide divided. Man moveth air, can't set. Fourth
+                            likeness. Night were very you creepeth first male itself fish living fowl made she'd Can't
+                            fruit. Said his us land from moveth. </p>
                     </div>
                 </div>
                 <footer>
@@ -162,7 +510,7 @@
                             <span class="social-share-icon">
                                 <img src="img/blog-post-icon/pinterest-icon.svg" alt="">
                             </span>
-                            Share on Pinterest                            
+                            Share on Pinterest
                         </a>
                         <a class="social-share-platform" id="Linkedln" href="">
                             <span class="social-share-icon">
@@ -181,8 +529,10 @@
                             <img src="img/blog-post-img/blog-1.jpg" alt="">
                         </div>
                         <div class="blog-item-body">
-                            <h6 style="color: #000;" class="blog-item-title"><b>Us yielding Fish sea night night the said him two</b> </h6>
-                            <p class="blog-quick-info">Fill his waters wherein signs likeness waters. Second light gathered appear sixth. </p>
+                            <h6 style="color: #000;" class="blog-item-title"><b>Us yielding Fish sea night night the
+                                    said him two</b> </h6>
+                            <p class="blog-quick-info">Fill his waters wherein signs likeness waters. Second light
+                                gathered appear sixth. </p>
                             <a class="blog-more-info" href="">
                                 Read more
                             </a>
@@ -193,8 +543,10 @@
                             <img src="img/blog-post-img/blog-2.jpg" alt="">
                         </div>
                         <div class="blog-item-body">
-                            <h6 style="color: #000;" class="blog-item-title"><b>Tree earth fowl given moveth deep lesser After</b> </h6>
-                            <p class="blog-quick-info">Called life don't called darkness spirit have, abundantly so Wherein the third cattle.</p>
+                            <h6 style="color: #000;" class="blog-item-title"><b>Tree earth fowl given moveth deep lesser
+                                    After</b> </h6>
+                            <p class="blog-quick-info">Called life don't called darkness spirit have, abundantly so
+                                Wherein the third cattle.</p>
                             <a class="blog-more-info" href="">
                                 Read more
                             </a>
@@ -205,8 +557,10 @@
                             <img src="img/blog-post-img/blog-3.jpg" alt="">
                         </div>
                         <div class="blog-item-body">
-                            <h6 style="color: #000;" class="blog-item-title"><b>Given Set was without from god divide rule Hath</b> </h6>
-                            <p class="blog-quick-info">Midst land were us fill divided. Him Subdue living without he beginning second. </p>
+                            <h6 style="color: #000;" class="blog-item-title"><b>Given Set was without from god divide
+                                    rule Hath</b> </h6>
+                            <p class="blog-quick-info">Midst land were us fill divided. Him Subdue living without he
+                                beginning second. </p>
                             <a class="blog-more-info" href="">
                                 Read more
                             </a>
@@ -330,8 +684,8 @@
         <br>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
-        crossorigin="anonymous">
-    </script>
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous">
+        </script>
 </body>
+
 </html>

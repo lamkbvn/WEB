@@ -12,8 +12,8 @@ let listResult = [];
 function displayResultSearch(){
   let selectTypeClothe = `${document.querySelector('#select-type-clothe').value}`;
   listResult = [];
-  let strSearch = `${contentSearch.value}`.toLowerCase().replaceAll(' ','');
-  for(let i = 0; i < listProduct.length; i++){
+  let strSearch = `${contentSearch.value}`.toLowerCase().replaceAll('','');
+  for(let i = 0; i < listProduct.length ; i++){
     let nameP = listProduct[i].querySelector('.product-sale-name');
     searchProduct(i , nameP , -1 , strSearch , 0 ,selectTypeClothe);
   }
@@ -22,14 +22,9 @@ function displayResultSearch(){
 
 function searchProduct(i ,nameP , jNameP , strSearch, jStrSearch,selectTypeClothe){
   nameP1 = nameP.textContent.toLowerCase().trim();
-  let jTemp = nameP1.search(strSearch[jStrSearch]);
-  if(jTemp != -1 && jTemp > jNameP){
-    ++jStrSearch;
-    jNameP = jTemp;
-    if(jStrSearch <  strSearch.length)
-      searchProduct(i , nameP , jNameP , strSearch , jStrSearch,selectTypeClothe);
-    else
-    if(jStrSearch == strSearch.length && selectTypeClothe == 'All Clothe' || selectTypeClothe == categoriesProductSale[i].textContent.trim())
+  let jTemp = nameP1.search(strSearch);
+  if(jTemp != -1 ){
+    if(selectTypeClothe == 'All Clothe' || selectTypeClothe == categoriesProductSale[i].textContent.trim())
       {
         let name1 = nameP.textContent.trim();
         let price1 ;

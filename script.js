@@ -13,6 +13,7 @@ person.addEventListener('click' ,
     if(sectionForm.classList.contains('hidden-form')){
       sectionForm.classList.remove('hidden-form');
       body.style.overflow = 'hidden';
+      invalidAccount.innerHTML ='';
     }
   }
 );

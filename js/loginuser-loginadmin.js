@@ -58,14 +58,7 @@ btnRegister.addEventListener('click' ,
   }
 )
 
-const account = [
-  {
-    username : 'mai phuc lam',
-    accountname : 'lampro',
-    password : '123',
-    cart : []
-  }
-];
+const account =[];
 
 let formLogin = document.querySelector('.form');
 let inputAccountName =  document.querySelector('.input-accountname');
@@ -76,18 +69,36 @@ let btnSignIn = document.querySelector('.btn-signin');
 let nameUser = document.querySelector('.name-user');
 let btnSignOut = document.querySelector('.btn-sign-out');
 
-let indexAccountnameCur;
+let indexAccountnameCur = -1;
 let isSignIn = false;
+let isSignInAdmin = false;
 
 btnSignIn.addEventListener('click',enterPage);
 
 function enterPage(){
+  console.log(inputAccountName.value + ' ' + inputPassword.value);
   invalidAccount.classList.remove('hidden-form');
   if(inputAccountName.value =='' || inputPassword.value == '')
   {
     invalidAccount.innerHTML = 'You must enter account name and password before chose sign in';
+    return;
   }
-  else{
+
+  if(inputAccountName.value == `admin` && inputPassword.value == `admin`)
+  {
+    sectionForm.classList.add('hidden-form');
+    window.location = 'admin/index.html';
+    isSignInAdmin = true;
+    return;
+  }
+
+  if(!AccountNameExist())
+  {
+    invalidAccount.innerHTML ='Account name no exist/';
+    return;
+  }
+
+
     for(let i = 0; i < account.length; i++){
       if(account[i].accountname == inputAccountName.value && account[i].password == inputPassword.value)
           {
@@ -103,17 +114,26 @@ function enterPage(){
             loadDataCart();
           }
       else{
-        if(account[i].accountname != inputAccountName.value && account[i].password == inputPassword.value)
-          invalidAccount.innerHTML ='Account name wrong/';
-        else
         if( account[i].accountname == inputAccountName.value && account[i].password != inputPassword.value)
           invalidAccount.innerHTML ='Password wrong/';
-        else{
-          invalidAccount.innerHTML ='Account name and Password Wrong/';
-        }
       }
     }
-  }
+
+    setTimeout(() => {
+      if(isSignIn)
+      alert(`Welcome , ${account[indexAccountnameCur].username}`);
+    if(isSignInAdmin)
+      alert(`Welcome , Admin`);
+    }, 300);
+    
+  
+}
+
+function AccountNameExist(){
+  for(let i = 0; i < account.length; i++)
+    if(account[i].accountname == inputAccountName.value)
+      return true;
+  return false;
 }
 
 let hiddenPass = true;
@@ -144,6 +164,8 @@ function signOutNow(){
   invalidAccount.classList.add('hidden-form');
   indexAccountnameCur = -1;
   isSignIn =false;
+  localStorage.setItem("indexAccountnameCur", indexAccountnameCur);
+  localStorage.setItem("isSignIn", isSignIn);
   productCart.innerHTML = '';
   updateTotalPrice();
 }
@@ -183,7 +205,10 @@ function signUp(){
       invalidAccount.innerHTML = 'Enter full infor of you before sign up';
       return;
     }
-    
+  if(!checkAccountNameSignUp(inputAccountName.value)){
+    invalidAccount.innerHTML = 'Account name accept a->z , A->Z , 0->9 ';
+    return;
+  }
   let newAccount = {
     username : inputUsername.value,
     accountname : inputAccountName.value,
@@ -202,8 +227,11 @@ function signUp(){
   invalidAccount.innerHTML = 'Sign up sucess.Return Login';
 }
 
-
-
-
-
-
+function checkAccountNameSignUp(inputAccountName){
+    for(let i = 0; i < inputAccountName.length; i++){
+      let c = inputAccountName.charCodeAt(i);
+      if( c <= 47 || (c >= 58 && c <= 64) || (c >= 91 && c <= 96) || c >= 123)
+        return 0;
+    }
+    return 1;
+}
