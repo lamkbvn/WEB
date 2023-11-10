@@ -183,6 +183,7 @@ function signUp(){
       invalidAccount.innerHTML = 'Enter full infor of you before sign up';
       return;
     }
+    
   let newAccount = {
     username : inputUsername.value,
     accountname : inputAccountName.value,
