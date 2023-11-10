@@ -69,6 +69,19 @@ for(overlay of overlayScreen){
 )
 }
 
+// Active nav section indicator
+let navItems = document.querySelector(".nav");
+var actItem = document.querySelector(".active-item");
+
+navItems.addEventListener("click", function(event) {
+    var clickedItem = event.target.closest(".nav-item");
+    if(clickedItem) {
+        actItem.classList.remove("active-item");
+        clickedItem.classList.add("active-item");
+        actItem = clickedItem;
+    }
+})
+
 
 
 
