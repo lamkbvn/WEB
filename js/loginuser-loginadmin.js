@@ -87,7 +87,7 @@ function enterPage(){
   if(inputAccountName.value == `admin` && inputPassword.value == `admin`)
   {
     sectionForm.classList.add('hidden-form');
-    window.location = 'admin/admin.html';
+    window.location = 'admin/index.html';
     isSignInAdmin = true;
     return;
   }
