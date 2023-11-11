@@ -1,0 +1,35 @@
+.sale
+{
+    background-size: cover;
+    min-height: 600px;
+    padding-top: 250px;
+    text-align: justify;
+    margin-top: 5%;
+}
+.btton
+{
+    padding: 3%;
+    background-color: black;
+    color: aliceblue;   
+}
+.time
+{
+    text-transform: uppercase;
+    width: 360px;
+    position: relative;
+    display: flex;
+    text-align: center;
+    color: grey;
+    font-size: 14px;
+    font-weight: 500;
+    padding-top: 5%;
+    padding-bottom: 10%;   
+}
+.tgian
+{
+    color: rgb(255, 111, 97);
+    font-size: 50px;
+    
+    font-weight: 700;
+
+}
