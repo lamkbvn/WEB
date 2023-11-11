@@ -251,7 +251,7 @@
     color: white;
 }
 
-#shop-items .card .card-image .badge *:not(.saling-product,.new-product) {
+#shop-items .card .card-image .badge *:not(.saling-product) {
     display: none;
 }
 

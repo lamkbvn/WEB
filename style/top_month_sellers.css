@@ -94,7 +94,7 @@
     font-weight: bold;
 }
 
-#top-items .card .card-image .badge *:not(.saling-product,.new-product) {
+#top-items .card .card-image .badge *:not(.saling-product) {
     display: none;
 }
 
