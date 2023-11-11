@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -27,17 +28,19 @@
     <link rel="stylesheet" href="style/bestpick.css">
     <link rel="stylesheet" href="style/about.css">
     <link rel="stylesheet" href="style/cart.css">
+    <link rel="stylesheet" href="style/review.css">
+    <link rel="stylesheet" href="style/sale.css">
+    <link rel="stylesheet" href="style/shop.css">
     <script defer src="script.js"></script>
     <script defer src="js/about.js"></script>
-    <script defer src="js/switchPage.js"></script>
     <script defer src="js/addToCart.js"></script>
+    <script defer src="js/searchProduct.js"></script>
     <script defer src="js/loginuser-loginadmin.js"></script>
-    <link rel="stylesheet" href="style/search.css">
-    <link rel="stylesheet" href="style/shop.css">
-    <title>Shop Clothes</title>
-</head>
-<body>
 
+    <link rel="stylesheet" href="style/search.css">
+</head>
+
+<body>
     <div class="header" id="header">
         <div class="left-header">
             <span class="name-shop">SHOP CLOTHE</span>
@@ -71,8 +74,8 @@
                         <a href="" class="link-nav">Blog</a>
                         <div class="dropdown">
                             <ul>
-                                <li class="link-card blogs"><a href="#head-page">Blog</a></li>
-                                <li class="link-card"><a href="#head-page">Blog post</a></li>
+                                <li class="link-card blogs"><a href="blog.html">Blog</a></li>
+                                <li class="link-card"><a href="blog-post.html">Blog post</a></li>
                             </ul>
                         </div>
                     </li>
@@ -84,11 +87,11 @@
                 <div class="search-header ">
                     <img src="img/icon-header/search.svg" alt="" class="icon-header search">
                 </div>
-                <div class="user-header ">
+                <div class="user-header">
                     <img src="img/icon-header/person.svg" alt="" class="icon-header person">
                     <div class="name-user"></div>
                 </div>
-                <div class="cart-header ">
+                <div class="cart-header">
                     <img src="img/icon-header/cart.svg" alt="" class="icon-header cart">
                     <span class="number-product-in-cart">0</span>
                 </div>
@@ -99,6 +102,145 @@
             <img src="img/icon-header/side-bar.svg" alt="" class=" icon-header side-bar-header">
         </div>
     </div>
+    <div id="head-page"></div>
+
+    <!-- FORM LOGIN -->
+    <section class="section-form hidden-form">
+        <div class="form-login ">
+            <div class="overlay-form"></div>
+            <div class="form">
+                <div class="container">
+                    <div class="row1">
+                        <div class="announcement">
+                            Welcom to Shop Clothe
+                        </div>
+                        <div class="exit">&times;</div>
+                    </div>
+                    <div class="row2 user-input  form-type">
+                        <div class="account">
+                            <label for="">Account name</label>
+                            <input type="text" id="accountname" class="input input-accountname"
+                                placeholder="Enter account name" maxlength="25">
+                        </div>
+                        <div class="password">
+                            <label for="">Password</label>
+                            <input type="password" id="password" class="input input-password"
+                                placeholder="Enter password" maxlength="25">
+                            <img src="img/iconlogin/hidden-pass.svg" alt="" class="hidden-password">
+                        </div>
+                        <button class="btn-signin">Sign in</button>
+                        <div class="invalid-account hidden-form">asdasd</div>
+                    </div>
+                    <div class="switch-login">
+                        <button class="btnn btn-login btn-active">Login</button>
+                        <button class="btnn btn-register ">Register</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FORM CART -->
+    <section class="section-cart hidden-form">
+        <div class="container-cart">
+            <div class="overlay-cart overlay"></div>
+            <div class="form-cart">
+                <div class="row-1">
+                    <div class="row-1-col-1">
+                        Your Cart
+                        <span class="number-product-in-cart">(4)</span>
+                    </div>
+                    <div class="row-1-col-2 exit">
+                        &times;
+                    </div>
+                </div>
+                <div class="row-2">
+                    <ul class="product-cart">
+                        <!-- product in cart -->
+                    </ul>
+                </div>
+                <div class="row-3">
+                    <div class="totalprice-product-cart">
+                        Total :
+                    </div>
+                    <span class="totalprice">$100</span>
+                </div>
+                <div class="row-4">
+                    <!-- <div class="buy-product-cart">
+                        Continue to checkout
+                    </div> -->
+                    <a href="pagecart.html">
+                        <div class="display-product-cart">
+                            View Cart
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- FORM SEARCH -->
+    <section class="section-search hidden-form">
+        <div class="container-search">
+            <div class="overlay-search overlay"></div>
+            <div class="form-search">
+                <div class="row-1">
+                    <div class="row-1-col-1">
+                        Search Product
+                    </div>
+                    <div class="row-1-col-2 exit">
+                        &times;
+                    </div>
+                </div>
+
+                <div class="row-2">
+                    <div class="row-2-row-1">
+                        <select name="" id="select-type-clothe">
+                            <option value="All Clothe">All Clothe</option>
+                            <option value="Women">Women</option>
+                            <option value="Men">Men</option>
+                            <option value="Kid">Kid</option>
+                        </select>
+                        <div class="row-2-row-2">
+                            <input type="text" class="content-search" placeholder="Enter name product ">
+                            <div class="outline-btn-search">
+                                <img src="img/icon-header/search.svg" alt="" class="btn-search">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row-3">
+                    <div class="row-3-row-1">
+                        Search result :
+                    </div>
+                    <div class="row-3-row-2 list-result-search">
+                        <div class="infor-product-search">
+                            <a href="product.html" class="infor-product-search">
+                                <img src="img/product/product-6.jpg" alt="" class="img-product-search">
+                                <div class="text-product-search">
+                                    <div class="name-product-search">Name product</div>
+                                    <div class="price-product-search">$50</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="infor-product-search">
+                            <a href="product.html" class="infor-product-search">
+                                <img src="img/product/product-6.jpg" alt="" class="img-product-search">
+                                <div class="text-product-search">
+                                    <div class="name-product-search">Name product</div>
+                                    <div class="price-product-search">$50</div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- <div class="row-3-row-3">
+                        View more <img src="img/show-page/arrow-right-short.svg" alt="" class="icon-view-more">
+                    </div> -->
+                </div>
+            </div>
+        </div>
+    </section>
+
 
     <section class="shop-pg">
         <div class="shop-banner">
@@ -117,7 +259,8 @@
                             <div class="list-expand hidden " id="category-list">
                                 <ul class="list-expand-cnt">
                                     <li class="list-expand-item">
-                                        <button class="list-expand-item-label" onclick="toAllP(event)">All Products</button>
+                                        <button class="list-expand-item-label" onclick="toAllP(event)">All
+                                            Products</button>
                                     </li>
                                     <li class="list-expand-item">
                                         <button class="list-expand-item-label label-tg">Women</button>
@@ -137,7 +280,7 @@
                                                 </li>
                                             </ul>
                                         </div>
-                                    </li>   
+                                    </li>
                                     <li class="list-expand-item">
                                         <button class="list-expand-item-label label-tg">Men</button>
                                         <div class="item-expand hidden ">
@@ -207,7 +350,9 @@
 
                                     <div class="list-expand-item price-range">
                                         <input type="number" placeholder="$10.00" min="10">
-                                        <span><h5> - </h5></span>
+                                        <span>
+                                            <h5> - </h5>
+                                        </span>
                                         <input type="number" placeholder="$350.00" max="350">
                                     </div>
                                 </ul>
@@ -219,7 +364,8 @@
             <div class="main-pg">
                 <div class="promotion-cards">
                     <div class="slider">
-                        <div class="promotion-card" style="background-image: url(img/shop/cover-24.jpg);background-size: cover; background-position: left;">
+                        <div class="promotion-card"
+                            style="background-image: url(img/shop/cover-24.jpg);background-size: cover; background-position: left;">
                             <div class="promote-cnt">
                                 <h2 style="font-size: 36px;"> 2019 Summer Collection</h2>
                                 <a href="" class="promote-cnt-nav">
@@ -228,10 +374,12 @@
                                 </a>
                             </div>
                             <div>
-                                <img src="img/shop/cover-16.jpg" alt="" style="object-fit: cover; width: 100%; height: 100%;">
+                                <img src="img/shop/cover-16.jpg" alt=""
+                                    style="object-fit: cover; width: 100%; height: 100%;">
                             </div>
                         </div>
-                        <div class="promotion-card" style="background-image: url(img/shop/cover-29.jpg); background-size: cover; background-position: center;">
+                        <div class="promotion-card"
+                            style="background-image: url(img/shop/cover-29.jpg); background-size: cover; background-position: center;">
                             <div class="promote-cnt">
                                 <h2>
                                     Get -50% from Summer Collection
@@ -244,7 +392,8 @@
                                 </button>
                             </div>
                         </div>
-                        <div class="promotion-card" style="background-image: url(img/shop/cover-30.jpg);background-size: cover; background-position: center;">
+                        <div class="promotion-card"
+                            style="background-image: url(img/shop/cover-30.jpg);background-size: cover; background-position: center;">
                             <div class="promote-cnt">
                                 <h5>ENJOY AN EXTRA</h5>
                                 <h1>50% OFF</h1>
@@ -274,7 +423,7 @@
                             <ol>
                                 <li>
                                     <a class="nav-item" href="index.html">Home</a>
-                                </li>                                
+                                </li>
                                 <li>
                                     <span class="curr-pg">Women's Clothing</span>
                                 </li>
@@ -282,285 +431,294 @@
                         </nav>
                     </div>
                     <div id="shop-items">
-                        <div class="card">
+                        <div class="card product-sale">
                             <div class="card-image">
                                 <div class="badge">
                                     <span class="sale-badge">NORMAL</span>
                                 </div>
-                                <a href="">
-                                    <div class="action">
-                                        <button class="action-bt">
-                                            <span class="action-bt-label">Add to cart</span>
+                                <a>
+                                    <div class="action ">
+                                        <button class="action-bt add-sale-to-cart">
+                                            <span class="action-bt-label ">Add to cart</span>
                                             <img src="img/icon-normal/add-to-cart-icon.svg" alt="">
                                         </button>
                                     </div>
-                                    <img src="img/product/product-6.jpg" alt="top-month-sellers1">
+                                    <a href="product.html"><img src="img/product/product-6.jpg"
+                                            alt="top-month-sellers1"></a>
                                 </a>
                             </div>
                             <div class="card-info">
                                 <div class="categories">
-                                    <a class="categories-label" href="">
-                                        Bags
+                                    <a class="categories-label categories-product-sale" href="">
+                                        Women
                                     </a>
                                 </div>
-                                <div class="product-name">
+                                <div class="product-name product-sale-name">
                                     <a class="product-name-label" href="">
                                         Zip Bag
                                     </a>
                                 </div>
                                 <div class="price">
-                                    <span class="price-label">$50.00</span>
+                                    <span class="price-label product-normal-price">$50.00</span>
                                 </div>
                             </div>
                         </div>
-                        <div class="card">
+                        <div class="card product-sale">
                             <div class="card-image">
                                 <div class="badge">
                                     <span class="sale-badge">NORMAL</span>
                                 </div>
-                                <a href="">
+                                <a>
                                     <div class="action">
-                                        <button class="action-bt">
-                                            <span class="action-bt-label">Add to cart</span>
+                                        <button class="action-bt add-sale-to-cart">
+                                            <span class="action-bt-label ">Add to cart</span>
                                             <img src="img/icon-normal/add-to-cart-icon.svg" alt="">
                                         </button>
                                     </div>
-                                    <img src="img/product/product-6.jpg" alt="top-month-sellers2">
+                                    <a href="product.html"><img src="img/product/product-6.jpg"
+                                            alt="top-month-sellers2"></a>
                                 </a>
                             </div>
                             <div class="card-info">
                                 <div class="categories">
-                                    <a class="categories-label" href="">
-                                        Jeans
+                                    <a class="categories-label categories-product-sale" href="">
+                                        Men
                                     </a>
                                 </div>
-                                <div class="product-name">
+                                <div class="product-name product-sale-name">
                                     <a class="product-name-label" href="">
                                         White Jeans
                                     </a>
                                 </div>
                                 <div class="price">
-                                    <span class="price-label">$60.00</span>
+                                    <span class="price-label product-normal-price">$60.00</span>
                                 </div>
                             </div>
                         </div>
-                        <div class="card">
+                        <div class="card product-sale">
                             <div class="card-image">
                                 <div class="badge">
                                     <span class="sale-badge saling-product">SALE</span>
                                 </div>
-                                <a href="">
+                                <a>
                                     <div class="action">
-                                        <button class="action-bt">
-                                            <span class="action-bt-label">Add to cart</span>
+                                        <button class="action-bt add-sale-to-cart">
+                                            <span class="action-bt-label ">Add to cart</span>
                                             <img src="img/icon-normal/add-to-cart-icon.svg" alt="">
                                         </button>
                                     </div>
-                                    <img src="img/product/product-6.jpg" alt="top-month-sellers3">
+                                    <a href="product.html"><img src="img/product/product-6.jpg"
+                                            alt="top-month-sellers3"></a>
                                 </a>
                             </div>
                             <div class="card-info">
                                 <div class="categories">
-                                    <a class="categories-label" href="">
-                                        Dresses
+                                    <a class="categories-label categories-product-sale" href="">
+                                        Kid
                                     </a>
                                 </div>
-                                <div class="product-name">
+                                <div class="product-name product-sale-name">
                                     <a class="product-name-label" href="">
                                         Yellow Dress
                                     </a>
                                 </div>
                                 <div class="price">
-                                    <span class="price-label">$45.50</span>
-                                    <span class="sale-price-label">$40.00</span>
+                                    <span class="price-label product-normal-price">$45.50</span>
+                                    <span class="sale-price-label product-sale-pricel">$40.00</span>
                                 </div>
                             </div>
                         </div>
-                        <div class="card">
+                        <div class="card product-sale">
                             <div class="card-image">
                                 <div class="badge">
                                     <span class="sale-badge">NORMAL</span>
                                 </div>
                                 <a href="">
                                     <div class="action">
-                                        <button class="action-bt">
-                                            <span class="action-bt-label">Add to cart</span>
+                                        <button class="action-bt add-sale-to-cart">
+                                            <span class="action-bt-label ">Add to cart</span>
                                             <img src="img/icon-normal/add-to-cart-icon.svg" alt="">
                                         </button>
                                     </div>
-                                    <img src="img/product/product-6.jpg" alt="top-month-sellers4">
+                                    <a href="product.html"><img src="img/product/product-6.jpg"
+                                            alt="top-month-sellers4"></a>
                                 </a>
                             </div>
                             <div class="card-info">
                                 <div class="categories">
-                                    <a class="categories-label" href="">
-                                        Sweaters
+                                    <a class="categories-label categories-product-sale" href="">
+                                        Kid
                                     </a>
                                 </div>
-                                <div class="product-name">
+                                <div class="product-name product-sale-name">
                                     <a class="product-name-label" href="">
                                         Red Sweater
-                                    </a>    
+                                    </a>
                                 </div>
                                 <div class="price">
-                                    <span class="price-label">$69.99</span>
+                                    <span class="price-label product-normal-price">$69.99</span>
                                 </div>
                             </div>
                         </div>
-                        <div class="card">
+                        <div class="card product-sale">
                             <div class="card-image">
                                 <div class="badge">
                                     <span class="sale-badge saling-product">SALE</span>
                                 </div>
                                 <a href="">
                                     <div class="action">
-                                        <button class="action-bt">
-                                            <span class="action-bt-label">Add to cart</span>
+                                        <button class="action-bt add-sale-to-cart">
+                                            <span class="action-bt-label ">Add to cart</span>
                                             <img src="img/icon-normal/add-to-cart-icon.svg" alt="">
                                         </button>
                                     </div>
-                                    <img src="img/product/product-6.jpg" alt="top-month-sellers5">
+                                    <a href="product.html"><img src="img/product/product-6.jpg"
+                                            alt="top-month-sellers5"></a>
                                 </a>
                             </div>
                             <div class="card-info">
                                 <div class="categories">
-                                    <a class="categories-label" href="">
-                                        Shoes
+                                    <a class="categories-label categories-product-sale" href="">
+                                        Men
                                     </a>
                                 </div>
-                                <div class="product-name">
+                                <div class="product-name product-sale-name">
                                     <a class="product-name-label" href="">
                                         Leather Sandals
                                     </a>
                                 </div>
                                 <div class="price">
-                                    <span class="price-label">$129.00</span>
-                                    <span class="sale-price-label">$40.00</span>
+                                    <span class="price-label product-normal-price">$129.00</span>
+                                    <span class="sale-price-label product-sale-price">$40.00</span>
                                 </div>
                             </div>
                         </div>
-                        <div class="card">
+                        <div class="card product-sale">
                             <div class="card-image">
                                 <div class="badge">
                                     <span class="sale-badge">NORMAL</span>
                                 </div>
-                               <a href="">
-                                   <div class="action">
-                                    <button class="action-bt">
-                                        <span class="action-bt-label">Add to cart</span>
-                                        <img src="img/icon-normal/add-to-cart-icon.svg" alt="">
-                                    </button>
-                                   </div>
-                                    <img src="img/product/product-6.jpg" alt="top-month-sellers6">
-                               </a>
+                                <a href="">
+                                    <div class="action">
+                                        <button class="action-bt add-sale-to-cart">
+                                            <span class="action-bt-label ">Add to cart</span>
+                                            <img src="img/icon-normal/add-to-cart-icon.svg" alt="">
+                                        </button>
+                                    </div>
+                                    <a href="product.html"><img src="img/product/product-6.jpg"
+                                            alt="top-month-sellers7"></a>
+                                </a>
                             </div>
                             <div class="card-info">
                                 <div class="categories">
-                                    <a class="categories-label" href="">
-                                        Dresses
+                                    <a class="categories-label categories-product-sale" href="">
+                                        Women
                                     </a>
                                 </div>
-                                <div class="product-name">
+                                <div class="product-name product-sale-name">
                                     <a class="product-name-label" href="">
                                         Floral Dress
-                                    </a>    
+                                    </a>
                                 </div>
                                 <div class="price">
-                                    <span class="price-label">$40.00</span>
+                                    <span class="price-label product-normal-price">$40.00</span>
                                 </div>
                             </div>
                         </div>
-                        <div class="card">
+                        <div class="card product-sale">
                             <div class="card-image">
                                 <div class="badge">
                                     <span class="sale-badge saling-product">SALE</span>
                                 </div>
-                               <a href="">
-                                   <div class="action">
-                                    <button class="action-bt">
-                                        <span class="action-bt-label">Add to cart</span>
-                                        <img src="img/icon-normal/add-to-cart-icon.svg" alt="">
-                                    </button>
-                                   </div>
-                                    <img src="img/product/product-6.jpg" alt="top-month-sellers6">
-                               </a>
+                                <a href="">
+                                    <div class="action">
+                                        <button class="action-bt add-sale-to-cart">
+                                            <span class="action-bt-label ">Add to cart</span>
+                                            <img src="img/icon-normal/add-to-cart-icon.svg" alt="">
+                                        </button>
+                                    </div>
+                                    <a href="product.html"><img src="img/product/product-6.jpg"
+                                            alt="top-month-sellers8"></a>
+                                </a>
                             </div>
                             <div class="card-info">
                                 <div class="categories">
-                                    <a class="categories-label" href="">
-                                        Dresses
+                                    <a class="categories-label categories-product-sale" href="">
+                                        Men
                                     </a>
                                 </div>
-                                <div class="product-name">
+                                <div class="product-name product-sale-name">
                                     <a class="product-name-label" href="">
                                         Floral Dress
-                                    </a>    
+                                    </a>
                                 </div>
                                 <div class="price">
-                                    <span class="price-label">$40.00</span>
-                                    <span class="sale-price-label">$35.00</span>
+                                    <span class="price-label product-normal-price">$40.00</span>
+                                    <span class="sale-price-label product-sale-price">$35.00</span>
                                 </div>
                             </div>
                         </div>
-                        <div class="card">
+                        <div class="card product-sale">
                             <div class="card-image">
                                 <div class="badge">
                                     <span class="sale-badge">NORMAL</span>
                                 </div>
-                               <a href="">
-                                   <div class="action">
-                                    <button class="action-bt">
-                                        <span class="action-bt-label">Add to cart</span>
-                                        <img src="img/icon-normal/add-to-cart-icon.svg" alt="">
-                                    </button>
-                                   </div>
-                                    <img src="img/product/product-6.jpg" alt="top-month-sellers6">
-                               </a>
+                                <a href="">
+                                    <div class="action">
+                                        <button class="action-bt add-sale-to-cart">
+                                            <span class="action-bt-label ">Add to cart</span>
+                                            <img src="img/icon-normal/add-to-cart-icon.svg" alt="">
+                                        </button>
+                                    </div>
+                                    <a href="product.html"><img src="img/product/product-6.jpg"
+                                            alt="top-month-sellers9"></a>
+                                </a>
                             </div>
                             <div class="card-info">
                                 <div class="categories">
-                                    <a class="categories-label" href="">
-                                        Dresses
+                                    <a class="categories-label categories-product-sale" href="">
+                                        Kid
                                     </a>
                                 </div>
-                                <div class="product-name">
+                                <div class="product-name product-sale-name">
                                     <a class="product-name-label" href="">
                                         Floral Dress
-                                    </a>    
+                                    </a>
                                 </div>
                                 <div class="price">
-                                    <span class="price-label">$40.00</span>
+                                    <span class="price-label product-normal-price">$40.00</span>
                                 </div>
                             </div>
                         </div>
-                        <div class="card">
+                        <div class="card product-sale">
                             <div class="card-image">
                                 <div class="badge">
                                     <span class="sale-badge">NORMAL</span>
                                 </div>
-                               <a href="">
-                                   <div class="action">
-                                    <button class="action-bt">
-                                        <span class="action-bt-label">Add to cart</span>
-                                        <img src="img/icon-normal/add-to-cart-icon.svg" alt="">
-                                    </button>
-                                   </div>
-                                    <img src="img/product/product-6.jpg" alt="top-month-sellers6">
-                               </a>
+                                <a href="">
+                                    <div class="action">
+                                        <button class="action-bt add-sale-to-cart">
+                                            <span class="action-bt-label ">Add to cart</span>
+                                            <img src="img/icon-normal/add-to-cart-icon.svg" alt="">
+                                        </button>
+                                    </div>
+                                    <a href="product.html"><img src="img/product/product-6.jpg"
+                                            alt="top-month-sellers6"></a>
+                                </a>
                             </div>
                             <div class="card-info">
                                 <div class="categories">
-                                    <a class="categories-label" href="">
-                                        Dresses
+                                    <a class="categories-label categories-product-sale" href="">
+                                        Men
                                     </a>
                                 </div>
-                                <div class="product-name">
+                                <div class="product-name product-sale-name">
                                     <a class="product-name-label" href="">
                                         Floral Dress
-                                    </a>    
+                                    </a>
                                 </div>
                                 <div class="price">
-                                    <span class="price-label">$40.00</span>
+                                    <span class="price-label product-normal-price">$40.00</span>
                                 </div>
                             </div>
                         </div>
@@ -568,26 +726,38 @@
                     <nav class="nav-pg">
                         <ul class="nav-pg-container">
                             <li class="nav-pg-prev"><a href="">
-                                <svg class="svg-inline--fa fa-caret-left" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="caret-left" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512" data-fa-i2svg=""><path fill="currentColor" d="M137.4 406.6l-128-127.1C3.125 272.4 0 264.2 0 255.1s3.125-16.38 9.375-22.63l128-127.1c9.156-9.156 22.91-11.9 34.88-6.943S192 115.1 192 128v255.1c0 12.94-7.781 24.62-19.75 29.58S146.5 415.8 137.4 406.6z"></path></svg>
-                            </a></li>
+                                    <svg class="svg-inline--fa fa-caret-left" aria-hidden="true" focusable="false"
+                                        data-prefix="fas" data-icon="caret-left" role="img"
+                                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512" data-fa-i2svg="">
+                                        <path fill="currentColor"
+                                            d="M137.4 406.6l-128-127.1C3.125 272.4 0 264.2 0 255.1s3.125-16.38 9.375-22.63l128-127.1c9.156-9.156 22.91-11.9 34.88-6.943S192 115.1 192 128v255.1c0 12.94-7.781 24.62-19.75 29.58S146.5 415.8 137.4 406.6z">
+                                        </path>
+                                    </svg>
+                                </a></li>
                             <li class="nav-item nav-item nav-act-pg"><a href="">
-                                1                               
-                            </a></li>
-                            <li class="nav-item" ><a href="">
-                                2
-                            </a></li>
-                            <li class="nav-item" ><a href="">
-                                3
-                            </a></li>
-                            <li class="nav-item" ><a href="">
-                                4
-                            </a></li>
-                            <li class="nav-item" ><a href="">
-                                5
-                            </a></li>
+                                    1
+                                </a></li>
+                            <li class="nav-item"><a href="">
+                                    2
+                                </a></li>
+                            <li class="nav-item"><a href="">
+                                    3
+                                </a></li>
+                            <li class="nav-item"><a href="">
+                                    4
+                                </a></li>
+                            <li class="nav-item"><a href="">
+                                    5
+                                </a></li>
                             <li class="nav-pg-next"><a href="">
-                                <svg class="svg-inline--fa fa-caret-right" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="caret-right" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512" data-fa-i2svg=""><path fill="currentColor" d="M118.6 105.4l128 127.1C252.9 239.6 256 247.8 256 255.1s-3.125 16.38-9.375 22.63l-128 127.1c-9.156 9.156-22.91 11.9-34.88 6.943S64 396.9 64 383.1V128c0-12.94 7.781-24.62 19.75-29.58S109.5 96.23 118.6 105.4z"></path></svg>
-                            </a></li>
+                                    <svg class="svg-inline--fa fa-caret-right" aria-hidden="true" focusable="false"
+                                        data-prefix="fas" data-icon="caret-right" role="img"
+                                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512" data-fa-i2svg="">
+                                        <path fill="currentColor"
+                                            d="M118.6 105.4l128 127.1C252.9 239.6 256 247.8 256 255.1s-3.125 16.38-9.375 22.63l-128 127.1c-9.156 9.156-22.91 11.9-34.88 6.943S64 396.9 64 383.1V128c0-12.94 7.781-24.62 19.75-29.58S109.5 96.23 118.6 105.4z">
+                                        </path>
+                                    </svg>
+                                </a></li>
                         </ul>
                     </nav>
                 </div>
@@ -709,6 +879,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
         crossorigin="anonymous"></script>
-    <script src="js/shop.js"></script>   
+    <script src="js/shop.js"></script>
 </body>
+
 </html>

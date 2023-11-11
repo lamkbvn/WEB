@@ -6,7 +6,7 @@ let categoriesProductSale = document.querySelectorAll('.categories-product-sale'
 let saleBadge = document.querySelectorAll('.sale-badge');
 
 btnSearch.addEventListener('click', displayResultSearch);
-
+  
 let listResult = [];
 
 function displayResultSearch(){

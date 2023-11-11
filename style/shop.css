@@ -219,6 +219,7 @@
     height: 350px;
     display: flex;
     flex-direction: column;
+    cursor: pointer;
 }
 
 #shop-items .card .card-image {
@@ -232,6 +233,7 @@
     top: 5%;
     left: 0;
     border-radius: 0;
+    z-index: 5;
 }
 
 #shop-items .card .card-image .badge > span {
@@ -271,6 +273,7 @@
     background-color: transparent;
     transition: all .3s;
     border: none;
+    z-index : 5;
 }
 
 #shop-items .card .card-image .action .action-bt {
