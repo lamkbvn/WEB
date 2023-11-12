@@ -82,6 +82,13 @@ navItems.addEventListener("click", function(event) {
     }
 })
 
+window.addEventListener('load', adjustMargin);
+window.addEventListener('resize', adjustMargin);
+
+function adjustMargin() {
+    var headerHeight = document.querySelector('.header').offsetHeight;
+    document.body.style.marginTop = headerHeight + 'px';
+}
 
 
 

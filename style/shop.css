@@ -3,6 +3,7 @@
 }
 
 .shop-pg {
+    position: relative;
     padding-top: 100px;
     padding-bottom: 80px;
 }
@@ -253,7 +254,7 @@
     color: white;
 }
 
-#shop-items .card .card-image .badge *:not(.saling-product,.new-product) {
+#shop-items .card .card-image .badge *:not(.saling-product) {
     display: none;
 }
 
