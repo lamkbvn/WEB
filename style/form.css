@@ -44,14 +44,14 @@
 .form .container{
 
   width: auto;
-  height: 650px;
+  height: 600px;
 
   padding: 0;
 
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 .form .container .exit{
