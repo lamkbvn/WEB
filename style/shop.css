@@ -445,7 +445,7 @@
     
 }
 
-.shop-pg .item-expand > ul > li, .shop-pg #price-list > ul > li {
+.shop-pg #price-list > ul > li {
     display: flex;
     gap: 12px;
 }
@@ -493,16 +493,6 @@
 
 .shop-pg .list-expand-item .list-expand-item-label:hover {
     color: #000;
-}
-
-.shop-pg .item-expand {
-    transition: display ease-out 1s;
-}   
-.shop-pg .item-expand > ul {
-    padding-left: 12px;
-}
-.shop-pg .item-expand > ul > li {
-    margin: 8px 0;
 }
 
 .shop-pg .price-range {
