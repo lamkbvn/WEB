@@ -140,9 +140,6 @@
     padding: 10px;
 }
 
-#top-items .card .card-image .action .action-bt .action-bt-label {
-    transition: all .3s;
-}
 #top-items .card .card-image .action .action-bt:hover .action-bt-label {
     color: transparent;
 }
