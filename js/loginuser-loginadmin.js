@@ -168,6 +168,7 @@ function signOutNow(){
   localStorage.setItem("isSignIn", isSignIn);
   productCart.innerHTML = '';
   updateTotalPrice();
+  
 }
 
 // SIGN UP
