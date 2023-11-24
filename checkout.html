@@ -12,6 +12,7 @@
     <!-- Font-awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
         integrity="sha512-...">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <link rel="stylesheet" href="style/header.css">
     <link rel="stylesheet" href="style/general.css">
@@ -21,10 +22,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
     <script defer src="script.js"></script>
+    <link rel="stylesheet" href="./style/checkout.css">
+    <link rel="stylesheet" href="./style/sale.css">
 
     <!--link breadcrumb-->
     <link rel="stylesheet" href="style/crumb.css">
-
 </head>
 <body>
     <div class="header">
@@ -73,6 +75,8 @@
         </div>
     </div>
 
+
+
     <!--Breadcrumb-->
     <div class="row">
         <div class="col-2"></div>
@@ -80,147 +84,211 @@
         <ol class="crumb">
             <a href="index.html" style="color: grey;">Home</a>
             <i class="fa fa-angle-right ms-1" style="padding-left: 2px;padding-right: 3px;"></i>
-            <span style="color: grey;">Blog</span>
+            <a href="" style="color: grey;">Shopping cart</a>
+            <i class="fa fa-angle-right ms-1" style="padding-left: 2px;padding-right: 3px;"></i>
+            <span>Checkout</span>
         </ol>
         </div>
     </div>
 
-    <div class="blog">
-        <b>Our Blog</b>
-    </div>
-    <nav class="filter">
-        <a class="blog_active" href="#">All</a>
-        <a class="blog_link" href="#">Company</a>
-        <a class="blog_link" href="#">Brand</a>
-        <a class="blog_link" href="">Fashion</a>
-        <a class="blog_link" href="#">Shop</a>
-    </nav>
-
-    <!--post-->
-    <div class="post">
-    <div class="row">
-        <!--cot ben trai-->
-        <div class="col-md-6">
-            <!--post 1-->
-        <div class="row-cols-1">
-            <img src="./img/blog/blog-1.jpg" alt="#">
-        <a href="./blog-post.html">
-            <h5 style="color: black;">
-                So isn't land signs greater void face replenish
-            </h5>
+    <!--checkout-->
+    <div>
+        <div class="Title-page">
+            <h2>Checkout</h2>
             <p>
-                Midst one brought greater also morning green syaing had good. Open stars day let over gathered, grass face one every light of under.
+                Already have an account? <b>Click here to login</b>
             </p>
-        </a>
-            <a href="./blog-post.html"><b>Read more</b>
-                <i class="fas fa-arrow-right" style="padding-left: 4px; padding-top: 20px;padding-bottom: 30px;"></i>
-            </a>
         </div>
-
-        <!--post 2-->
-        <div class="row-cols-1">
-            <img src="./img/blog/blog-5.jpg" alt="#">
-        <a href="blog-post.html">
-            <h5 style="color: black;">
-                Morning let you created every day.
-            </h5>
-            <p>
-               Created spirit fly was fifth. Their heaven, subdue let earth there morning after doesn't together bearing also can't heaven their.
-            </p>
-        </a>
-            <a href="blog-post.html"><b>Read more</b>
-                <i class="fas fa-arrow-right" style="padding-left: 4px; padding-top: 20px;padding-bottom: 30px;"></i>
-            </a>
-        </div>
-
-        <!--post 3-->
-        <div class="row-cols-1">
-            <img src="./img/blog/blog-7.jpg" alt="#">
-        <a href="blog-post.html">
-            <h5 style="color: black;">
-                Heaven upon heaven moveth every have.
-            </h5>
-            <p>
-                Divided own, there tree forth whales you, fill creepeth our. You're itself may yielding green was fly one kind fish hath be be winged.
-            </p>
-        </a>
-            <a href="blog-post.html"><b>Read more</b>
-                <i class="fas fa-arrow-right" style="padding-left: 4px; padding-top: 20px;padding-bottom: 30px;"></i>
-            </a>
-        </div>
-
-        </div>
-
-        <!--cot ben phai-->
-        <div class="col-md-6">
-            <!--post 4-->
-            <div class="row-cols-1">
-                <img src="./img/blog/blog-4.jpg" alt="#">
-
-            <a href="blog-post.html">
-                <h5 style="color: black;">
-                    Sea good every which said first divided.
-                </h5>
-                <p>
-                    From fruit shall stars over. Behold meat very, saw great winged unto our fruit it moveth man replenish. Meat place is so fruit. 
-                </p>
-            </a>
-                <a href="blog-post.html"><b>Read more</b>
-                    <i class="fas fa-arrow-right" style="padding-left: 4px; padding-top: 20px;padding-bottom: 30px;"></i>
-                </a>
+    <!--form-->
+    <div class="row padding ">
+        <div class="col-md-6 inf">
+            <!--user infomation-->
+            <h5>Billing Details</h5>
+            <div class="name">
+                <div class="row-cols-1" style="margin-right: 15px;">
+                    <label>First name *</label>
+                    <input type="text" placeholder="First name">
+                </div>
+                <div class="row-cols-1" style="margin-left: 15px;">
+                    <label>Last name *</label>
+                    <input type="text" placeholder="Last name">
+                </div>    
             </div>
-
-            <!--post 5-->
-            <div class="row-cols-1">
-                <img src="./img/blog/blog-6.jpg" alt="#">
-            <a href="blog-post.html">
-                <h5 style="color: black;">
-                    Third darkness and second dry second greater.
-                </h5>
-                <p>
-                    Let meat subdue the first for fourth is. Them our meat isn't you'll, you're place Years dominion shall from years a hath Good appear yielding.
-                </p>
-            </a>
-                <a href="blog-post.html"><b>Read more</b>
-                    <i class="fas fa-arrow-right" style="padding-left: 4px; padding-top: 20px;padding-bottom: 30px;"></i>
-                </a>
+            <div class="email">
+                <label>Email *</label>
+                <p class="row-cols-1"><input type="text" placeholder="Email"></p>
             </div>
-
-            <!--post 6-->
-            <div class="row-cols-1">
-                <img src="./img/blog/blog-8.jpg" alt="#">
-            <a href="blog-post.html">
-                <h5 style="color: black;">
-                    Created their subdue together.
-                </h5>
-                <p>
-                    Stars female night fowl our second in great can't after he sea thing so a said two. Fowl may open first.
-                </p>
-            </a>
-                <a href="blog-post.html"><b>Read more</b>
-                    <i class="fas fa-arrow-right" style="padding-left: 4px; padding-top: 20px;padding-bottom: 30px;"></i>
-                </a>
+            <div class="address">
+                <label>Address *</label>
+                <p class="row-cols-1"><input type="text" placeholder="Address"></p>
             </div>
-        </div>
-    </div>
-    </div>
+            <div class="phone">
+                <label>Mobile phone *</label>
+                <p class="row-cols-1"><input type="text" placeholder="Mobile phone"></p>
+            </div>
+            
+            <!--Shipping Details-->
+            <h5>Shipping Details</h5>
+            <table class="table font">
+                <tr>
+                    <td>
+                        <input type="radio" name="tick" value="Standard Shipping">Standard Shipping
+                    </td>
+                    <td>
+                        <p>Delivery in 5-7 working days</p>
+                    </td>
+                    <td>
+                    <p>$8.00</p>
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td>
+                        <input type="radio" name="tick" value="Express Shipping">Express Shipping
+                    </td>
+                    <td>
+                        <p>Delivery in 3-5 working days</p>
+                    </td>
+                    <td>
+                    <p>$12.00</p>
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td>
+                        <input type="radio" name="tick" value="1 - 2 Shipping">1 - 2 Shipping
+                    </td>
+                    <td>
+                        <p>Delivery in 1-2 working days</p>
+                    </td>
+                    <td>
+                    <p>$18.00</p>
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td>
+                        <input type="radio" name="tick" value="Free Shipping">Free Shipping
+                    </td>
+                    <td>
+                        <p>Living won't the He one every subdue meat replenish face was you morning firmament darkness.</p>
+                    </td>
+                    <td>
+                    <p>$0.00</p>
+                    </td>
+                </tr>
+                
+            </table>
 
-    <!--Load more-->
-    <div class="row">
-        <div class="col-md-3"></div>
-    <div class="col-md-6 text-center">
-        <div class="post">
-            <p style="color: rgb(158, 158, 158); padding-bottom: 30px;">
-                Showing 16 of 24 products
-            </p>
-            <!--progress Bar-->
-            <div class="progress mx-4 mb-4">
-                <div class="progress-bar bg-dark" role="progressbar" style="width: 66%;">
+             <!--Payment-->
+            <h5>Payment</h5>
+            
+            <div>
+                <div class="Credit">
+                    <th>
+                        <input type="radio" name="card" value="Credit Card">Credit Card
+                        <img class="footer-payment" src="img/category/payment/mastercard.svg" alt="...">
+                        <img class="footer-payment" src="img/category/payment/visa.svg" alt="...">
+                        <img class="footer-payment" src="img/category/payment/maestro.svg" alt="...">
+                    </th>
+                </div>
+                <div class="Credit">
+                    <div>
+                        <input type="text" placeholder="Card Number *" class="nhap">
+                        <input type="text" placeholder="Name on Card *" class="nhap">
+                        <input type="month" class="nhapp">
+                        <input type="text" placeholder="CVV *" class="nhapp">
+                    </div>
+                </div>
+                <div class="Paypal">
+                    <th>
+                        <input type="radio" name="card" value="Paypal"><img src="./img/category/payment/paypal.svg" class="img"> 
+                    </th>
                 </div>
             </div>
-            <button class="button">Load  more</button>
+
+            <!--Notes-->
+            <div>
+                <input type="text" placeholder="Order Notes (optional)" class="note">
+            </div>
+            
+
         </div>
+
+       
+
+        <div class="col-md-6 inf" style="padding-left: 150px;">
+            <!--Order-->
+            <h5>Order Items (3)</h5>
+            <div class="row">
+                <div class="col-3">
+                    <img src="./img/product/product-6.jpg" alt="" style="width: 100%;">
+                </div>
+                <div class="col-9">
+                    <a href="#" style="color: black;"><b>Cotton floral print Dress</b></a>
+                    <p class="font">$40.00</p>
+                    <div style="padding-top: 50px;">
+                        <p class="text-muted font">Size: M</p>
+                        <p class="text-muted font">Color: Red</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row padding">
+                <div class="col-3">
+                    <img src="./img/product/product-10.jpg" alt="" style="width: 100%;">
+                </div>
+                <div class="col-9">
+                    <a href="#" style="color: black;"><b>Suede cross body Bag</b></a>
+                    <p class="font">$49.00</p>
+                    <div style="padding-top: 50px;">
+                        <p class="text-muted font">Color: Brown </p>
+                    </div>
+            </div>
+            <div class="row padding" style="padding-left: 25px;">
+                <div class="col-4 total" >
+                    <p class="line">
+                        Subtotal
+                    </p>
+                    <p class="line">
+                        Tax
+                    </p>
+                    <p class="line">
+                        Shipping
+                    </p>
+                    <p class="line">
+                        <b>Total</b>
+                    </p>
+                </div>
+                <div class="col-4 total text">
+                    <p class="line">
+                        $89.00
+                    </p>
+                    <p class="line">
+                        $0.00
+                    </p>
+                    <p class="line">
+                        $8.00
+                    </p>
+                    <p class="line">
+                        <b>$97.00</b>
+                    </p>
+                </div>
+                <div class="col-8">
+                    <p class="font" style="text-align: justify;">Your personal data will be used to process your order, support your experience throughout this website, and for other purposes described in our privacy policy.</p>
+                </div>
+                <script src="./order.js"></script>
+                <button class="col-8 btton padding" id="order" onclick="orderSuccess()">
+                    Place Order
+                </button>
+                
+            </div>
+
+          
+        </div>
+
     </div>
+
     </div>
 </body>
 <!--footer-->
