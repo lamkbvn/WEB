@@ -1,73 +1,107 @@
 let person =document.querySelector('.user-header');
-let sectionForm = document.querySelector('.section-form');
-let overlayForm = document.querySelector('.overlay-form');
+let sectionFormLogin = document.querySelector('.section-form-login');
+let overlayFormLogin = document.querySelector('.overlay-form-login');
 let btnActive = document.querySelector('.btn-active');
 
 let input = document.querySelector('.input');
 let body = document.querySelector('body');
-let exitBtn = document.querySelectorAll('.exit');
+let exitBtnLogin = document.querySelector('.exit-login');
+let invalidAccountLogin = document.querySelector('.invalid-account-login');
 
+let sectionFormRegister = document.querySelector('.section-form-register');
+let overlayFormRegister = document.querySelector('.overlay-form-register');
+let exitBtnRegister = document.querySelector('.exit-register');
 
-person.addEventListener('click' ,
-  function (){
-    if(sectionForm.classList.contains('hidden-form')){
-      sectionForm.classList.remove('hidden-form');
+person.onclick = function (){
+      if(!isSignIn)
+      {
+        sectionFormLogin.classList.remove('hidden-form');
       body.style.overflow = 'hidden';
-      invalidAccount.innerHTML ='';
-    }
+      invalidAccountLogin.innerHTML ='';
+      }
   }
-);
-overlayForm.addEventListener('click' ,
-function (){
-  sectionForm.classList.add('hidden-form');
-  input.value = '';
+
+
+
+exitBtnLogin.onclick = function(){
+      sectionFormLogin.classList.add('hidden-form');
+      body.style.overflow = '';
+      invalidAccountLogin.innerHTML ='';
+}
+
+overlayFormLogin.onclick = function(){
+  sectionFormLogin.classList.add('hidden-form');
   body.style.overflow = '';
+  invalidAccountLogin.innerHTML ='';
 }
-);
 
-for(exit of exitBtn) {
-  exit.addEventListener('click' ,
-  function () {
-    sectionCart.classList.add('hidden-form');
-    sectionSearch.classList.add('hidden-form');
-    sectionForm.classList.add('hidden-form');
-    body.style.overflow = '';
+let btnLogin = document.querySelector('.btn-login');
+let btnRegister = document.querySelector('.btn-register');
+
+
+btnLogin.onclick = function (){
+    btnLogin.classList.add('btn-active');
+    btnRegister.classList.remove('btn-active');
+    sectionFormRegister.classList.add('hidden-form');
+    sectionFormLogin.classList.remove('hidden-form');
   }
-)
+
+
+
+btnRegister.onclick = function (){
+    btnLogin.classList.remove('btn-active');
+    btnRegister.classList.add('btn-active');
+    sectionFormLogin.classList.add('hidden-form');
+    sectionFormRegister.classList.remove('hidden-form');
+  }
+
+exitBtnRegister.onclick = function(){
+    sectionFormRegister.classList.add('hidden-form');
+    body.style.overflow = '';
+    invalidAccountLogin.innerHTML ='';
 }
 
-let cart = document.querySelector('.cart-header');
+
+overlayFormRegister.onclick = function(){
+sectionFormRegister.classList.add('hidden-form');
+body.style.overflow = '';
+invalidAccountLogin.innerHTML ='';
+}
+
+let btnSearch = document.querySelector('.search');
+let sectionSearch = document.querySelector('.section-search');
+let overlaySearch = document.querySelector('.overlay-search');
+let exitSearch = document.querySelector('.exit-search');
+btnSearch.onclick = function(){
+  sectionSearch.classList.remove('hidden-form');
+}
+
+overlaySearch.onclick = function(){
+  sectionSearch.classList.add('hidden-form');
+}
+
+exitSearch.onclick = function(){
+  sectionSearch.classList.add('hidden-form');
+}
+
+let btnCart = document.querySelector('.cart');
 let sectionCart = document.querySelector('.section-cart');
-let overlayScreen = document.querySelectorAll('.overlay');
-let formCart = document.querySelector('.form-cart');
-const search =document.querySelector('.search-header');
-const sectionSearch =document.querySelector('.section-search');
-
-
-
-cart.addEventListener('click' ,
-  function () {
-    sectionCart.classList.remove('hidden-form');
-    body.style.overflow = 'hidden';
-  }
-)
-
-search.addEventListener('click',
-  function () {
-    sectionSearch.classList.remove('hidden-form');
-    body.style.overflow = 'hidden';
-  }
-)
-
-for(overlay of overlayScreen){
-  overlay.addEventListener('click' ,
-  function () {
-    sectionCart.classList.add('hidden-form');
-    sectionSearch.classList.add('hidden-form');
-    body.style.overflow = '';
-  }
-)
+let overlayCart = document.querySelector('.overlay-cart');
+let exitCart = document.querySelector('.exit-cart');
+btnCart.onclick = function(){
+  sectionCart.classList.remove('hidden-form');
 }
+
+overlayCart.onclick = function(){
+  sectionCart.classList.add('hidden-form');
+}
+
+exitCart.onclick = function(){
+  sectionCart.classList.add('hidden-form');
+}
+
+
+
 
 // Active nav section indicator
 let navItems = document.querySelector(".nav");
