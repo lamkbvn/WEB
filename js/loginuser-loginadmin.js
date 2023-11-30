@@ -37,30 +37,6 @@ btnSignIn.onclick = function(){
     invalidAccountLogin.classList.remove('hidden-form');
       invalidAccountLogin.innerHTML ='Account or Password wrong';
   }
-<<<<<<< HEAD
-=======
-}
-
-btnSignOut.addEventListener('click',signOutNow);
-
-function signOutNow(){
-  sectionForm.classList.remove('hidden');
-  sectionForm.classList.add('hidden-form');
-  nameUser.innerHTML = '';
-  btnSignOut.classList.add('hidden-form');
-  invalidAccount.innerHTML ='';
-  invalidAccount.classList.add('hidden-form');
-  indexAccountnameCur = -1;
-  isSignIn =false;
-  localStorage.setItem("indexAccountnameCur", indexAccountnameCur);
-  localStorage.setItem("isSignIn", isSignIn);
-  productCart.innerHTML = '';
-  updateTotalPrice();
-  
-}
-
-// SIGN UP
->>>>>>> 32547b59987d6870efd6dffdba1e5ba6cd8337b6
 
 
 
@@ -87,6 +63,7 @@ btnSignOut.onclick = function(){
     btnSignOut.classList.add('hidden-form');
     nameUser.innerHTML = '';
     isSignIn = false;
+    numberProductInCart.innerHTML = 3 + "";
   }
 }
 
