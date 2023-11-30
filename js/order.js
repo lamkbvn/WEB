@@ -47,5 +47,5 @@ function orderSuccess() {
 };
 function Order() {
     alert("Order Succesfull");
-    window.location.href = 'WEB_SGU/index.html';
+    window.location.href = 'index.html';
 }
