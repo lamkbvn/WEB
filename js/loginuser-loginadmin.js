@@ -37,9 +37,7 @@ btnSignIn.onclick = function(){
     invalidAccountLogin.classList.remove('hidden-form');
       invalidAccountLogin.innerHTML ='Account or Password wrong';
   }
-<<<<<<< HEAD
-=======
-}
+
 
 btnSignOut.addEventListener('click',signOutNow);
 
@@ -60,7 +58,6 @@ function signOutNow(){
 }
 
 // SIGN UP
->>>>>>> 32547b59987d6870efd6dffdba1e5ba6cd8337b6
 
 
 
@@ -140,7 +137,6 @@ let btnSignUp = document.querySelector('.btn-signup');
     body.style.overflow = '';
     btnSignOut.classList.remove('hidden-form');
   }
-
 
 
 

@@ -9,7 +9,7 @@
     <!-- Bootrap - css -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    
     <!-- Font-awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
         integrity="sha512-...">
@@ -354,197 +354,197 @@
             </p>
         </div>
 
-    <!--form-->
-    <div class="row padding ">
-        <div class="col-md-6 inf">
-            <!--user infomation-->
-            <h5>Billing Details</h5>
-            <div class="name">
-                <div class="row-cols-1" style="margin-right: 15px;">
-                    <label>First name *</label>
-                    <input type="text" placeholder="First name" required>
-                </div>
-                <div class="row-cols-1" style="margin-left: 15px;">
-                    <label>Last name *</label>
-                    <input type="text" placeholder="Last name" required>
-                </div>    
-            </div>
-            <div class="email">
-                <label>Email *</label>
-                <p class="row-cols-1"><input type="text" placeholder="Email"></p>
-            </div>
-            <div class="address">
-                <label>Address *</label>
-                <p class="row-cols-1"><input type="text" placeholder="Address"></p>
-            </div>
-            <div class="phone">
-                <label>Mobile phone *</label>
-                <p class="row-cols-1"><input type="text" placeholder="Mobile phone"></p>
-            </div>
-            
-            <!--Shipping Details-->
-            <h5>Shipping Details</h5>
-            <table class="table font">
-                <tr>
-                    <td>
-                        <input type="radio" name="tick" value="Standard Shipping">Standard Shipping
-                    </td>
-                    <td>
-                        <p>Delivery in 5-7 working days</p>
-                    </td>
-                    <td>
-                    <p>$8.00</p>
-                    </td>
-                </tr>
-                
-                <tr>
-                    <td>
-                        <input type="radio" name="tick" value="Express Shipping">Express Shipping
-                    </td>
-                    <td>
-                        <p>Delivery in 3-5 working days</p>
-                    </td>
-                    <td>
-                    <p>$12.00</p>
-                    </td>
-                </tr>
-                
-                <tr>
-                    <td>
-                        <input type="radio" name="tick" value="1 - 2 Shipping">1 - 2 Shipping
-                    </td>
-                    <td>
-                        <p>Delivery in 1-2 working days</p>
-                    </td>
-                    <td>
-                    <p>$18.00</p>
-                    </td>
-                </tr>
-                
-                <tr>
-                    <td>
-                        <input type="radio" name="tick" value="Free Shipping">Free Shipping
-                    </td>
-                    <td>
-                        <p>Living won't the He one every subdue meat replenish face was you morning firmament darkness.</p>
-                    </td>
-                    <td>
-                    <p>$0.00</p>
-                    </td>
-                </tr>
-                
-            </table>
+<!--form-->
 
-             <!--Payment-->
-            <h5>Payment</h5>
+<div class="row padding ">
+    <div class="col-md-6 inf">
+        <!--user infomation-->
+        <h5>Billing Details</h5>
+        <div class="name">
+            <div class="row-cols-1" style="margin-right: 15px;">
+                <label>First name *</label>
+                <input type="text" placeholder="First name" id="fname">
+            </div>
+            <div class="row-cols-1" style="margin-left: 15px;">
+                <label>Last name *</label>
+                <input type="text" placeholder="Last name" id="lname">
+            </div>    
+        </div>
+        <div class="email">
+            <label>Email *</label>
+            <p class="row-cols-1"><input type="text" placeholder="Email" id="email"></p>
+        </div>
+        <div class="address">
+            <label>Address *</label>
+            <p class="row-cols-1"><input type="text" placeholder="Address" id="addr"></p>
+        </div>
+        <div class="phone">
+            <label>Mobile phone *</label>
+            <p class="row-cols-1"><input type="text" placeholder="Mobile phone" id="phone"></p>
+        </div>
+        
+        <!--Shipping Details-->
+        <h5>Shipping Details</h5>
+        <table class="table font">
+            <tr>
+                <td>
+                    <input type="radio" name="tick" value="Standard Shipping" id="Standard">Standard Shipping
+                </td>
+                <td>
+                    <p>Delivery in 5-7 working days</p>
+                </td>
+                <td>
+                <p>$8.00</p>
+                </td>
+            </tr>
             
-            <div>
-                <div class="Credit">
-                    <th>
-                        <input type="radio" name="card" value="Credit Card">Credit Card
-                        <img class="footer-payment" src="img/category/payment/mastercard.svg" alt="...">
-                        <img class="footer-payment" src="img/category/payment/visa.svg" alt="...">
-                        <img class="footer-payment" src="img/category/payment/maestro.svg" alt="...">
-                    </th>
-                </div>
-                <div class="Credit">
-                    <div>
-                        <input type="text" placeholder="Card Number *" class="nhap">
-                        <input type="text" placeholder="Name on Card *" class="nhap">
-                        <input type="month" class="nhapp">
-                        <input type="text" placeholder="CVV *" class="nhapp">
-                    </div>
-                </div>
-                <div class="Paypal">
-                    <th>
-                        <input type="radio" name="card" value="Paypal"><img src="./img/category/payment/paypal.svg" class="img"> 
-                    </th>
+            <tr>
+                <td>
+                    <input type="radio" name="tick" value="Express Shipping" id="Express">Express Shipping
+                </td>
+                <td>
+                    <p>Delivery in 3-5 working days</p>
+                </td>
+                <td>
+                <p>$12.00</p>
+                </td>
+            </tr>
+            
+            <tr>
+                <td>
+                    <input type="radio" name="tick" value="1 - 2 Shipping" id="1-2">1 - 2 Shipping
+                </td>
+                <td>
+                    <p>Delivery in 1-2 working days</p>
+                </td>
+                <td>
+                <p>$18.00</p>
+                </td>
+            </tr>
+            
+            <tr>
+                <td>
+                    <input type="radio" name="tick" value="Free Shipping" id="Free">Free Shipping
+                </td>
+                <td>
+                    <p>Living won't the He one every subdue meat replenish face was you morning firmament darkness.</p>
+                </td>
+                <td>
+                <p>$0.00</p>
+                </td>
+            </tr>
+            
+        </table>
+
+        <!--Payment-->
+        <h5>Payment</h5>
+        
+        <div>
+            <div class="Credit">
+                <th>
+                    <input type="radio" name="card" value="Credit Card" id="Credit">Credit Card
+                    <img class="footer-payment" src="img/category/payment/mastercard.svg" alt="...">
+                    <img class="footer-payment" src="img/category/payment/visa.svg" alt="...">
+                    <img class="footer-payment" src="img/category/payment/maestro.svg" alt="...">
+                </th>
+            </div>
+            <div class="Credit">
+                <div>
+                    <input type="text" placeholder="Card Number *" class="nhap" id="Card_number">
+                    <input type="text" placeholder="Name on Card *" class="nhap" id="Card_name">
+                    <input type="month" class="nhapp" id="month">
+                    <input type="text" placeholder="CVV *" class="nhapp" id="CVV">
                 </div>
             </div>
-
-            <!--Notes-->
-            <div>
-                <input type="text" placeholder="Order Notes (optional)" class="note">
+            <div class="Paypal">
+                <th>
+                    <input type="radio" name="card" value="Paypal" id="Paypal"><img src="./img/category/payment/paypal.svg" class="img"> 
+                </th>
             </div>
-            
-
         </div>
 
-       
-
-        <div class="col-md-6 inf" style="padding-left: 150px;">
-            <!--Order-->
-            <h5>Order Items (3)</h5>
-            <div class="row">
-                <div class="col-3">
-                    <img src="./img/product/product-6.jpg" alt="" style="width: 100%;">
-                </div>
-                <div class="col-9">
-                    <a href="#" style="color: black;"><b>Cotton floral print Dress</b></a>
-                    <p class="font">$40.00</p>
-                    <div style="padding-top: 50px;">
-                        <p class="text-muted font">Size: M</p>
-                        <p class="text-muted font">Color: Red</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row padding">
-                <div class="col-3">
-                    <img src="./img/product/product-10.jpg" alt="" style="width: 100%;">
-                </div>
-                <div class="col-9">
-                    <a href="#" style="color: black;"><b>Suede cross body Bag</b></a>
-                    <p class="font">$49.00</p>
-                    <div style="padding-top: 50px;">
-                        <p class="text-muted font">Color: Brown </p>
-                    </div>
-            </div>
-            <div class="row padding" style="padding-left: 25px;">
-                <div class="col-4 total" >
-                    <p class="line">
-                        Subtotal
-                    </p>
-                    <p class="line">
-                        Tax
-                    </p>
-                    <p class="line">
-                        Shipping
-                    </p>
-                    <p class="line">
-                        <b>Total</b>
-                    </p>
-                </div>
-                <div class="col-4 total text">
-                    <p class="line">
-                        $89.00
-                    </p>
-                    <p class="line">
-                        $0.00
-                    </p>
-                    <p class="line">
-                        $8.00
-                    </p>
-                    <p class="line">
-                        <b>$97.00</b>
-                    </p>
-                </div>
-                <div class="col-8">
-                    <p class="font" style="text-align: justify;">Your personal data will be used to process your order, support your experience throughout this website, and for other purposes described in our privacy policy.</p>
-                </div>
-                <script src="./order.js"></script>
-                <button class="col-8 btton padding" id="order" onclick="orderSuccess()">
-                    Place Order
-                </button>
-                
-            </div>
-
-          
+        <!--Notes-->
+        <div>
+            <input type="text" placeholder="Order Notes (optional)" class="note">
         </div>
+        
 
     </div>
 
+
+
+    <div class="col-md-6 inf" style="padding-left: 150px;">
+        <!--Order-->
+        <h5>Order Items (3)</h5>
+        <div class="row">
+            <div class="col-3">
+                <img src="./img/product/product-6.jpg" alt="" style="width: 100%;">
+            </div>
+            <div class="col-9">
+                <a href="#" style="color: black;"><b>Cotton floral print Dress</b></a>
+                <p class="font">$40.00</p>
+                <div style="padding-top: 50px;">
+                    <p class="text-muted font">Size: M</p>
+                    <p class="text-muted font">Color: Red</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row padding">
+            <div class="col-3">
+                <img src="./img/product/product-10.jpg" alt="" style="width: 100%;">
+            </div>
+            <div class="col-9">
+                <a href="#" style="color: black;"><b>Suede cross body Bag</b></a>
+                <p class="font">$49.00</p>
+                <div style="padding-top: 50px;">
+                    <p class="text-muted font">Color: Brown </p>
+                </div>
+        </div>
+        <div class="row padding" style="padding-left: 25px;">
+            <div class="col-4 total" >
+                <p class="line">
+                    Subtotal
+                </p>
+                <p class="line">
+                    Tax
+                </p>
+                <p class="line">
+                    Shipping
+                </p>
+                <p class="line">
+                    <b>Total</b>
+                </p>
+            </div>
+            <div class="col-4 total text">
+                <p class="line">
+                    $89.00
+                </p>
+                <p class="line">
+                    $0.00
+                </p>
+                <p class="line">
+                    $8.00
+                </p>
+                <p class="line">
+                    <b>$97.00</b>
+                </p>
+            </div>
+            <div class="col-8">
+                <p class="font" style="text-align: justify;">Your personal data will be used to process your order, support your experience throughout this website, and for other purposes described in our privacy policy.</p>
+            </div>
+            <script src="js/order.js"></script>
+            <button class="col-8 btton padding" id="order" onclick="orderSuccess()">
+                Place Order
+            </button>
+            
+        </div>
+
+    
     </div>
+
+</div>
+
 </body>
 <!--footer-->
 <footer class="footer" style="background-color: rgb(197, 204, 204);">
