@@ -14,10 +14,10 @@ function orderSuccess() {
 
     //kiem tra
     if (firstName == '' || lastName == '' || Email == '' || Address == '') {
-        return alert('Please fill out your information');
+        return alert('Please fill in your information');
     }
     if (isNaN(Phone)) {
-        return alert('Your Phone must be number');
+        return alert('Your Phone must be a number');
     }
     //kiem tra chon phuong thuc giao hang
     if (Standard || Express || One_two || Free) {  
