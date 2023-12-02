@@ -124,14 +124,15 @@ function LOGUP(){
   const href1 =
     ["http://127.0.0.1:5501/index1.html",
     "http://127.0.0.1:5501/shop1.html" ,
-    "http://127.0.0.1:5501/product1.html?",
+    "http://127.0.0.1:5501/product1.html",
     "http://127.0.0.1:5501/blog-post1.html",
     "http://127.0.0.1:5501/blog1.html",
     "http://127.0.0.1:5501/contact_us1.html",
     "http://127.0.0.1:5501/pagecart1.html",
     "http://127.0.0.1:5501/checkout1.html",
     "http://127.0.0.1:5501/historyOrder.html",
-    "http://127.0.0.1:5501/search1.html",]
+    "http://127.0.0.1:5501/search1.html",
+    "http://127.0.0.1:5501/product1.html?"]
 
   function checkhref1(){
       for(let h of href1)
