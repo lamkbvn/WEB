@@ -82,9 +82,26 @@
   display: flex;
   width: 400px;
   border: 1px solid black;
+}
 
+.container-search .row-2-row-1{
   margin-top: 25px;
 }
+
+.container-search .row-2-row-3{
+  margin-top: 25px;
+  display: flex;
+}
+
+.container-search .row-2-row-3 .price-start{
+  width: 100px;
+}
+
+.container-search .row-2-row-3 .price-end{
+  width: 100px;
+}
+
+
 
 .container-search .content-search{
     width : 350px;
@@ -157,4 +174,85 @@
   width: 30px;
   height: 30px;
   transition: transform 0.5s;
+}
+
+/* PAGE SEARCH */
+
+h3{
+  width: 100%;
+  text-align: center;
+}
+
+
+.container-sp{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap : 10px;
+  
+  padding : 32px;
+
+  border: none;
+
+  border-bottom: 1px solid gainsboro;
+}
+
+.container-sp #select-type-clothe{
+  width: 150px;
+  height: 50px;
+  padding: 12px;
+}
+
+.container-sp .row-2-row-2{
+  display: flex;
+  width: 400px;
+  height: 50px;
+  border: 1px solid black;
+}
+
+
+
+.container-sp .row-2-row-3{
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-top: 4px;
+}
+
+.container-sp .row-2-row-3 .price-start{
+  width: 100px;
+  height: 45px;
+}
+
+.container-sp .row-2-row-3 .price-end{
+  width: 100px;
+  height: 45px;
+}
+
+
+
+.container-sp .content-search{
+    width : 350px;
+    height : -10px;
+    padding : 15px;
+
+    border: none;
+    outline: none;
+}
+
+.container-sp .outline-btn-search{
+  flex: 1;
+  height: 50px;
+  width: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border-left: 1px solid black;
+}
+
+.container-sp .btn-search{
+  width: 16px;
+  height: 16px;
+  border: 1px solid gainsboro;
 }

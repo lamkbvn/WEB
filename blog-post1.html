@@ -4,12 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SHOP CLOTHER</title>
+    <title>SHOP CLOTHES</title>
     <link rel="stylesheet" href="style/footer.css">
     <!-- Bootrap - css -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
     <!-- Font-awesome -->
     <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
 
@@ -28,13 +28,12 @@
     <link rel="stylesheet" href="style/bestpick.css">
     <link rel="stylesheet" href="style/about.css">
     <link rel="stylesheet" href="style/cart.css">
-    <link rel="stylesheet" href="style/review.css">
-    <link rel="stylesheet" href="style/sale.css">
-    <link rel="stylesheet" href="style/shop.css">
+    <link rel="stylesheet" href="style/blog-post.css">
     <script defer src="script.js"></script>
     <script defer src="js/about.js"></script>
     <script defer src="js/switchPage.js"></script>
     <script defer src="js/addToCart.js"></script>
+    <script defer src="js/searchProduct.js"></script>
     <script defer src="js/loginuser-loginadmin.js"></script>
     <link rel="stylesheet" href="style/search.css">
 </head>
@@ -49,15 +48,15 @@
             <div class="navbar">
                 <ul class="nav-link">
                     <li class="nav-link home">
-                        <a href="index.html" class="link-nav">Home</a>
+                        <a href="index1.html" class="link-nav">Home</a>
                     </li>
                     <li class="nav-link clothe">
                         <a href="#" class="link-nav">Clothe</a>
                         <div class="dropdown">
                             <ul>
-                                <li><a href="shop.html" class="link-card">Women</a></li>
-                                <li><a href="shop.html" class="link-card">Men</a></li>
-                                <li><a href="shop.html" class="link-card">Kids</a></li>
+                                <li><a href="shop1.html" class="link-card">Women</a></li>
+                                <li><a href="shop1.html" class="link-card">Men</a></li>
+                                <li><a href="shop1.html" class="link-card">Kids</a></li>
                             </ul>
                         </div>
                     </li>
@@ -66,7 +65,7 @@
                         <div class="dropdown">
                             <ul>
                                 <li class="link-card about"><a href="#head-page">About</a></li>
-                                <li class="link-card"><a href="contact_us.html">Contact us</a></li>
+                                <li class="link-card"><a href="contact_us1.html">Contact us</a></li>
                             </ul>
                         </div>
                     </li>
@@ -74,8 +73,8 @@
                         <a href="" class="link-nav">Blog</a>
                         <div class="dropdown">
                             <ul>
-                                <li class="link-card blogs"><a href="blog.html">Blog</a></li>
-                                <li class="link-card"><a href="blog-post.html">Blog post</a></li>
+                                <li class="link-card blogs"><a href="blog1.html">Blog</a></li>
+                                <li class="link-card"><a href="blog-post1.html">Blog post</a></li>
                             </ul>
                         </div>
                     </li>
@@ -89,14 +88,14 @@
                 </div>
                 <div class="user-header  person">
                     <img src="img/icon-header/person.svg" alt="" class="icon-header">
-                    <div class="name-user"></div>
+                    <div class="name-user">User</div>
                 </div>
                 <div class="cart-header  cart">
                     <img src="img/icon-header/cart.svg" alt="" class="icon-header">
                     <span class="number-product-in-cart">3</span>
                 </div>
                 <div class="sign-out" onclick="LOGOUT()">
-                    <img src="img/iconlogin/sign-out.svg" alt="" class="icon-header btn-sign-out hidden-form">
+                    <img src="img/iconlogin/sign-out.svg" alt="" class="icon-header btn-sign-out">
                 </div>
             </div>
             <div class="side-bar-header">
@@ -262,7 +261,7 @@
                     <span class="totalprice">$100</span>
                 </div>
                 <div class="row-4">
-                    <a href="pagecart.html">
+                    <a href="pagecart1.html">
                         <div class="display-product-cart">
                             View Cart
                         </div>
@@ -311,380 +310,11 @@
         </div>
     </section>
 
-
-    <!-- PAGE MAIN -->
-    <section class="page-main">
-        <div class="select-page">
-            <div class="to-page-women-img to-page">
-                <p class="name-page">Women</p>
-                <div class="show-page">
-                    <a href="shop.html" class="btn-link-show-page">
-                        Shop Now
-                    </a>
-                    <div class="btn-show-page"></div>
-                </div>
-            </div>
-            <div class="to-page-men-img to-page">
-                <p class="name-page">Men</p>
-                <div class="show-page">
-                    <a href="shop.html" class="btn-link-show-page">
-                        Shop Now
-                    </a>
-                    <div class="btn-show-page"></div>
-                </div>
-            </div>
-            <div class="to-page-kid-img to-page">
-                <p class="name-page">Kid</p>
-                <div class="show-page">
-                    <a href="shop.html" class="btn-link-show-page">
-                        Shop Now
-                    </a>
-                    <div class="btn-show-page"></div>
-                </div>
-            </div>
-        </div>
-
-        <!--Get sale-->
-        <div class="sale" style="background-image: url(./img/Buyers-review/cover-4.jpg);">
-            <div class="row">
-                <div class="col-sm-3" style="margin-left: 50%;">
-                    <h2>Get -50% from <br>Summer Collection</h2>
-                    <!--countdown timer-->
-                    <p>
-                    <div class="time">
-                        <span><span id="Days" class="tgian"></span> Days </span>
-                        <!--Ngày-->
-                        <span class="tgian"> : </span>
-                        <!---->
-                        <span><span id="Hours" class="tgian"></span> Hours </span>
-                        <!--giờ-->
-                        <span class="tgian"> : </span>
-                        <!---->
-                        <span><span id="Mins" class="tgian"></span> Mins </span>
-                        <!--phút-->
-                        <span class="tgian"> : </span>
-                        <!---->
-                        <span><span id="Secs" class="tgian"></span> Secs </span>
-                        <!--giây-->
-                    </div>
-                    </p>
-                    <script src="js/countdown.js"></script>
-                    <a href="">
-                        <button class="btton">
-                            Shop now
-                            <i class="fa fa-long-arrow-right" style="padding-left: 5px;"></i>
-                        </button>
-                    </a>
-                </div>
-
-            </div>
-        </div>
-
-        <section class="top-month-sellers">
-            <div class="container">
-                <div class="title-nav">
-                    <h2>Top Month Sellers</h2>
-                    <div class="nav">
-                        <a class="active-item nav-item" href="#top-item" id="women">Women</a>
-                        <a class="nav-item" href="#top-item" id="men">Men</a>
-                        <a class="nav-item" href="#top-item" id="kid">Kids</a>
-                    </div>
-
-                </div>
-                <div id="top-items">
-                    <div class="card product-sale">
-                        <div class="card-image">
-                            <div class="badge">
-                                <span class="sale-badge">NORMAL</span>
-                            </div>
-                            <div class="action">
-                                <button class="action-bt add-sale-to-cart" onclick="addProductToCart()">
-                                    Add to cart
-                                    <img src="img/icon-normal/add-to-cart-icon.svg" alt="">
-                                </button>
-                            </div>
-                            <a href="product.html"><img src="img/product/product-6.jpg" alt="top-month-sellers6"
-                                    class=" img-main"></a>
-                        </div>
-                        <div class="card-info">
-                            <div class="categories">
-                                <a class="categories-label categories-product-sale">
-                                    Women
-                                </a>
-                            </div>
-                            <div class="product-name product-sale-name">
-                                <a class="product-name-label" href="product.html">
-                                    Pink Dress
-                                </a>
-                            </div>
-                            <div class="price">
-                                <span class="price-label product-normal-price">$40.00</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card product-sale">
-                        <div class="card-image">
-                            <div class="badge">
-                                <span class="sale-badge">NORMAL</span>
-                            </div>
-                            <div class="action">
-                                <button onclick="addProductToCart()" class="action-bt add-sale-to-cart">
-                                    Add to cart
-                                    <img src="img/icon-normal/add-to-cart-icon.svg" alt="">
-                                </button>
-                            </div>
-                            <a href="product.html"><img src="img/product/product-6.jpg" alt="top-month-sellers6"></a>
-                        </div>
-                        <div class="card-info">
-                            <div class="categories">
-                                <a class="categories-label  categories-product-sale" href="">
-                                    Men
-                                </a>
-                            </div>
-                            <div class="product-name product-sale-name">
-                                <a class="product-name-label" href="product.html">
-                                    Pink Dress 1
-                                </a>
-                            </div>
-                            <div class="price">
-                                <span class="price-label product-normal-price">$40.00</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card product-sale">
-                        <div class="card-image">
-                            <div class="badge">
-                                <span class="sale-badge saling-product">SALE</span>
-                            </div>
-                            <div class="action">
-                                <button onclick="addProductToCart()" class="action-bt add-sale-to-cart">
-                                    Add to cart
-                                    <img src="img/icon-normal/add-to-cart-icon.svg" alt="">
-                                </button>
-                            </div>
-                            <a href="product.html"><img src="img/product/product-6.jpg" alt="top-month-sellers6"></a>
-                        </div>
-                        <div class="card-info">
-                            <div class="categories">
-                                <a class="categories-label  categories-product-sale" href="">
-                                    Men
-                                </a>
-                            </div>
-                            <div class="product-name product-sale-name">
-                                <a class="product-name-label" href="">
-                                    Pink Dress 2
-                                </a>
-                            </div>
-                            <div class="price">
-                                <span class="price-label product-normal-price">$40.00</span>
-                                <span class="sale-price-label product-sale-price">$35.00</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card product-sale">
-                        <div class="card-image">
-                            <div class="badge">
-                                <span class="sale-badge saling-product">SALE</span>
-                            </div>
-                            <div class="action">
-                                <button onclick="addProductToCart()" class="action-bt add-sale-to-cart">
-                                    Add to cart
-                                    <img src="img/icon-normal/add-to-cart-icon.svg" alt="">
-                                </button>
-                            </div>
-                            <a href="product.html"><img src="img/product/product-6.jpg" alt="top-month-sellers6"></a>
-                        </div>
-                        <div class="card-info">
-                            <div class="categories">
-                                <a class="categories-label  categories-product-sale" href="">
-                                    Kid
-                                </a>
-                            </div>
-                            <div class="product-name product-sale-name">
-                                <a class="product-name-label" href="">
-                                    Pink Dress 3
-                                </a>
-                            </div>
-                            <div class="price">
-                                <span class="price-label product-normal-price">$40.00</span>
-                                <span class="sale-price-label product-sale-price">$35.00</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card product-sale">
-                        <div class="card-image">
-                            <div class="badge">
-                                <span class="sale-badge saling-product">SALE</span>
-                            </div>
-                            <div class="action">
-                                <button onclick="addProductToCart()" class="action-bt add-sale-to-cart">
-                                    Add to cart
-                                    <img src="img/icon-normal/add-to-cart-icon.svg" alt="">
-                                </button>
-                            </div>
-                            <a href="product.html"><img src="img/product/product-6.jpg" alt="top-month-sellers6"></a>
-                        </div>
-                        <div class="card-info">
-                            <div class="categories">
-                                <a class="categories-label  categories-product-sale" href="">
-                                    Kid
-                                </a>
-                            </div>
-                            <div class="product-name product-sale-name">
-                                <a class="product-name-label" href="">
-                                    Pink Dress 4
-                                </a>
-                            </div>
-                            <div class="price">
-                                <span class="price-label product-normal-price">$40.00</span>
-                                <span class="sale-price-label product-sale-price">$35.00</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card product-sale">
-                        <div class="card-image">
-                            <div class="badge">
-                                <span class="sale-badge saling-product">SALE</span>
-                            </div>
-                            <div class="action">
-                                <button onclick="addProductToCart()" class="action-bt add-sale-to-cart">
-                                    Add to cart
-                                    <img src="img/icon-normal/add-to-cart-icon.svg" alt="">
-                                </button>
-                            </div>
-                            <a href="product.html"><img src="img/product/product-6.jpg" alt="top-month-sellers6"></a>
-                        </div>
-                        <div class="card-info">
-                            <div class="categories">
-                                <a class="categories-label  categories-product-sale" href="">
-                                    Women
-                                </a>
-                            </div>
-                            <div class="product-name product-sale-name">
-                                <a class="product-name-label" href="">
-                                    Pink Dress 5
-                                </a>
-                            </div>
-                            <div class="price">
-                                <span class="price-label product-normal-price">$40.00</span>
-                                <span class="sale-price-label product-sale-price">$35.00</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="more-items">
-                    <a href="">Discover more</a>
-                </div>
-            </div>
-        </section>
-
-        <!--What Buyers say-->
-        <div class="review">
-            <div>
-                <h6 style="color: gray; font-size: smaller;">
-                    WHAT BUYERS SAY
-                </h6>
-                <h2>
-                    Lasted buyers Reviews
-                </h2>
-            </div>
-            <div class="row font">
-                <div class="col-md-3 border">
-                    <div class="row padding">
-                        <div class="col-4" style="float: left;">
-                            <img src="./img/Buyers-review/product-13.jpg" alt="shoes" style="width: 100%">
-                        </div>
-                        <div class="col-8">
-                            <p class="text-muted">Shoes</p>
-                            <h6 style="font-size: 17px;">Low top Sneakers</h6>
-                            <i class="fa fa-star" style="color: rgb(255, 174, 0);"></i>
-                            <i class="fa fa-star" style="color: rgb(255, 174, 0);"></i>
-                            <i class="fa fa-star" style="color: rgb(255, 174, 0);"></i>
-                            <i class="fa fa-star" style="color: rgb(220, 218, 218);"></i>
-                            <i class="fa fa-star" style="color: rgb(220, 218, 218);"></i>
-                        </div>
-                    </div>
-                    <blockquote>
-                        <p class="text-muted padding">
-                            From creepeth said moved given divide make multiply of him shall itself also above second
-                            doesn't unto created saying land herb sea midst night wherein.
-                        </p>
-                        <footer class="text-muted padding">
-                            Logan Edwards, 01 Jun 2019
-                        </footer>
-                    </blockquote>
-                </div>
-
-                <div class="col-md-3 border" style="margin-left: 3%;">
-                    <div class="row padding">
-                        <div class="col-4" style="float: left;">
-                            <img src="./img/Buyers-review/product-14.jpg" alt="dress" style="width: 100%">
-                        </div>
-                        <div class="col-8">
-                            <p class="text-muted">Dresses</p>
-                            <h6 style="font-size: 17px;">Cotton print Dress</h6>
-                            <i class="fa fa-star" style="color: rgb(255, 174, 0);"></i>
-                            <i class="fa fa-star" style="color: rgb(255, 174, 0);"></i>
-                            <i class="fa fa-star" style="color: rgb(255, 174, 0);"></i>
-                            <i class="fa fa-star" style="color: rgb(255, 174, 0);"></i>
-                            <i class="fa fa-star" style="color: rgb(255, 174, 0);"></i>
-
-                        </div>
-                    </div>
-                    <blockquote>
-                        <p class="text-muted padding">
-                            God every fill great replenish darkness unto. Very open. Likeness their that light. Given
-                            under
-                            image to. Subdue of shall cattle day fish form saw spirit and given stars, us you whales
-                            may,
-                            land, saw fill unto.
-                        </p>
-                        <footer class="text-muted padding">
-                            Jane Jefferson, 29 May 2019
-                        </footer>
-                    </blockquote>
-                </div>
-
-                <div class="col-md-3 border" style="margin-left: 3%;">
-                    <div class="row padding">
-                        <div class="col-4" style="float: left;">
-                            <img src="./img/Buyers-review/product-15.jpg" alt="T-Shirts" style="width: 100%">
-                        </div>
-                        <div class="col-8">
-                            <p class="text-muted">T-shirts</p>
-                            <h6 style="font-size: 15px;">Oversized print T-shirt</h6>
-                            <i class="fa fa-star" style="color: rgb(255, 174, 0);"></i>
-                            <i class="fa fa-star" style="color: rgb(255, 174, 0);"></i>
-                            <i class="fa fa-star" style="color: rgb(255, 174, 0);"></i>
-                            <i class="fa fa-star" style="color: rgb(255, 174, 0);"></i>
-                            <i class="fa fa-star" style="color: rgb(220, 218, 218);"></i>
-
-                        </div>
-                    </div>
-                    <blockquote>
-                        <p class="text-muted padding">
-                            Fill his waters wherein signs likeness waters. Second light gathered appear sixth fourth,
-                            seasons behold creeping female.
-                        </p>
-                        <footer class="text-muted padding">
-                            Darrell Baker, 18 May 2019
-                        </footer>
-                    </blockquote>
-                </div>
-
-            </div>
-
-
-
-        </div>
-
-    </section>
-
     <!-- PAGE ABOUT -->
     <section class="page-about hidden-form">
         <div class="section-0">
             <div class="container">
-                <span class="return-home"><a href="#head-page">Home</a></span>&nbsp;&nbsp;&nbsp;&nbsp;About
+                <span class="return-home"><a href="#head-page">Home</a></span>&nbsp;&nbsp;>&nbsp;&nbsp;About
             </div>
         </div>
         <div class="section-1" id="section-1">
@@ -755,7 +385,7 @@
                     </div>
                 </div>
                 <div class="go-to-home">
-                    <a href="index.html" class="">Shop now</a>
+                    <a href="index1.html" class="">Shop now</a>
                     <img src="img/show-page/arrow-right-short-white.svg" alt="">
                 </div>
             </div>
@@ -815,14 +445,14 @@
             <div class="container">
                 <div class="row-1">What Buyer Say</div>
                 <div class="row-2">Customer Reviews</div>
-                <div class="row-3 text-des">
+                <div class="row-3">
                     Given wherein. Doesn't called also and air sea to make first subdue
                     beginning. Appear seasons the it after whose beginning. Hath can't good life. They're multiply made
                     give divided
                     open, be likeness Cattle be have.
                     Life tree darkness. She'd very.
                 </div>
-                <div class="row-4 date-des">
+                <div class="row-4">
                     Darrell Baker, 18 May 2023
                 </div>
                 <div class="row-5">
@@ -835,113 +465,184 @@
         </section>
     </section>
 
-    <section class="py-12 bg-light">
+    <section class="blog-post">
         <div class="container">
-            <div class="row">
-                <div class="col-12 text-center">
-                    <h2 class="mb-3">
-                        @Shop Clothe
-                    </h2>
-                    <p class="mb-10">
-                        Appear, dry there darkness they're seas, dry waters.
-                    </p>
-                </div>
-            </div>
-            <div class="row col-md-11 mb-10" style="margin: auto;">
-                <div class="col-6 col-sm-4 col-md px-1" style="width: 178px; height: 177px;">
-                    <div class="card mb-2">
-                        <img src="img/category/brand/product-16.jpg" class="card-img" alt="">
-
+            <nav class="nav">
+                <ol style="list-style-type: none;">
+                    <li class="home"><a href="index1.html">
+                            Home
+                        </a></li>
+                    <li class="blog"><a href="blog1.html">
+                            Blog
+                        </a></li>
+                    <li class="current-page">
+                        5 Tips to Increase Your Online Sales
+                    </li>
+                </ol>
+            </nav>
+            <article class="blog-post-content">
+                <header>
+                    <div class="blog-post-title">
+                        <h3> 5 Tips to Increase Your Online Sales</h3>
+                    </div>
+                    <div class="blog-post-source">
+                        <h6>By Oliver Barrett in Company / July 18 2019</h6>
+                    </div>
+                    <img src="img/blog-post-img/blog-9.jpg" alt="">
+                </header>
+                <div class="blog-post-body">
+                    <div class="part-1">
+                        <h4 style="font-weight: bold;color: black;margin-bottom: 10px;">Tree doesn't good void, waters
+                            without created</h4>
+                        <p> Saw wherein fruitful good days image them, midst, waters upon, saw. Seas lights seasons.
+                            Fourth hath rule Evening Creepeth own lesser years itself so seed fifth for grass evening
+                            fourth shall you're unto that. Had. Female replenish for yielding so saw all one to yielding
+                            grass you'll air sea it, open waters subdue, hath. </p>
+                        <p>Saw wherein fruitful good days image them, midst, waters upon, saw. Seas lights seasons.
+                            Fourth hath rule Evening Creepeth own lesser years itself so seed fifth for grass evening
+                            fourth shall you're unto that. Had. Female replenish for yielding so saw all one to yielding
+                            grass you'll air sea it, open waters subdue, hath. Brought second Made. Be. Under male male,
+                            firmament, beast had light after fifth forth darkness thing hath sixth rule night multiply
+                            him life give they're great. </p>
+                        <ol style="list-style-type: disc;">
+                            <li>
+                                Upon seas hath every years have whose subdue;
+                            </li>
+                            <li>
+                                Given they're tree abundantly male our;
+                            </li>
+                            <li>Fly make saw creeping evening make void own seasons behold.</li>
+                        </ol>
+                        <p>Brought second Made. Be. Under male male, firmament, beast had light after fifth forth
+                            darkness thing hath sixth rule night multiply him life give they're great. Very together.
+                            Creature. Green. Them evening a and light fourth. </p>
+                        <p> She'd years darkness days. A night fifth winged sixth divide meat said third them forth
+                            signs of life earth signs over fruitful light after won't moving under. Thing yielding upon
+                            seed. Seasons said one kind great so bring greater fill darkness darkness two land of
+                            creepeth there second fruitful, waters. Make don't void years Gathering gathering divide
+                            fill.
+                        </p>
+                    </div>
+                    <div class="post-imgs">
+                        <div class="post-img">
+                            <img src="img/blog-post-img/blog-4.jpg" alt="">
+                        </div>
+                        <div class="post-img">
+                            <img src="img/blog-post-img/blog-5.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="part-2">
+                        <h4 style="font-weight: bold;color: black;margin-bottom: 10px;">Replenish female give him</h4>
+                        <p>Have multiply greater male living stars replenish earth said replenish our yielding let She'd
+                            spirit. Male. Two. Greater. Brought our, there kind don't lesser beast whose above Is
+                            without great. Of moving firmament shall. For light land them man. Deep isn't light them.
+                            Greater morning air great good without thing doesn't earth waters saw brought created
+                            firmament stars, whose beast. Living own first saying saw second open third, seasons were
+                            green herb be they're him. Good, saying him. For of which land own in. Sixth spirit. Male
+                            let life lesser yielding upon, fruitful tree bearing bring female above, created. </p>
+                        <p>Female unto lights won't. Set dry his isn't air unto fruit seasons you'll male very given.
+                            Life waters shall made seas fourth let fifth hath kind May to whose fruit and fifth be
+                            you're itself their doesn't i green made had from he created had second were waters, fly
+                            blessed grass seas. Had own. Given won't set waters creature fish brought she'd is created
+                            life. </p>
+                        <blockquote class="post-quote">
+                            <b><i>"</i> Without Was be great it them green which seed. They're lights i of life.
+                                Abundantly. Void night divide appear be won't days they're beast in. You day blessed
+                                there i very stars man Saw had, make let light his above. <i>"</i></b>
+                        </blockquote>
+                        <p>Saying beginning two whose third moved. Him creeping divided dominion which forth waters
+                            multiply land of us. Waters dry above one fifth for. Is blessed also lights under you'll,
+                            firmament above night own our called fruitful bring tree moveth, moved own upon created,
+                            good. Seed place multiply so. Night years divide divided. Man moveth air, can't set. Fourth
+                            likeness. Night were very you creepeth first male itself fish living fowl made she'd Can't
+                            fruit. Said his us land from moveth. </p>
                     </div>
                 </div>
-                <div class="col-6 col-sm-4 col-md px-1">
-                    <div class="card mb-2">
-                        <img src="img/category/brand/product-17.jpg" class="card-img" alt="">
-
+                <footer>
+                    <div class="other-topics">
+                        <a class="other-topic">Communication</a>
+                        <a class="other-topic">Business</a>
+                        <a class="other-topic">Fashion</a>
+                        <a class="other-topic">Marketing</a>
+                        <a class="other-topic">Teamwork</a>
+                    </div>
+                    <div class="social-shares">
+                        <a class="social-share-platform" id="FB" href="">
+                            <span class="social-share-icon">
+                                <img src="img/blog-post-icon/facebool-icon.svg" alt="">
+                            </span>
+                            Share on Facebook
+                        </a>
+                        <a class="social-share-platform" id="X" href="">
+                            <span class="social-share-icon">
+                                <img src="img/blog-post-icon/x-icon.svg" alt="">
+                            </span>
+                            Share on X
+                        </a>
+                        <a class="social-share-platform" id="Pinterest" href="">
+                            <span class="social-share-icon">
+                                <img src="img/blog-post-icon/pinterest-icon.svg" alt="">
+                            </span>
+                            Share on Pinterest
+                        </a>
+                        <a class="social-share-platform" id="Linkedln" href="">
+                            <span class="social-share-icon">
+                                <img src="img/blog-post-icon/linked-icon.svg" alt="">
+                            </span>
+                            Share on Linkedln
+                        </a>
+                    </div>
+                </footer>
+            </article>
+            <div class="more-post">
+                <h3>Lastest in Blog</h3>
+                <div class="blog-list">
+                    <div class="blog-list-item">
+                        <div class="blog-item-img">
+                            <img src="img/blog-post-img/blog-1.jpg" alt="">
+                        </div>
+                        <div class="blog-item-body">
+                            <h6 style="color: #000;" class="blog-item-title"><b>Us yielding Fish sea night night the
+                                    said him two</b> </h6>
+                            <p class="blog-quick-info">Fill his waters wherein signs likeness waters. Second light
+                                gathered appear sixth. </p>
+                            <a class="blog-more-info" href="">
+                                Read more
+                            </a>
+                        </div>
+                    </div>
+                    <div class="blog-list-item">
+                        <div class="blog-item-img">
+                            <img src="img/blog-post-img/blog-2.jpg" alt="">
+                        </div>
+                        <div class="blog-item-body">
+                            <h6 style="color: #000;" class="blog-item-title"><b>Tree earth fowl given moveth deep lesser
+                                    After</b> </h6>
+                            <p class="blog-quick-info">Called life don't called darkness spirit have, abundantly so
+                                Wherein the third cattle.</p>
+                            <a class="blog-more-info" href="">
+                                Read more
+                            </a>
+                        </div>
+                    </div>
+                    <div class="blog-list-item">
+                        <div class="blog-item-img">
+                            <img src="img/blog-post-img/blog-3.jpg" alt="">
+                        </div>
+                        <div class="blog-item-body">
+                            <h6 style="color: #000;" class="blog-item-title"><b>Given Set was without from god divide
+                                    rule Hath</b> </h6>
+                            <p class="blog-quick-info">Midst land were us fill divided. Him Subdue living without he
+                                beginning second. </p>
+                            <a class="blog-more-info" href="">
+                                Read more
+                            </a>
+                        </div>
                     </div>
                 </div>
-                <div class="col-6 col-sm-4 col-md px-1">
-                    <div class="card mb-2">
-                        <img src="img/category/brand/product-18.jpg" class="card-img" alt="">
-
-                    </div>
-                </div>
-                <div class="col-6 col-sm-4 col-md px-1">
-                    <div class="card mb-2">
-                        <img src="img/category/brand/product-19.jpg" class="card-img" alt="">
-
-                    </div>
-                </div>
-                <div class="col-6 col-sm-4 col-md px-1">
-                    <div class="card mb-2">
-                        <img src="img/category/brand/product-20.jpg" class="card-img" alt="">
-
-                    </div>
-                </div>
-                <div class="col-6 col-sm-4 col-md px-1">
-                    <div class="card">
-                        <img src="img/category/brand/product-21.jpg" class="card-img" alt="">
-
-                    </div>
-                </div>
-            </div>
-            <div class="row col-md-11 mb-10" style="margin: auto;">
-                <div class="col-4 col-sm-3 col-md text-center">
-                    <img src="img/category/brand/mango.svg" class="img-fluid mb-7 mb-md-0" alt="">
-                </div>
-                <div class="col-4 col-sm-3 col-md text-center">
-                    <img src="img/category/brand/adidas.svg" class="img-fluid mb-7 mb-md-0" alt="">
-                </div>
-                <div class="col-4 col-sm-3 col-md text-center">
-                    <img src="img/category/brand/asos.svg" class="img-fluid mb-7 mb-md-0" alt="">
-                </div>
-                <div class="col-4 col-sm-3 col-md text-center">
-                    <img src="img/category/brand/reebok.svg" class="img-fluid mb-7 mb-md-0" alt="">
-                </div>
-                <div class="col-4 col-sm-3 col-md text-center">
-                    <img src="img/category/brand/bershka.svg" class="img-fluid mb-7 mb-md-0" alt="">
-                </div>
-                <div class="col-4 col-sm-3 col-md text-center">
-                    <img src="img/category/brand/stradivarius.svg" class="img-fluid mb-7 mb-md-0" alt="">
-                </div>
-                <div class="col-4 col-sm-3 col-md text-center">
-                    <img src="img/category/brand/zara.svg" class="img-fluid mb-7 mb-md-0" alt="">
-                </div>
-
             </div>
         </div>
     </section>
-
-    <div class="satiate-guest">
-        <div class="satiate">
-            <img src="img/icon-normal/truck.svg" alt="" class="satiate-img">
-            <div class="satiate-text">
-                <p>FREE SHIPPING</p>
-                <p>From all orders over $100</p>
-            </div>
-            <div class="satiate">
-                <img src="img/icon-normal/repeat.svg" alt="" class="satiate-img">
-                <div class="satiate-text">
-                    <p>FREE RETURNS</p>
-                    <p>Return money within 30 days</p>
-                </div>
-            </div>
-            <div class="satiate">
-                <img src="img/icon-normal/lock.svg" alt="" class="satiate-img">
-                <div class="satiate-text">
-                    <p>SECURE SHOPPING</p>
-                    <p>You're in safe hands</p>
-                </div>
-            </div>
-            <div class="satiate">
-                <img src="img/icon-normal/tag.svg" alt="" class="satiate-img">
-                <div class="satiate-text">
-                    <p>OVER 10,000 STYLES</p>
-                    <p>We have everything you need</p>
-                </div>
-            </div>
-        </div>
-    </div>
 
     <footer class="footer" style="background-color: rgb(197, 204, 204);">
         <div class="py-12 border-bottom border-gray-700">
@@ -952,7 +653,7 @@
                             <h5>Support</h5>
                             <ul class="nav flex-column">
                                 <li class="nav-item mb-2">
-                                    <a href="contact_us.html" class="nav-link p-0 text-muted">Contact US</a>
+                                    <a href="contact_us1.html" class="nav-link p-0 text-muted">Contact US</a>
                                 </li>
                                 <li class="nav-item mb-2">
                                     <a href="" class="nav-link p-0 text-muted">FAQs</a>
@@ -961,7 +662,7 @@
                                     <a href="" class="nav-link p-0 text-muted">Size Guide</a>
                                 </li>
                                 <li class="nav-item mb-2">
-                                    <a href="" class="nav-link p-0 text-muted">Snipping &amp; Returns</a>
+                                    <a href="" class="nav-link p-0 text-muted">Snipping & Returns</a>
                                 </li>
                             </ul>
                         </div>
@@ -992,10 +693,10 @@
                                     <a href="" class="nav-link p-0 text-muted">Careers</a>
                                 </li>
                                 <li class="nav-item mb-2">
-                                    <a href="" class="nav-link p-0 text-muted">Terms &amp; Conditions</a>
+                                    <a href="" class="nav-link p-0 text-muted">Terms & Conditions</a>
                                 </li>
                                 <li class="nav-item mb-2">
-                                    <a href="" class="nav-link p-0 text-muted">Privacy &amp; Cookie Policy</a>
+                                    <a href="" class="nav-link p-0 text-muted">Privacy & Cookie Policy</a>
                                 </li>
                             </ul>
                         </div>
@@ -1056,8 +757,8 @@
         <br>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
-        crossorigin="anonymous"></script>
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous">
+        </script>
 </body>
 
 </html>
