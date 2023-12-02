@@ -35,13 +35,14 @@
     <script defer src="js/about.js"></script>
     <script defer src="js/switchPage.js"></script>
     <script defer src="js/addToCart.js"></script>
-    <script defer src="js/searchProduct.js"></script>
     <script defer src="js/loginuser-loginadmin.js"></script>
+
 
     <link rel="stylesheet" href="style/search.css">
 </head>
 
 <body>
+    <div id="head-page"></div>
     <div class="header" id="header">
         <div class="left-header">
             <span class="name-shop">SHOP CLOTHE</span>
@@ -56,9 +57,9 @@
                         <a href="#" class="link-nav">Clothe</a>
                         <div class="dropdown">
                             <ul>
-                                <li><a href="" class="link-card">Women</a></li>
-                                <li><a href="" class="link-card">Men</a></li>
-                                <li><a href="" class="link-card">Kids</a></li>
+                                <li><a href="shop.html" class="link-card">Women</a></li>
+                                <li><a href="shop.html" class="link-card">Men</a></li>
+                                <li><a href="shop.html" class="link-card">Kids</a></li>
                             </ul>
                         </div>
                     </li>
@@ -88,52 +89,52 @@
                 <div class="search-header ">
                     <img src="img/icon-header/search.svg" alt="" class="icon-header search">
                 </div>
-                <div class="user-header">
-                    <img src="img/icon-header/person.svg" alt="" class="icon-header person">
+                <div class="user-header  person">
+                    <img src="img/icon-header/person.svg" alt="" class="icon-header">
                     <div class="name-user"></div>
                 </div>
-                <div class="cart-header">
-                    <img src="img/icon-header/cart.svg" alt="" class="icon-header cart">
-                    <span class="number-product-in-cart">0</span>
+                <div class="cart-header  cart">
+                    <img src="img/icon-header/cart.svg" alt="" class="icon-header">
+                    <span class="number-product-in-cart">3</span>
                 </div>
                 <div class="sign-out">
                     <img src="img/iconlogin/sign-out.svg" alt="" class="icon-header btn-sign-out hidden-form">
                 </div>
             </div>
-            <img src="img/icon-header/side-bar.svg" alt="" class=" icon-header side-bar-header">
+            <div class="side-bar-header">
+                <!-- <img src="img/icon-header/side-bar.svg" alt="" class=" icon-header side-bar-header"> -->
+            </div>
         </div>
     </div>
-    <div id="head-page"></div>
-
     <!-- FORM LOGIN -->
-    <section class="section-form hidden-form">
+    <section class="section-form-login hidden-form" style="z-index: 100;">
         <div class="form-login ">
-            <div class="overlay-form"></div>
+            <div class="overlay-form overlay-form-login"></div>
             <div class="form">
                 <div class="container">
                     <div class="row1">
                         <div class="announcement">
                             Welcom to Shop Clothe
                         </div>
-                        <div class="exit">&times;</div>
+                        <div class="exit exit-login">&times;</div>
                     </div>
-                    <div class="row2 user-input  form-type">
+                    <div class="row2 user-input ">
                         <div class="account">
                             <label for="">Account name</label>
-                            <input type="text" id="accountname" class="input input-accountname"
+                            <input type="text" id="accountnamelogin" class="input input-accountname account-login"
                                 placeholder="Enter account name" maxlength="25">
                         </div>
                         <div class="password">
                             <label for="">Password</label>
-                            <input type="password" id="password" class="input input-password"
+                            <input type="password" id="passwordlogin" class="input input-password password-login"
                                 placeholder="Enter password" maxlength="25">
                             <img src="img/iconlogin/hidden-pass.svg" alt="" class="hidden-password">
                         </div>
                         <button class="btn-signin">Sign in</button>
-                        <div class="invalid-account hidden-form">asdasd</div>
+                        <div class="invalid-account-login hidden-form">asdasd</div>
                     </div>
                     <div class="switch-login">
-                        <button class="btnn btn-login btn-active">Login</button>
+                        <button class="btnn btn-active">Login</button>
                         <button class="btnn btn-register ">Register</button>
                     </div>
                 </div>
@@ -141,23 +142,117 @@
         </div>
     </section>
 
+    <!-- FORM Rigister -->
+    <section class="section-form-register  hidden-form" style="z-index: 100;">
+        <div class="form-login ">
+            <div class="overlay-form overlay-form-register"></div>
+            <div class="form">
+                <div class="container">
+                    <div class="row1">
+                        <div class="announcement">
+                            Welcom to Shop Clothe
+                        </div>
+                        <div class="exit exit-register">&times;</div>
+                    </div>
+                    <div class="row2 user-input">
+                        <div class="name">
+                            <label for="">User name</label>
+                            <input type="text" id="username" class="input input-username" placeholder="Enter user name"
+                                maxlength="30">
+                        </div>
+                        <div class="account">
+                            <label for="">Account name</label>
+                            <input type="text" id="accountname" class="input input-accountname account-register"
+                                placeholder="Enter account name" maxlength="25">
+                        </div>
+                        <div class="password">
+                            <label for="">Password</label>
+                            <input type="password" id="password" class="input input-password password-register"
+                                placeholder="Enter password" maxlength="25">
+                            <img src="img/iconlogin/hidden-pass.svg" alt="" class="hidden-password">
+                        </div>
+                        <button class="btn-signup">Sign up</button>
+                        <div class="invalid-account-register hidden-form">enter account</div>
+                    </div>
+                    <div class="switch-login">
+                        <button class="btnn btn-login">Login</button>
+                        <button class="btnn btn-active">Register</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- FORM CART -->
-    <section class="section-cart hidden-form">
+    <section class="section-cart hidden-form" style="z-index: 100;">
         <div class="container-cart">
             <div class="overlay-cart overlay"></div>
             <div class="form-cart">
                 <div class="row-1">
                     <div class="row-1-col-1">
                         Your Cart
-                        <span class="number-product-in-cart">(4)</span>
+                        <span class="number-product-in-cart number-product-your-cart">(4)</span>
                     </div>
-                    <div class="row-1-col-2 exit">
+                    <div class="row-1-col-2 exit-cart">
                         &times;
                     </div>
                 </div>
                 <div class="row-2">
                     <ul class="product-cart">
-                        <!-- product in cart -->
+                        <li class="item-cart">
+                            <img src="img/product/product-1.jpg" alt="" class="img-item-cart">
+                            <div class="infor-item-cart">
+                                <div class="name-item-cart">Sweater</div>
+                                <div class="price-item-cart">$50.00</div>
+                                <div class="edit-quantity">
+                                    <img onclick="minusFunction(event)" src="img/iconcart/minus.svg" alt=""
+                                        class="btn-edit-quantity minus">
+                                    <div class="quantity-item-cart quantity">
+                                        1
+                                    </div>
+                                    <img onclick="plusFunction(event)" src="img/iconcart/plus.svg" alt=""
+                                        class="btn-edit-quantity plus ">
+                                </div>
+                            </div>
+                            <div onclick="removeProduct()" class="remove-item-cart" id="remove-item-cart">&times;</div>
+                            `;
+                        </li>
+                        <li class="item-cart">
+                            <img src="img/product/product-3.jpg" alt="" class="img-item-cart">
+                            <div class="infor-item-cart">
+                                <div class="name-item-cart">Sweater</div>
+                                <div class="price-item-cart">$50.00</div>
+                                <div class="edit-quantity">
+                                    <img onclick="minusFunction(event)" src="img/iconcart/minus.svg" alt=""
+                                        class="btn-edit-quantity minus">
+                                    <div class="quantity-item-cart quantity">
+                                        1
+                                    </div>
+                                    <img onclick="plusFunction(event)" src="img/iconcart/plus.svg" alt=""
+                                        class="btn-edit-quantity plus ">
+                                </div>
+                            </div>
+                            <div onclick="removeProduct()" class="remove-item-cart" id="remove-item-cart">&times;</div>
+                            `;
+                        </li>
+                        <li class="item-cart">
+                            <img src="img/product/product-2.jpg" alt="" class="img-item-cart">
+                            <div class="infor-item-cart">
+                                <div class="name-item-cart">Sweater</div>
+                                <div class="price-item-cart">$50.00</div>
+                                <div class="edit-quantity">
+                                    <img onclick="minusFunction(event)" src="img/iconcart/minus.svg" alt=""
+                                        class="btn-edit-quantity minus">
+                                    <div class="quantity-item-cart quantity">
+                                        1
+                                    </div>
+                                    <img onclick="plusFunction(event)" src="img/iconcart/plus.svg" alt=""
+                                        class="btn-edit-quantity plus ">
+                                </div>
+                            </div>
+                            <div onclick="removeProduct()" class="remove-item-cart" id="remove-item-cart">&times;</div>
+                            `;
+                        </li>
                     </ul>
                 </div>
                 <div class="row-3">
@@ -167,9 +262,6 @@
                     <span class="totalprice">$100</span>
                 </div>
                 <div class="row-4">
-                    <!-- <div class="buy-product-cart">
-                        Continue to checkout
-                    </div> -->
                     <a href="pagecart.html">
                         <div class="display-product-cart">
                             View Cart
@@ -180,7 +272,7 @@
         </div>
     </section>
     <!-- FORM SEARCH -->
-    <section class="section-search hidden-form">
+    <section class="section-search hidden-form" style="z-index: 100;">
         <div class="container-search">
             <div class="overlay-search overlay"></div>
             <div class="form-search">
@@ -188,7 +280,7 @@
                     <div class="row-1-col-1">
                         Search Product
                     </div>
-                    <div class="row-1-col-2 exit">
+                    <div class="row-1-col-2 exit-search">
                         &times;
                     </div>
                 </div>
@@ -217,9 +309,9 @@
                     <div class="row-3-row-2 list-result-search">
                         <div class="infor-product-search">
                             <a href="product.html" class="infor-product-search">
-                                <img src="img/product/product-6.jpg" alt="" class="img-product-search">
+                                <img src="img/product/product-5.jpg" alt="" class="img-product-search">
                                 <div class="text-product-search">
-                                    <div class="name-product-search">Name product</div>
+                                    <div class="name-product-search">Shoes</div>
                                     <div class="price-product-search">$50</div>
                                 </div>
                             </a>
@@ -228,19 +320,17 @@
                             <a href="product.html" class="infor-product-search">
                                 <img src="img/product/product-6.jpg" alt="" class="img-product-search">
                                 <div class="text-product-search">
-                                    <div class="name-product-search">Name product</div>
+                                    <div class="name-product-search">Dress</div>
                                     <div class="price-product-search">$50</div>
                                 </div>
                             </a>
                         </div>
                     </div>
-                    <!-- <div class="row-3-row-3">
-                        View more <img src="img/show-page/arrow-right-short.svg" alt="" class="icon-view-more">
-                    </div> -->
                 </div>
             </div>
         </div>
     </section>
+
 
     <!-- PAGE MAIN -->
     <section class="page-main">
@@ -298,7 +388,7 @@
                         <!--giây-->
                     </div>
                     </p>
-                    <script src="countdown.js"></script>
+                    <script src="js/countdown.js"></script>
                     <a href="">
                         <button class="btton">
                             Shop now
@@ -328,12 +418,13 @@
                                 <span class="sale-badge">NORMAL</span>
                             </div>
                             <div class="action">
-                                <button class="action-bt add-sale-to-cart">
+                                <button class="action-bt add-sale-to-cart" onclick="addProductToCart()">
                                     Add to cart
                                     <img src="img/icon-normal/add-to-cart-icon.svg" alt="">
                                 </button>
                             </div>
-                            <a href="product.html"><img src="img/product/product-6.jpg" alt="top-month-sellers6" class=" img-main"></a>
+                            <a href="product.html"><img src="img/product/product-6.jpg" alt="top-month-sellers6"
+                                    class=" img-main"></a>
                         </div>
                         <div class="card-info">
                             <div class="categories">
@@ -357,7 +448,7 @@
                                 <span class="sale-badge">NORMAL</span>
                             </div>
                             <div class="action">
-                                <button class="action-bt add-sale-to-cart">
+                                <button onclick="addProductToCart()" class="action-bt add-sale-to-cart">
                                     Add to cart
                                     <img src="img/icon-normal/add-to-cart-icon.svg" alt="">
                                 </button>
@@ -386,7 +477,7 @@
                                 <span class="sale-badge saling-product">SALE</span>
                             </div>
                             <div class="action">
-                                <button class="action-bt add-sale-to-cart">
+                                <button onclick="addProductToCart()" class="action-bt add-sale-to-cart">
                                     Add to cart
                                     <img src="img/icon-normal/add-to-cart-icon.svg" alt="">
                                 </button>
@@ -416,7 +507,7 @@
                                 <span class="sale-badge saling-product">SALE</span>
                             </div>
                             <div class="action">
-                                <button class="action-bt add-sale-to-cart">
+                                <button onclick="addProductToCart()" class="action-bt add-sale-to-cart">
                                     Add to cart
                                     <img src="img/icon-normal/add-to-cart-icon.svg" alt="">
                                 </button>
@@ -446,7 +537,7 @@
                                 <span class="sale-badge saling-product">SALE</span>
                             </div>
                             <div class="action">
-                                <button class="action-bt add-sale-to-cart">
+                                <button onclick="addProductToCart()" class="action-bt add-sale-to-cart">
                                     Add to cart
                                     <img src="img/icon-normal/add-to-cart-icon.svg" alt="">
                                 </button>
@@ -476,7 +567,7 @@
                                 <span class="sale-badge saling-product">SALE</span>
                             </div>
                             <div class="action">
-                                <button class="action-bt add-sale-to-cart">
+                                <button onclick="addProductToCart()" class="action-bt add-sale-to-cart">
                                     Add to cart
                                     <img src="img/icon-normal/add-to-cart-icon.svg" alt="">
                                 </button>
@@ -744,14 +835,14 @@
             <div class="container">
                 <div class="row-1">What Buyer Say</div>
                 <div class="row-2">Customer Reviews</div>
-                <div class="row-3">
+                <div class="row-3 text-des">
                     Given wherein. Doesn't called also and air sea to make first subdue
                     beginning. Appear seasons the it after whose beginning. Hath can't good life. They're multiply made
                     give divided
                     open, be likeness Cattle be have.
                     Life tree darkness. She'd very.
                 </div>
-                <div class="row-4">
+                <div class="row-4 date-des">
                     Darrell Baker, 18 May 2023
                 </div>
                 <div class="row-5">
