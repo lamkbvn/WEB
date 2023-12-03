@@ -3,11 +3,51 @@ let nameUser = document.querySelector('.name-user');
 let btnSignIn = document.querySelector('.btn-signin');
 let accountLogin = document.querySelector('.account-login');
 let passwordLogin = document.querySelector('.password-login');
+let hidlog = document.querySelector('.hid-log');
+let hidreg = document.querySelector('.hid-reg');
 
-let isSignIn = false;
 
-btnSignIn.onclick = function(){
+let currentName  = "User";
+let currentUser ;
+let currentPassword ;
+let an = true;
+function hiddenlog(){
+  if(an)
+  {
+    hidlog.src = "img/iconlogin/non-hidden-pass.svg";
+    let passlog = document.querySelector('.password-login');
+    passlog.type = "text";
+    let passreg = document.querySelector('.password-register');
+    passreg.type = "text";
+    an = false;
+  }
+  else {
+    hidlog.src = "img/iconlogin/hidden-pass.svg";
+    let passlog = document.querySelector('.password-login');
+    passlog.type = "password";
+    let passreg = document.querySelector('.password-register');
+    passreg.type = "password";
+    an = true;
+  }
+}
 
+function hiddenreg(){
+  if(an)
+  {
+    hidreg.src = "img/iconlogin/non-hidden-pass.svg";
+    let passreg = document.querySelector('.password-register');
+    passreg.type = "text";
+    an = false;
+  }
+  else {
+    hidreg.src = "img/iconlogin/hidden-pass.svg";
+    let passreg = document.querySelector('.password-register');
+    passreg.type = "password";
+    an = true;
+  }
+}
+
+function LOGIN(){
   if(accountLogin.value == '')
     {
       invalidAccountLogin.classList.remove('hidden-form');
@@ -22,53 +62,29 @@ btnSignIn.onclick = function(){
   }
 
 
-  if(accountLogin.value =='user' && passwordLogin.value =='user')
-  {
     sectionFormLogin.classList.add('hidden-form');
     body.style.overflow = '';
     invalidAccountLogin.innerHTML ='';
-    nameUser.innerHTML = 'User';
+    nameUser.innerHTML = currentName;
     btnSignOut.classList.remove('hidden-form');
     alert('Sign in success');
-    isSignIn =true;
+    window.location ="index1.html";
     return;
-  }
-  else{
-    invalidAccountLogin.classList.remove('hidden-form');
-      invalidAccountLogin.innerHTML ='Account or Password wrong';
-  }
-
-
-
-  if(accountLogin.value =='admin' && passwordLogin.value =='admin')
-  {
-    sectionFormLogin.classList.add('hidden-form');
-    body.style.overflow = '';
-    invalidAccountLogin.innerHTML ='';
-    window.location = "admin\\index.html";
-    isSignIn = true;
-    alert('Sign in success');
-    return;
-  }
-  else{
-      invalidAccountLogin.classList.remove('hidden-form');
-        invalidAccountLogin.innerHTML ='Account or Password wrong';
-    }
   }
 
 let btnSignOut = document.querySelector('.btn-sign-out');
-btnSignOut.onclick = function(){
-  if(isSignIn)
+function LOGOUT(){
+  if(checkhref1())
   {
     btnSignOut.classList.add('hidden-form');
     nameUser.innerHTML = '';
-    isSignIn = false;
     numberProductInCart.innerHTML = 3 + "";
+    window.location = "index.html";
   }
 }
 
 let btnSignUp = document.querySelector('.btn-signup');
-  btnSignUp.onclick = function(){
+function LOGUP(){
     let invalidAccountRegister = document.querySelector('.invalid-account-register');
     let name = document.querySelector('.input-username');
     if(name.value === '')
@@ -95,28 +111,36 @@ let btnSignUp = document.querySelector('.btn-signup');
       return;
     }
 
-    if(accountregister.value == "admin")
-    {
-      invalidAccountRegister.classList.remove('hidden-form');
-      invalidAccountRegister.innerHTML ='admin is not account name.Please account name other.';
-      return;
-    }
-
-    if(accountregister.value == 'user')
-    {
-      invalidAccountRegister.classList.remove('hidden-form');
-      invalidAccountRegister.innerHTML ='Account name \'user\' is existing.Please account name other';
-
-      return;
-    }
-
+    currentName = name.value;
+    currentUser = accountregister.value;
+    currentPassword = passwordregister.value;
     alert("Sign up success");
     nameUser.innerHTML = name.value;
     sectionFormRegister.classList.add('hidden-form');
-    isSignIn = true;
     body.style.overflow = '';
     btnSignOut.classList.remove('hidden-form');
   }
+
+  const href1 =
+    ["http://127.0.0.1:5501/index1.html",
+    "http://127.0.0.1:5501/shop1.html" ,
+    "http://127.0.0.1:5501/product1.html",
+    "http://127.0.0.1:5501/blog-post1.html",
+    "http://127.0.0.1:5501/blog1.html",
+    "http://127.0.0.1:5501/contact_us1.html",
+    "http://127.0.0.1:5501/pagecart1.html",
+    "http://127.0.0.1:5501/checkout1.html",
+    "http://127.0.0.1:5501/historyOrder.html",
+    "http://127.0.0.1:5501/search1.html",
+    "http://127.0.0.1:5501/product1.html?"]
+
+  function checkhref1(){
+      for(let h of href1)
+        if(h == window.location.href)
+          return true;
+      return false;
+  }
+
 
 
 

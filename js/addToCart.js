@@ -1,7 +1,7 @@
 let numberProductInCart = document.querySelector('.number-product-in-cart');
 
 function addProductToCart(){
-  if(isSignIn){
+  if(checkhref1()){
     alert('Added Product To Cart');
     numberProductInCart.innerHTML =   Number(numberProductInCart.textContent) + 1;
     return;
