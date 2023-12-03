@@ -276,7 +276,7 @@
                                 </li>
                             </ul>
                         </li>
-                        <li class="nav-item">
+                        <!-- <li class="nav-item">
                             <a href="#" class="nav-link">
                                 <i class="nav-icon fas fa-copy"></i>
                                 <p>
@@ -298,7 +298,7 @@
                                     </a>
                                 </li>
                             </ul>
-                        </li>
+                        </li> -->
                         <li class="nav-item">
                             <a href="#" class="nav-link">
                                 <i class="nav-icon fas fa-copy"></i>
@@ -314,12 +314,12 @@
                                         <p>List</p>
                                     </a>
                                 </li>
-                                <li class="nav-item">
+                                <!-- <li class="nav-item">
                                     <a href="../invoice/invoice_create.html" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Create</p>
                                     </a>
-                                </li>
+                                </li> -->
                             </ul>
                         </li>
                         <li class="nav-item">
@@ -410,7 +410,7 @@
                                         <thead>
                                             <tr>
                                                 <th>User ID</th>
-                                                <th>Customer ID</th>
+                                                <th>Customer</th>
                                                 <th>level</th>
                                                 <th>User name</th>
                                                 <th>Password</th>
@@ -418,7 +418,109 @@
                                                 <th>Delete</th>
                                             </tr>
                                         </thead>
-                                        <tbody>  
+                                        <tbody>
+                                            <tr>
+                                            <th>
+                                                <th>1</th>
+                                                <th>nguyenbao@gmail.com</th>
+                                                <th><span class="badge badge-info">Super Admin</span></th>
+                                                <th>baobao123</th>
+                                                <th>12345677</th>
+                                                <th><a href="user_edit.html" class="btn btn-success">Edit</a></th>
+                                                <th><a href="" class="btn btn-danger" onclick="alertdelete()">Delete</a>
+                                            </th>
+                                            </tr>
+                                            <tr>
+                                            <th>
+                                                <th>2</th>
+                                                <th>nguyenlam@gmail.com</th>
+                                                <th><span class="badge badge-success">Admin</span></th>
+                                                <th>lamlam123</th>
+                                                <th>12345677</th>
+                                                <th><a href="user_edit.html" class="btn btn-success">Edit</a></th>
+                                                <th><a href="" class="btn btn-danger" onclick="alertdelete()">Delete</a>
+                                            </th>  
+                                            </tr>
+                                            <tr>
+                                            <th>
+                                                <th>3</th>
+                                                <th>nguyenphuc@gmail.com</th>
+                                                <th><span class="badge badge-success">Admin</span></th>
+                                                <th>phucphuc123</th>
+                                                <th>12345677</th>
+                                                <th><a href="user_edit.html" class="btn btn-success">Edit</a></th>
+                                                <th><a href="" class="btn btn-danger" onclick="alertdelete()">Delete</a>
+                                            </th> 
+                                        </tr>
+                                        <tr>
+                                            <th>
+                                                <th>4</th>
+                                                <th>nguyennam@gmail.com</th>
+                                                <th><span class="badge badge-success">Admin</span></th>
+                                                <th>namnam123</th>
+                                                <th>12345677</th>
+                                                <th><a href="user_edit.html" class="btn btn-success">Edit</a></th>
+                                                <th><a href="" class="btn btn-danger" onclick="alertdelete()">Delete</a>
+                                            </th>  
+                                        </tr> 
+                                        <tr>
+                                            <th>
+                                                <th>5</th>
+                                                <th>nguyenhuy@gmail.com</th>
+                                                <th><span class="badge badge-secondary">Customer</span></th>
+                                                <th>huyhuy123</th>
+                                                <th>12345677</th>
+                                                <th><a href="product_edit.html" class="btn btn-success">Edit</a></th>
+                                                <th><a href="" class="btn btn-danger" onclick="alertdelete()">Delete</a>
+                                            </th>  
+                                        </tr>
+                                        <tr>
+                                            <th>
+                                                <th>6</th>
+                                                <th>nguyenluyen@gmail.com</th>
+                                                <th><span class="badge badge-secondary">Customer</span></th>
+                                                <th>luyen123</th>
+                                                <th>12345677</th>
+                                                <th><a href="product_edit.html" class="btn btn-success">Edit</a></th>
+                                                <th><a href="" class="btn btn-danger" onclick="alertdelete()">Delete</a>
+                                            </th>  
+                                        </tr>
+                                        <tr>
+                                            <th>
+                                                <th>7</th>
+                                                <th>tuyeyky@gmail.com</th>
+                                                <th><span class="badge badge-secondary">Customer</span></th>
+                                                <th>tuyetky123</th>
+                                                <th>12345677</th>
+                                                <th><a href="product_edit.html" class="btn btn-success">Edit</a></th>
+                                                <th><a href="" class="btn btn-danger" onclick="alertdelete()">Delete</a>
+                                            </th>  
+                                        </tr>
+                                        <tr>
+                                            <th>
+                                                <th>8</th>
+                                                <th>nguyenhuy@gmail.com</th>
+                                                <th><span class="badge badge-danger">Block</span></th>
+                                                <th>huyhuy123</th>
+                                                <th>12345677</th>
+                                                <th><a href="product_edit.html" class="btn btn-success">Edit</a></th>
+                                                <th><a href="" class="btn btn-danger" onclick="alertdelete()">Delete</a>
+                                            </th>  
+                                        </tr>
+                                        <tr>
+                                            <th>
+                                                <th>9</th>
+                                                <th>nguyenhuy@gmail.com</th>
+                                                <th><span class="badge badge-danger">Block</span></th>
+                                                <th>huyhuy123</th>
+                                                <th>12345677</th>
+                                                <th><a href="product_edit.html" class="btn btn-success">Edit</a></th>
+                                                <th><a href="" class="btn btn-danger" onclick="alertdelete()">Delete</a>
+                                            </th>  
+                                        </tr>
+                                        
+                                           
+
                                         </tbody>
                                     </table>
                                 </div>
@@ -477,7 +579,7 @@
     <!-- AdminLTE for demo purposes -->
     <script src="../../dist/js/demo.js"></script>
     <!-- Page specific script -->
-    <script src="../../js/user/user_list.js"></script>
+    <script src="../../js/delete.js"></script>
     <script>
         $(function () {
             $("#example1").DataTable({

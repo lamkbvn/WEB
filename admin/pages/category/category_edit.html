@@ -225,8 +225,8 @@
                                 </p>
                             </a>
                         </li>
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">
+                        <li class="nav-item menu-open">
+                            <a href="#" class="nav-link active">
                                 <i class="nav-icon fas fa-copy"></i>
                                 <p>
                                     Category
@@ -235,13 +235,13 @@
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a href="../category/category_list.html" class="nav-link">
+                                    <a href="category_list.html" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>List</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="../category/category_create.html" class="nav-link">
+                                    <a href="category_create.html" class="nav-link active">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Create</p>
                                     </a>
@@ -271,8 +271,8 @@
                                 </li>
                             </ul>
                         </li>
-                        <li class="nav-item menu-open">
-                            <a href="#" class="nav-link active">
+                        <!-- <li class="nav-item">
+                            <a href="#" class="nav-link">
                                 <i class="nav-icon fas fa-copy"></i>
                                 <p>
                                     Cart
@@ -281,19 +281,19 @@
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a href="cart_list.html" class="nav-link">
+                                    <a href="../cart/cart_list.html" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>List</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="cart_create.html" class="nav-link active">
+                                    <a href="../cart/cart_create.html" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Create</p>
                                     </a>
                                 </li>
                             </ul>
-                        </li>
+                        </li> -->
                         <li class="nav-item">
                             <a href="#" class="nav-link">
                                 <i class="nav-icon fas fa-copy"></i>
@@ -309,12 +309,12 @@
                                         <p>List</p>
                                     </a>
                                 </li>
-                                <li class="nav-item">
+                                <!-- <li class="nav-item">
                                     <a href="../invoice/invoice_create.html" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Create</p>
                                     </a>
-                                </li>
+                                </li> -->
                             </ul>
                         </li>
                         <li class="nav-item">
@@ -397,37 +397,16 @@
                             <!-- jquery validation -->
                             <div class="card card-primary">
                                 <div class="card-header">
-                                    <h3 class="card-title">Cart<small>-Create</small></h3>
+                                    <h3 class="card-title">Category <small>-Edit</small></h3>
                                 </div>
                                 <!-- /.card-header -->
                                 <!-- form start -->
-                                <form action="cart_list.html" id="quickForm">
+                                <form action="category_list.html" id="quickForm">
                                     <div class="card-body">
                                         <div class="form-group">
-                                            <label for="productName">Product name</label>
+                                            <label for="categoryName">Name</label>
                                             <input type="text" name="name" class="form-control"
-                                                id="productName" placeholder="Enter product name" required>
-                                        </div>
-                                    </div>
-                                    <div class="card-body">
-                                        <div class="form-group">
-                                            <label for="price">Price</label>
-                                            <input type="text" name="price" class="form-control"
-                                                id="price" placeholder="Enter Price" required>
-                                        </div>
-                                    </div>
-                                    <div class="card-body">
-                                        <div class="form-group">
-                                            <label for="quantity">Quantity</label>
-                                            <input type="number" name="quantity" class="form-control"
-                                                id="quantity" placeholder="Enter Quantity" value="1" required>
-                                        </div>
-                                    </div>
-                                    <div class="card-body">
-                                        <div class="form-group">
-                                            <label for="total">Total</label>
-                                            <input type="number" name="total" class="form-control"
-                                                id="total" placeholder="Enter Total price" required>
+                                                id="categoryName" placeholder="Enter category name" value="men" required>
                                         </div>
                                     </div>
                                     <!-- /.card-body -->
@@ -471,31 +450,6 @@
     <!-- REQUIRED SCRIPTS -->
 
     <!-- jQuery -->
-    <script>
-        document.addEventListener("DOMContentLoaded", function(){
-
-       
-        var priceInput = document.getElementById("price");
-        var quantityInput = document.getElementById("quantity");
-        var totalInput = document.getElementById("total");
-    
-        priceInput.addEventListener("input", Total);
-        quantityInput.addEventListener("input", Total);
-    
-        function Total() {
-            var price = parseFloat(priceInput.value) || 0;
-            var quantity = parseInt(quantityInput.value) || 0;
-
-            var total = price * quantity;
-    
-       
-            totalInput.value = total.toFixed(2); 
-        }
-    
-        Total();
-    })
-    </script>
-
     <script src="../../plugins/jquery/jquery.min.js"></script>
     <!-- Bootstrap 4 -->
     <script src="../../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -507,8 +461,8 @@
     <!-- AdminLTE for demo purposes -->
     <script src="../../dist/js/demo.js"></script>
     <!-- Page specific script -->
-    <script src="../../js/cart/cart_create.js"></script>
-    <script>
+    <!-- <script src="../../js/category/category_create.js"></script> -->
+    <!-- <script>
         $(function () {
             // $.validator.setDefaults({
             //     submitHandler: function () {
@@ -553,7 +507,7 @@
                 }
             });
         });
-    </script>
+    </script> -->
 </body>
 
 </html>
