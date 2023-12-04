@@ -128,3 +128,7 @@ function adjustMargin() {
   var headerHeight = document.querySelector(".header").offsetHeight;
   document.body.style.marginTop = headerHeight + "px";
 }
+
+function orderDetails() {
+  window.location = "OrderDetail.html";
+}

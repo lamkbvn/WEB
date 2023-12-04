@@ -36,7 +36,7 @@
   <script defer src="js/addToCart.js"></script>
   <script defer src="js/loginuser-loginadmin.js"></script>
   <link rel="stylesheet" href="style/search.css">
-  <link rel="stylesheet" href="style/historyOrdered.css">
+  <link rel="stylesheet" href="style/orderdetail.css">
 </head>
 
 <body>
@@ -308,12 +308,11 @@
   <div class="nav"></div>
   <div class="active-item"></div>
 
-  <h3 class="myAccount" style="margin-top: 25px;">My Account</h3>
-
+  <h3 style="margin-top: 35px;">Order Detail</h3>
   <section class="pageaccount">
     <div class="container">
       <div class="sbar">
-        <div class="ordered ibar active">Ordered</div>
+        <div class="ordered ibar active"><a href="historyOrder.html">Ordered</a>/Detail</div>
         <div class="logout ibar " onclick="LOGOUT()">Logout</div>
       </div>
       <div class="detailbar">
@@ -334,107 +333,58 @@
               </span>
             </div>
             <div class="ord-row-2">
-              <span class="img-ord">
-                <img src="img/product/product-4.jpg" alt="">
-              </span>
-              <span class="img-ord">
-                <img src="img/product/product-5.jpg" alt="">
-              </span>
-              <span class="img-ord">
-                <img src="img/product/product-6.jpg" alt="">
-              </span>
-              <span class="img-ord more-details">
-                +2 <br> more
-              </span>
-              <span onclick="orderDetails()" class="btn-ord-detail">
-                Order Details
-              </span>
+              <div class="title"> Item Order(3)</div>
+              <div class="item-order">
+                <span class="img-item">
+                  <img src="img/product/product-6.jpg" alt="">
+                </span>
+                <div class="infor-item">
+                  <div class="name-item">Cotton floral print Dress x 3</div>
+                  <div class="price-item">150.00$</div>
+                </div>
+              </div>
+              <div class="item-order">
+                <span class="img-item">
+                  <img src="img/product/product-5.jpg" alt="">
+                </span>
+                <div class="infor-item">
+                  <div class="name-item">floral print Shoes x 1</div>
+                  <div class="price-item">50.00$</div>
+                </div>
+              </div>
+              <div class="item-order">
+                <span class="img-item">
+                  <img src="img/product/product-1.jpg" alt="">
+                </span>
+                <div class="infor-item">
+                  <div class="name-item">Cotton floral print Shirt x 1</div>
+                  <div class="price-item">100.00$</div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-        <div class="ordered-detail">
-          <div class="container">
-            <div class="ord-row-1">
-              <div class="ship-date">
-                <span>Ship date :</span>
-                <span class="date">23-11-2023</span>
-              </div>
-              <div class="status-ord">
-                Status :
-                <span>Success</span>
-              </div>
-              <span class="price-ord">
-                Price :
-                <span>250$</span>
-              </span>
-            </div>
-            <div class="ord-row-2">
-              <span class="img-ord">
-                <img src="img/product/product-1.jpg" alt="">
-              </span>
-              <span class="img-ord">
-                <img src="img/product/product-4.jpg" alt="">
-              </span>
-              <span class="img-ord">
-                <img src="img/product/product-6.jpg" alt="">
-              </span>
-              <span class="img-ord more-details">
-                +2 <br> more
-              </span>
-              <span onclick="orderDetails()" class="btn-ord-detail">
-                Order Details
-              </span>
-            </div>
+        <div class="order-total">
+          <div class="title">
+            Order Total
+          </div>
+          <div class="sub-total total">
+            <div class="title">Subtotal</div>
+            <div class="price">50.00$</div>
+          </div>
+          <div class="tax-total total">
+            <div class="title">Tax</div>
+            <div class="price">0.00$</div>
+          </div>
+          <div class="ship-total total">
+            <div class="title">SHipping</div>
+            <div class="price">10.00$</div>
+          </div>
+          <div class="money-total total">
+            <div class="title">Total</div>
+            <div class="price">60.00$</div>
           </div>
         </div>
-        <div class="ordered-detail">
-          <div class="container">
-            <div class="ord-row-1">
-              <div class="ship-date">
-                <span>Ship date :</span>
-                <span class="date">24-11-2023</span>
-              </div>
-              <div class="status-ord">
-                Status :
-                <span>Success</span>
-              </div>
-              <span class="price-ord">
-                Price :
-                <span>250$</span>
-              </span>
-            </div>
-            <div class="ord-row-2">
-              <span class="img-ord">
-                <img src="img/product/product-4.jpg" alt="">
-              </span>
-              <span class="img-ord">
-                <img src="img/product/product-5.jpg" alt="">
-              </span>
-              <span class="img-ord">
-                <img src="img/product/product-1.jpg" alt="">
-              </span>
-              <span class="img-ord more-details">
-                +2 <br> more
-              </span>
-              <span onclick="orderDetails()" class="btn-ord-detail">
-                Order Details
-              </span>
-            </div>
-          </div>
-        </div>
-        <ul>
-          <li>
-            <img src="img/icon-normal/next.svg" alt="">
-          </li>
-          <li class="active">1</li>
-          <li>2</li>
-          <li>3</li>
-          <li>4</li>
-          <li>5</li>
-          <li>
-            <img src="img/icon-normal/previous.svg" alt="">
-          </li>
-        </ul>
       </div>
     </div>
   </section>

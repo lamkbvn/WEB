@@ -132,7 +132,8 @@ function LOGUP(){
     "http://127.0.0.1:5501/checkout1.html",
     "http://127.0.0.1:5501/historyOrder.html",
     "http://127.0.0.1:5501/search1.html",
-    "http://127.0.0.1:5501/product1.html?"]
+    "http://127.0.0.1:5501/product1.html?",
+    "http://127.0.0.1:5501/OrderDetail.html"]
 
   function checkhref1(){
       for(let h of href1)
