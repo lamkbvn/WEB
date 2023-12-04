@@ -276,7 +276,7 @@
                                 </li>
                             </ul>
                         </li>
-                        <li class="nav-item">
+                        <!-- <li class="nav-item">
                             <a href="#" class="nav-link">
                                 <i class="nav-icon fas fa-copy"></i>
                                 <p>
@@ -298,7 +298,7 @@
                                     </a>
                                 </li>
                             </ul>
-                        </li>
+                        </li> -->
                         <li class="nav-item">
                             <a href="#" class="nav-link">
                                 <i class="nav-icon fas fa-copy"></i>
@@ -314,12 +314,12 @@
                                         <p>List</p>
                                     </a>
                                 </li>
-                                <li class="nav-item">
+                                <!-- <li class="nav-item">
                                     <a href="../invoice/invoice_create.html" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Create</p>
                                     </a>
-                                </li>
+                                </li> -->
                             </ul>
                         </li>
                         <li class="nav-item">
@@ -414,13 +414,67 @@
                                                 <th>Name</th>
                                                 <th>Image</th>
                                                 <th>Price</th>
-                                                <th>Price Origin</th>
                                                 <th>Edit</th>
                                                 <th>Delete</th>
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            
+                                            <tr>
+                                                <th>1</th>
+                                                <th>Women</th>
+                                                <th>Dress</th>
+                                                <th><img src="../../img/dress.jpg" alt="" class="img-fluid"
+                                                        style="height: 100px;width: 100px;"></th>
+                                                <th>96000</th>
+                                                <th><a href="product_edit.html" class="btn btn-success">Edit</a></th>
+                                                <th><a href="" class="btn btn-danger" onclick="alertdelete()">Delete</a>
+                                                </th>
+                                            </tr>
+                                            <tr>
+                                                <th>2</th>
+                                                <th>Men</th>
+                                                <th>Sneaker</th>
+                                                <th><img src="../../img/sneaker.jpg" alt="" class="img-fluid"
+                                                        style="height: 100px;width: 100px;"></th>
+                                                <th>96000</th>
+                                                <th><a href="product_edit.html" class="btn btn-success">Edit</a></th>
+                                                <th><a href="" class="btn btn-danger" onclick="alertdelete()">Delete</a>
+                                                </th>
+                                            </tr>
+                                            <tr>
+                                                <th>3</th>
+                                                <th>Men</th>
+                                                <th>T-Shirt</th>
+                                                <th><img src="../../img/t-shirt.jpg" alt="" class="img-fluid"
+                                                        style="height: 100px;width: 100px;"></th>
+
+                                                <th>150000</th>
+                                                <th><a href="product_edit.html" class="btn btn-success">Edit</a></th>
+                                                <th><a href="" class="btn btn-danger" onclick="alertdelete()">Delete</a>
+                                                </th>
+                                            </tr>
+                                            <tr>
+                                                <th>4</th>
+                                                <th>Kid</th>
+                                                <th>POLO</th>
+                                                <th><img src="../../img/polo.jpg" alt="" class="img-fluid" style="height: 100px;width: 100px;"></th>
+
+                                                <th>90000</th>
+                                                <th><a href="product_edit.html" class="btn btn-success">Edit</a></th>
+                                                <th><a href="" class="btn btn-danger" onclick="alertdelete()">Delete</a>
+                                                </th>
+                                            </tr>
+                                            <tr>
+                                                <th>5</th>
+                                                <th>Kid</th>
+                                                <th>Jeans</th>
+                                                <th><img src="../../img/jeans-kid.jpg" alt="" class="img-fluid" style="height: 100px;width: 100px;"></th>
+
+                                                <th>34000</th>
+                                                <th><a href="product_edit.html" class="btn btn-success">Edit</a></th>
+                                                <th><a href="" class="btn btn-danger" onclick="alertdelete()">Delete</a>
+                                                </th>
+                                            </tr>
                                         </tbody>
                                     </table>
                                 </div>
@@ -479,7 +533,7 @@
     <!-- AdminLTE for demo purposes -->
     <script src="../../dist/js/demo.js"></script>
     <!-- Page specific script -->
-    <script src="../../js/product/product_list.js"></script>
+    <script src="../../js/delete.js"></script>
     <script>
         $(function () {
             $("#example1").DataTable({

@@ -15,13 +15,6 @@
     <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
     <!-- Theme style -->
     <link rel="stylesheet" href="../../dist/css/adminlte.min.css">
-    <style>
-        #preview img {
-            max-width: 100px;
-            max-height: 100px;
-            margin: 5px;
-        }
-    </style>
 
 </head>
 <!--
@@ -38,8 +31,7 @@
     <div class="wrapper">
         <!-- Preloader -->
         <div class="preloader flex-column justify-content-center align-items-center">
-            <img class="animation__wobble" src="../../dist/img/AdminLTELogo.png" alt="AdminLTELogo" height="60"
-                width="60">
+            <img class="animation__wobble" src="../../dist/img/AdminLTELogo.png" alt="AdminLTELogo" height="60" width="60">
         </div>
         <!-- Navbar -->
         <nav class="main-header navbar navbar-expand navbar-white navbar-light">
@@ -188,8 +180,8 @@
         <aside class="main-sidebar sidebar-dark-primary elevation-4">
             <!-- Brand Logo -->
             <a href="index.html" class="brand-link">
-                <img src="../../dist/img/AdminLTELogo.png" alt="AdminLTE Logo"
-                    class="brand-image img-circle elevation-3" style="opacity: .8">
+                <img src="../../dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
+                    style="opacity: .8">
                 <span class="brand-text font-weight-light">AdminLTE 3</span>
             </a>
 
@@ -223,7 +215,7 @@
                     <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu"
                         data-accordion="false">
                         <!-- Add icons to the links using the .nav-icon class
-                               with font-awesome or any other icon font library -->
+               with font-awesome or any other icon font library -->
                         <li class="nav-item">
                             <a href="../../index.html" class="nav-link">
                                 <i class="nav-icon fas fa-tachometer-alt"></i>
@@ -256,8 +248,8 @@
                                 </li>
                             </ul>
                         </li>
-                        <li class="nav-item menu-open">
-                            <a href="#" class="nav-link active">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
                                 <i class="nav-icon fas fa-copy"></i>
                                 <p>
                                     Product
@@ -272,7 +264,7 @@
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="../product/product_create.html" class="nav-link active">
+                                    <a href="../product/product_create.html" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Create</p>
                                     </a>
@@ -325,8 +317,8 @@
                                 </li> -->
                             </ul>
                         </li>
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">
+                        <li class="nav-item menu-open">
+                            <a href="#" class="nav-link active">
                                 <i class="nav-icon fas fa-copy"></i>
                                 <p>
                                     Customer
@@ -335,13 +327,13 @@
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a href="../customer/customer_list.html" class="nav-link">
+                                    <a href="customer_list.html" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>List</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="../customer/customer_create.html" class="nav-link">
+                                    <a href="customer_create.html" class="nav-link active">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Create</p>
                                     </a>
@@ -405,49 +397,49 @@
                             <!-- jquery validation -->
                             <div class="card card-primary">
                                 <div class="card-header">
-                                    <h3 class="card-title">Product <small>-Create</small></h3>
+                                    <h3 class="card-title">Customer<small>-Edit</small></h3>
                                 </div>
                                 <!-- /.card-header -->
                                 <!-- form start -->
-                                <form action="product_list.html" id="quickForm">
+                                <form action="customer_list.html" id="quickForm">
                                     <div class="card-body">
                                         <div class="form-group">
-                                            <label for="productName">Name</label>
-                                            <input type="text" name="name" class="form-control" id="productName"
-                                                placeholder="Enter product name" required>
+                                            <label for="FirstName">First Name</label>
+                                            <input type="text" name="FirstName" class="form-control"
+                                                id="FirstName" placeholder="Enter First name" value="Nguyen Gia" required>
                                         </div>
                                     </div>
                                     <div class="card-body">
                                         <div class="form-group">
-                                            <label for="category">Category</label>
-                                            <select class="form-control" id="category">
-                                                <option value="">Select Category</option>
-                                                <option value="Woman">Woman</option>
-                                                <option value="Kid">Kid</option>
-                                                <option value="Man">Man</option>
-                                            </select>
+                                            <label for="LastName">Last Name</label>
+                                            <input type="text" name="LastName" class="form-control"
+                                                id="LastName" placeholder="Enter Last name" value="Bao" required>
                                         </div>
                                     </div>
                                     <div class="card-body">
                                         <div class="form-group">
-                                            <label for="price">Price</label>
-                                            <input type="text" name="price" class="form-control" id="price"
-                                                placeholder="Enter product price" required>
+                                            <label for="email">Email</label>
+                                            <input type="email" name="email" class="form-control"
+                                                id="email" placeholder="Enter Email" value="nguyenbao@gmail.com" required>
                                         </div>
                                     </div>
                                     <div class="card-body">
                                         <div class="form-group">
-                                            <label for="image">Image</label>
-                                            <input type="file" name="imgUpload" class="form-control" id="imgUpload"
-                                                placeholder="Choose Image" multiple accept="image/*" required>
-
+                                            <label for="phone">Phone</label>
+                                            <input type="number" name="phone" class="form-control"
+                                                id="phone" placeholder="Enter Phone number" value="083658963" required>
                                         </div>
-                                        <div id="preview" class="form-group" style="width: 20%;height: 20%;"></div>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="form-group">
+                                            <label for="address">Address</label>
+                                            <input type="text" name="address" class="form-control"
+                                                id="address" placeholder="Enter Address" value="hoc mon, ho chi minh" required>
+                                        </div>
                                     </div>
                                     <!-- /.card-body -->
                                     <div class="card-footer">
-                                        <button type="submit" class="btn btn-primary"><a
-                                                style="color: aliceblue;">Submit</a></button>
+                                        <button type="submit" class="btn btn-primary"><a style="color: aliceblue;">Submit</a></button>
                                     </div>
                                 </form>
                             </div>
@@ -497,7 +489,7 @@
     <!-- AdminLTE for demo purposes -->
     <script src="../../dist/js/demo.js"></script>
     <!-- Page specific script -->
-    <!-- <script src="../../js/product/product_create.js"></script> -->
+    <!-- <script src="../../js/customer/customer_create.js"></script> -->
     <script>
         $(function () {
             // $.validator.setDefaults({
@@ -543,28 +535,6 @@
                 }
             });
         });
-    </script>
-
-    <script>
-        document.getElementById('imgUpload').addEventListener('change', function (e) {
-            var previewContainer = document.getElementById('preview');
-            previewContainer.innerHTML = '';
-
-            var files = e.target.files;
-            for (var i = 0; i < files.length; i++) {
-                var file = files[i];
-                var reader = new FileReader();
-
-                reader.onload = function (e) {
-                    var img = document.createElement('img');
-                    img.src = e.target.result;
-                    previewContainer.appendChild(img);
-                };
-
-                reader.readAsDataURL(file);
-            }
-        });
-
     </script>
 </body>
 
