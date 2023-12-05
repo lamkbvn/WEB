@@ -27,6 +27,10 @@ body{
   background-color: gainsboro;
 }
 
+.pageaccount .ibar:hover{
+  color: blue;
+}
+
 .pageaccount .detailbar{
   width: 500px;
   height: 500px;

@@ -21,7 +21,7 @@ person.onclick = function () {
     btnRegister.classList.remove("btn-active");
     sectionFormRegister.classList.add("hidden-form");
     sectionFormLogin.classList.remove("hidden-form");
-  } else window.location = "historyOrder.html";
+  } else window.location = "personalInfor.html";
 };
 
 exitBtnLogin.onclick = function () {
@@ -131,4 +131,13 @@ function adjustMargin() {
 
 function orderDetails() {
   window.location = "OrderDetail.html";
+}
+
+function personalInfor() {
+  window.location = "personalInfor.html";
+}
+
+function saveChanges() {
+  alert("Save changed");
+  window.location = "personalInfor.html";
 }

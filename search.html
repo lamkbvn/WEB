@@ -95,7 +95,7 @@
           <img src="img/icon-header/cart.svg" alt="" class="icon-header">
           <span class="number-product-in-cart">3</span>
         </div>
-        <div class="sign-out">
+        <div class="sign-out" onclick="LOGOUT()">
           <img src="img/iconlogin/sign-out.svg" alt="" class="icon-header btn-sign-out hidden-form">
         </div>
       </div>
@@ -116,6 +116,10 @@
             </div>
             <div class="exit exit-login">&times;</div>
           </div>
+          <div class="switch-login">
+            <button class="btnn btn-active">Login</button>
+            <button class="btnn btn-register ">Register</button>
+          </div>
           <div class="row2 user-input ">
             <div class="account">
               <label for="">Account name</label>
@@ -126,14 +130,10 @@
               <label for="">Password</label>
               <input type="password" id="passwordlogin" class="input input-password password-login"
                 placeholder="Enter password" maxlength="25">
-              <img src="img/iconlogin/hidden-pass.svg" alt="" class="hidden-password hid-log">
+              <img onclick="hiddenlog()" src="img/iconlogin/hidden-pass.svg" alt="" class="hidden-password hid-log">
             </div>
-            <button class="btn-signin">Login</button>
+            <button onclick="LOGIN()" class="btn-signin">Login</button>
             <div class="invalid-account-login hidden-form">asdasd</div>
-          </div>
-          <div class="switch-login">
-            <button class="btnn btn-active">Login</button>
-            <button class="btnn btn-register ">Register</button>
           </div>
         </div>
       </div>
@@ -152,6 +152,10 @@
             </div>
             <div class="exit exit-register">&times;</div>
           </div>
+          <div class="switch-login">
+            <button class="btnn btn-login">Login</button>
+            <button class="btnn btn-active">Register</button>
+          </div>
           <div class="row2 user-input">
             <div class="name">
               <label for="">User name</label>
@@ -167,14 +171,10 @@
               <label for="">Password</label>
               <input type="password" id="password" class="input input-password password-register"
                 placeholder="Enter password" maxlength="25">
-              <img src="img/iconlogin/hidden-pass.svg" alt="" class="hidden-password hid-reg">
+              <img onclick="hiddenred()" src="img/iconlogin/hidden-pass.svg" alt="" class="hidden-password hid-reg">
             </div>
-            <button class="btn-signup">Register</button>
+            <button onclick="LOGUP()" class="btn-signup">Register</button>
             <div class="invalid-account-register hidden-form">enter account</div>
-          </div>
-          <div class="switch-login">
-            <button class="btnn btn-login">Login</button>
-            <button class="btnn btn-active">Register</button>
           </div>
         </div>
       </div>
@@ -305,6 +305,7 @@
       </div>
     </div>
   </section>
+
   <h3 class="sp">SEARCH</h3>
   <section class="search-page">
     <div class="container-sp">
@@ -331,373 +332,361 @@
     </div>
     <div id="shop-items">
       <div class="card product-sale">
-          <div class="card-image">
-              <div class="badge">
-                  <span class="sale-badge">NORMAL</span>
-              </div>
-              <div class="action ">
-                  <button onclick="addProductToCart()" class="action-bt add-sale-to-cart">
-                      <span class="action-bt-label ">Add to cart</span>
-                      <img src="img/icon-normal/add-to-cart-icon.svg" alt="">
-                  </button>
-              </div>
-              <a href="product.html"><img src="img/product/product-6.jpg"
-                      alt="top-month-sellers1"></a>
-          </div>
-          <div class="card-info">
-              <div class="categories">
-                  <a class="categories-label categories-product-sale" href="">
-                      Women
-                  </a>
-              </div>
-              <div class="product-name product-sale-name">
-                  <a class="product-name-label" href="">
-                      Zip Bag
-                  </a>
-              </div>
-              <div class="price">
-                  <span class="price-label product-normal-price">$50.00</span>
-              </div>
-          </div>
-      </div>
-      <div class="card product-sale">
-          <div class="card-image">
-              <div class="badge">
-                  <span class="sale-badge">NORMAL</span>
-              </div>
-              <div class="action">
-                  <button onclick="addProductToCart()" class="action-bt add-sale-to-cart">
-                      <span class="action-bt-label ">Add to cart</span>
-                      <img src="img/icon-normal/add-to-cart-icon.svg" alt="">
-                  </button>
-              </div>
-              <a href="product.html"><img src="img/product/product-6.jpg"
-                      alt="top-month-sellers2"></a>
-          </div>
-          <div class="card-info">
-              <div class="categories">
-                  <a class="categories-label categories-product-sale" href="">
-                      Men
-                  </a>
-              </div>
-              <div class="product-name product-sale-name">
-                  <a class="product-name-label" href="">
-                      White Jeans
-                  </a>
-              </div>
-              <div class="price">
-                  <span class="price-label product-normal-price">$60.00</span>
-              </div>
-          </div>
-      </div>
-      <div class="card product-sale">
-          <div class="card-image">
-              <div class="badge">
-                  <span class="sale-badge saling-product">SALE</span>
-              </div>
-              <div class="action">
-                  <button onclick="addProductToCart()" class="action-bt add-sale-to-cart">
-                      <span class="action-bt-label ">Add to cart</span>
-                      <img src="img/icon-normal/add-to-cart-icon.svg" alt="">
-                  </button>
-              </div>
-              <a href="product.html"><img src="img/product/product-6.jpg"
-                      alt="top-month-sellers3"></a>
-          </div>
-          <div class="card-info">
-              <div class="categories">
-                  <a class="categories-label categories-product-sale" href="">
-                      Kid
-                  </a>
-              </div>
-              <div class="product-name product-sale-name">
-                  <a class="product-name-label" href="">
-                      Yellow Dress
-                  </a>
-              </div>
-              <div class="price">
-                  <span class="price-label product-normal-price">$45.50</span>
-                  <span class="sale-price-label product-sale-pricel">$40.00</span>
-              </div>
-          </div>
-      </div>
-      <div class="card product-sale">
-          <div class="card-image">
-              <div class="badge">
-                  <span class="sale-badge">NORMAL</span>
-              </div>
-              <div class="action">
-                  <button onclick="addProductToCart()" class="action-bt add-sale-to-cart">
-                      <span class="action-bt-label ">Add to cart</span>
-                      <img src="img/icon-normal/add-to-cart-icon.svg" alt="">
-                  </button>
-              </div>
-              <a href="product.html"><img src="img/product/product-6.jpg"
-                      alt="top-month-sellers4"></a>
-          </div>
-          <div class="card-info">
-              <div class="categories">
-                  <a class="categories-label categories-product-sale" href="">
-                      Kid
-                  </a>
-              </div>
-              <div class="product-name product-sale-name">
-                  <a class="product-name-label" href="">
-                      Red Sweater
-                  </a>
-              </div>
-              <div class="price">
-                  <span class="price-label product-normal-price">$69.99</span>
-              </div>
-          </div>
-      </div>
-      <div class="card product-sale">
-          <div class="card-image">
-              <div class="badge">
-                  <span class="sale-badge saling-product">SALE</span>
-              </div>
-              <div class="action">
-                  <button onclick="addProductToCart()" class="action-bt add-sale-to-cart">
-                      <span class="action-bt-label ">Add to cart</span>
-                      <img src="img/icon-normal/add-to-cart-icon.svg" alt="">
-                  </button>
-              </div>
-              <a href="product.html"><img src="img/product/product-6.jpg"
-                      alt="top-month-sellers5"></a>
-          </div>
-          <div class="card-info">
-              <div class="categories">
-                  <a class="categories-label categories-product-sale" href="">
-                      Men
-                  </a>
-              </div>
-              <div class="product-name product-sale-name">
-                  <a class="product-name-label" href="">
-                      Leather Sandals
-                  </a>
-              </div>
-              <div class="price">
-                  <span class="price-label product-normal-price">$129.00</span>
-                  <span class="sale-price-label product-sale-price">$40.00</span>
-              </div>
-          </div>
-      </div>
-      <div class="card product-sale">
-          <div class="card-image">
-              <div class="badge">
-                  <span class="sale-badge">NORMAL</span>
-              </div>
-              <a>
-                  <div class="action">
-                      <button onclick="addProductToCart()" class="action-bt add-sale-to-cart">
-                          <span class="action-bt-label ">Add to
-                              cart</span>
-                          <img src="img/icon-normal/add-to-cart-icon.svg" alt="">
-                      </button>
-                  </div>
-                  <a href="product.html"><img src="img/product/product-6.jpg"
-                          alt="top-month-sellers7"></a>
-              </a>
-          </div>
-          <div class="card-info">
-              <div class="categories">
-                  <a class="categories-label categories-product-sale" href="">
-                      Women
-                  </a>
-              </div>
-              <div class="product-name product-sale-name">
-                  <a class="product-name-label" href="">
-                      Floral Dress
-                  </a>
-              </div>
-              <div class="price">
-                  <span class="price-label product-normal-price">$40.00</span>
-              </div>
-          </div>
-      </div>
-      <div class="card product-sale">
-          <div class="card-image">
-              <div class="badge">
-                  <span class="sale-badge saling-product">SALE</span>
-              </div>
-              <div class="action">
-                  <button onclick="addProductToCart()" class="action-bt add-sale-to-cart">
-                      <span class="action-bt-label ">Add to cart</span>
-                      <img src="img/icon-normal/add-to-cart-icon.svg" alt="">
-                  </button>
-              </div>
-              <a href="product.html"><img src="img/product/product-6.jpg"
-                      alt="top-month-sellers8"></a>
-          </div>
-          <div class="card-info">
-              <div class="categories">
-                  <a class="categories-label categories-product-sale" href="">
-                      Men
-                  </a>
-              </div>
-              <div class="product-name product-sale-name">
-                  <a class="product-name-label" href="">
-                      Floral Dress
-                  </a>
-              </div>
-              <div class="price">
-                  <span class="price-label product-normal-price">$40.00</span>
-                  <span class="sale-price-label product-sale-price">$35.00</span>
-              </div>
-          </div>
-      </div>
-      
-      <div class="card product-sale">
         <div class="card-image">
-            <div class="badge">
-                <span class="sale-badge">NORMAL</span>
-            </div>
-            <div class="action">
-                <button onclick="addProductToCart()" class="action-bt add-sale-to-cart">
-                    <span class="action-bt-label ">Add to cart</span>
-                    <img src="img/icon-normal/add-to-cart-icon.svg" alt="">
-                </button>
-            </div>
-            <a href="product.html"><img src="img/product/product-6.jpg"
-                    alt="top-month-sellers9"></a>
+          <div class="badge">
+            <span class="sale-badge">NORMAL</span>
+          </div>
+          <div class="action ">
+            <button onclick="addProductToCart()" class="action-bt add-sale-to-cart">
+              <span class="action-bt-label ">Add to cart</span>
+              <img src="img/icon-normal/add-to-cart-icon.svg" alt="">
+            </button>
+          </div>
+          <a href="product.html"><img src="img/product/product-1.jpg" alt="top-month-sellers1"></a>
         </div>
         <div class="card-info">
-            <div class="categories">
-                <a class="categories-label categories-product-sale" href="">
-                    Kid
-                </a>
-            </div>
-            <div class="product-name product-sale-name">
-                <a class="product-name-label" href="">
-                    Floral Dress
-                </a>
-            </div>
-            <div class="price">
-                <span class="price-label product-normal-price">$40.00</span>
-            </div>
+          <div class="categories">
+            <a class="categories-label categories-product-sale" href="">
+              Women
+            </a>
+          </div>
+          <div class="product-name product-sale-name">
+            <a class="product-name-label" href="">
+              Zip Bag
+            </a>
+          </div>
+          <div class="price">
+            <span class="price-label product-normal-price">$50.00</span>
+          </div>
         </div>
+      </div>
+      <div class="card product-sale">
+        <div class="card-image">
+          <div class="badge">
+            <span class="sale-badge">NORMAL</span>
+          </div>
+          <div class="action">
+            <button onclick="addProductToCart()" class="action-bt add-sale-to-cart">
+              <span class="action-bt-label ">Add to cart</span>
+              <img src="img/icon-normal/add-to-cart-icon.svg" alt="">
+            </button>
+          </div>
+          <a href="product.html"><img src="img/product/product-3.jpg" alt="top-month-sellers2"></a>
+        </div>
+        <div class="card-info">
+          <div class="categories">
+            <a class="categories-label categories-product-sale" href="">
+              Men
+            </a>
+          </div>
+          <div class="product-name product-sale-name">
+            <a class="product-name-label" href="">
+              White Jeans
+            </a>
+          </div>
+          <div class="price">
+            <span class="price-label product-normal-price">$60.00</span>
+          </div>
+        </div>
+      </div>
+      <div class="card product-sale">
+        <div class="card-image">
+          <div class="badge">
+            <span class="sale-badge saling-product">SALE</span>
+          </div>
+          <div class="action">
+            <button onclick="addProductToCart()" class="action-bt add-sale-to-cart">
+              <span class="action-bt-label ">Add to cart</span>
+              <img src="img/icon-normal/add-to-cart-icon.svg" alt="">
+            </button>
+          </div>
+          <a href="product.html"><img src="img/product/product-4.jpg" alt="top-month-sellers3"></a>
+        </div>
+        <div class="card-info">
+          <div class="categories">
+            <a class="categories-label categories-product-sale" href="">
+              Kid
+            </a>
+          </div>
+          <div class="product-name product-sale-name">
+            <a class="product-name-label" href="">
+              Yellow Dress
+            </a>
+          </div>
+          <div class="price">
+            <span class="price-label product-normal-price">$45.50</span>
+            <span class="sale-price-label product-sale-pricel">$40.00</span>
+          </div>
+        </div>
+      </div>
+      <div class="card product-sale">
+        <div class="card-image">
+          <div class="badge">
+            <span class="sale-badge">NORMAL</span>
+          </div>
+          <div class="action">
+            <button onclick="addProductToCart()" class="action-bt add-sale-to-cart">
+              <span class="action-bt-label ">Add to cart</span>
+              <img src="img/icon-normal/add-to-cart-icon.svg" alt="">
+            </button>
+          </div>
+          <a href="product.html"><img src="img/product/product-6.jpg" alt="top-month-sellers4"></a>
+        </div>
+        <div class="card-info">
+          <div class="categories">
+            <a class="categories-label categories-product-sale" href="">
+              Kid
+            </a>
+          </div>
+          <div class="product-name product-sale-name">
+            <a class="product-name-label" href="">
+              Red Sweater
+            </a>
+          </div>
+          <div class="price">
+            <span class="price-label product-normal-price">$69.99</span>
+          </div>
+        </div>
+      </div>
+      <div class="card product-sale">
+        <div class="card-image">
+          <div class="badge">
+            <span class="sale-badge saling-product">SALE</span>
+          </div>
+          <div class="action">
+            <button onclick="addProductToCart()" class="action-bt add-sale-to-cart">
+              <span class="action-bt-label ">Add to cart</span>
+              <img src="img/icon-normal/add-to-cart-icon.svg" alt="">
+            </button>
+          </div>
+          <a href="product.html"><img src="img/product/product-4.jpg" alt="top-month-sellers5"></a>
+        </div>
+        <div class="card-info">
+          <div class="categories">
+            <a class="categories-label categories-product-sale" href="">
+              Men
+            </a>
+          </div>
+          <div class="product-name product-sale-name">
+            <a class="product-name-label" href="">
+              Leather Sandals
+            </a>
+          </div>
+          <div class="price">
+            <span class="price-label product-normal-price">$129.00</span>
+            <span class="sale-price-label product-sale-price">$40.00</span>
+          </div>
+        </div>
+      </div>
+      <div class="card product-sale">
+        <div class="card-image">
+          <div class="badge">
+            <span class="sale-badge">NORMAL</span>
+          </div>
+          <a>
+            <div class="action">
+              <button onclick="addProductToCart()" class="action-bt add-sale-to-cart">
+                <span class="action-bt-label ">Add to
+                  cart</span>
+                <img src="img/icon-normal/add-to-cart-icon.svg" alt="">
+              </button>
+            </div>
+            <a href="product.html"><img src="img/product/product-3.jpg" alt="top-month-sellers7"></a>
+          </a>
+        </div>
+        <div class="card-info">
+          <div class="categories">
+            <a class="categories-label categories-product-sale" href="">
+              Women
+            </a>
+          </div>
+          <div class="product-name product-sale-name">
+            <a class="product-name-label" href="">
+              Floral Dress
+            </a>
+          </div>
+          <div class="price">
+            <span class="price-label product-normal-price">$40.00</span>
+          </div>
+        </div>
+      </div>
+      <div class="card product-sale">
+        <div class="card-image">
+          <div class="badge">
+            <span class="sale-badge saling-product">SALE</span>
+          </div>
+          <div class="action">
+            <button onclick="addProductToCart()" class="action-bt add-sale-to-cart">
+              <span class="action-bt-label ">Add to cart</span>
+              <img src="img/icon-normal/add-to-cart-icon.svg" alt="">
+            </button>
+          </div>
+          <a href="product.html"><img src="img/product/product-1.jpg" alt="top-month-sellers8"></a>
+        </div>
+        <div class="card-info">
+          <div class="categories">
+            <a class="categories-label categories-product-sale" href="">
+              Men
+            </a>
+          </div>
+          <div class="product-name product-sale-name">
+            <a class="product-name-label" href="">
+              Floral Dress
+            </a>
+          </div>
+          <div class="price">
+            <span class="price-label product-normal-price">$40.00</span>
+            <span class="sale-price-label product-sale-price">$35.00</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="card product-sale">
+        <div class="card-image">
+          <div class="badge">
+            <span class="sale-badge">NORMAL</span>
+          </div>
+          <div class="action">
+            <button onclick="addProductToCart()" class="action-bt add-sale-to-cart">
+              <span class="action-bt-label ">Add to cart</span>
+              <img src="img/icon-normal/add-to-cart-icon.svg" alt="">
+            </button>
+          </div>
+          <a href="product.html"><img src="img/product/product-5.jpg" alt="top-month-sellers9"></a>
+        </div>
+        <div class="card-info">
+          <div class="categories">
+            <a class="categories-label categories-product-sale" href="">
+              Kid
+            </a>
+          </div>
+          <div class="product-name product-sale-name">
+            <a class="product-name-label" href="">
+              Floral Dress
+            </a>
+          </div>
+          <div class="price">
+            <span class="price-label product-normal-price">$40.00</span>
+          </div>
+        </div>
+      </div>
+      <div class="card product-sale">
+        <div class="card-image">
+          <div class="badge">
+            <span class="sale-badge">NORMAL</span>
+          </div>
+          <div class="action">
+            <button onclick="addProductToCart()" class="action-bt add-sale-to-cart">
+              <span class="action-bt-label ">Add to cart</span>
+              <img src="img/icon-normal/add-to-cart-icon.svg" alt="">
+            </button>
+          </div>
+          <a href="product.html"><img src="img/product/product-2.jpg" alt="top-month-sellers9"></a>
+        </div>
+        <div class="card-info">
+          <div class="categories">
+            <a class="categories-label categories-product-sale" href="">
+              Kid
+            </a>
+          </div>
+          <div class="product-name product-sale-name">
+            <a class="product-name-label" href="">
+              Floral Dress
+            </a>
+          </div>
+          <div class="price">
+            <span class="price-label product-normal-price">$40.00</span>
+          </div>
+        </div>
+      </div>
+      <div class="card product-sale">
+        <div class="card-image">
+          <div class="badge">
+            <span class="sale-badge">NORMAL</span>
+          </div>
+          <div class="action">
+            <button onclick="addProductToCart()" class="action-bt add-sale-to-cart">
+              <span class="action-bt-label ">Add to cart</span>
+              <img src="img/icon-normal/add-to-cart-icon.svg" alt="">
+            </button>
+          </div>
+          <a href="product.html"><img src="img/product/product-6.jpg" alt="top-month-sellers9"></a>
+        </div>
+        <div class="card-info">
+          <div class="categories">
+            <a class="categories-label categories-product-sale" href="">
+              Kid
+            </a>
+          </div>
+          <div class="product-name product-sale-name">
+            <a class="product-name-label" href="">
+              Floral Dress
+            </a>
+          </div>
+          <div class="price">
+            <span class="price-label product-normal-price">$40.00</span>
+          </div>
+        </div>
+      </div>
+      <div class="card product-sale">
+        <div class="card-image">
+          <div class="badge">
+            <span class="sale-badge">NORMAL</span>
+          </div>
+          <div class="action">
+            <button onclick="addProductToCart()" class="action-bt add-sale-to-cart">
+              <span class="action-bt-label ">Add to cart</span>
+              <img src="img/icon-normal/add-to-cart-icon.svg" alt="">
+            </button>
+          </div>
+          <a href="product.html"><img src="img/product/product-1.jpg" alt="top-month-sellers9"></a>
+        </div>
+        <div class="card-info">
+          <div class="categories">
+            <a class="categories-label categories-product-sale" href="">
+              Kid
+            </a>
+          </div>
+          <div class="product-name product-sale-name">
+            <a class="product-name-label" href="">
+              Floral Dress
+            </a>
+          </div>
+          <div class="price">
+            <span class="price-label product-normal-price">$40.00</span>
+          </div>
+        </div>
+      </div>
+      <div class="card product-sale">
+        <div class="card-image">
+          <div class="badge">
+            <span class="sale-badge">NORMAL</span>
+          </div>
+          <div class="action">
+            <button onclick="addProductToCart()" class="action-bt add-sale-to-cart">
+              <span class="action-bt-label ">Add to cart</span>
+              <img src="img/icon-normal/add-to-cart-icon.svg" alt="">
+            </button>
+          </div>
+          <a href="product.html"><img src="img/product/product-6.jpg" alt="top-month-sellers6"></a>
+        </div>
+        <div class="card-info">
+          <div class="categories">
+            <a class="categories-label categories-product-sale" href="">
+              Men
+            </a>
+          </div>
+          <div class="product-name product-sale-name">
+            <a class="product-name-label" href="">
+              Floral Dress
+            </a>
+          </div>
+          <div class="price">
+            <span class="price-label product-normal-price">$40.00</span>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="card product-sale">
-          <div class="card-image">
-              <div class="badge">
-                  <span class="sale-badge">NORMAL</span>
-              </div>
-              <div class="action">
-                  <button onclick="addProductToCart()" class="action-bt add-sale-to-cart">
-                      <span class="action-bt-label ">Add to cart</span>
-                      <img src="img/icon-normal/add-to-cart-icon.svg" alt="">
-                  </button>
-              </div>
-              <a href="product.html"><img src="img/product/product-6.jpg"
-                      alt="top-month-sellers9"></a>
-          </div>
-          <div class="card-info">
-              <div class="categories">
-                  <a class="categories-label categories-product-sale" href="">
-                      Kid
-                  </a>
-              </div>
-              <div class="product-name product-sale-name">
-                  <a class="product-name-label" href="">
-                      Floral Dress
-                  </a>
-              </div>
-              <div class="price">
-                  <span class="price-label product-normal-price">$40.00</span>
-              </div>
-          </div>
-      </div>
-      <div class="card product-sale">
-        <div class="card-image">
-            <div class="badge">
-                <span class="sale-badge">NORMAL</span>
-            </div>
-            <div class="action">
-                <button onclick="addProductToCart()" class="action-bt add-sale-to-cart">
-                    <span class="action-bt-label ">Add to cart</span>
-                    <img src="img/icon-normal/add-to-cart-icon.svg" alt="">
-                </button>
-            </div>
-            <a href="product.html"><img src="img/product/product-6.jpg"
-                    alt="top-month-sellers9"></a>
-        </div>
-        <div class="card-info">
-            <div class="categories">
-                <a class="categories-label categories-product-sale" href="">
-                    Kid
-                </a>
-            </div>
-            <div class="product-name product-sale-name">
-                <a class="product-name-label" href="">
-                    Floral Dress
-                </a>
-            </div>
-            <div class="price">
-                <span class="price-label product-normal-price">$40.00</span>
-            </div>
-        </div>
-      </div>
-      <div class="card product-sale">
-        <div class="card-image">
-            <div class="badge">
-                <span class="sale-badge">NORMAL</span>
-            </div>
-            <div class="action">
-                <button onclick="addProductToCart()" class="action-bt add-sale-to-cart">
-                    <span class="action-bt-label ">Add to cart</span>
-                    <img src="img/icon-normal/add-to-cart-icon.svg" alt="">
-                </button>
-            </div>
-            <a href="product.html"><img src="img/product/product-6.jpg"
-                    alt="top-month-sellers9"></a>
-        </div>
-        <div class="card-info">
-            <div class="categories">
-                <a class="categories-label categories-product-sale" href="">
-                    Kid
-                </a>
-            </div>
-            <div class="product-name product-sale-name">
-                <a class="product-name-label" href="">
-                    Floral Dress
-                </a>
-            </div>
-            <div class="price">
-                <span class="price-label product-normal-price">$40.00</span>
-            </div>
-        </div>
-      </div>
-      <div class="card product-sale">
-          <div class="card-image">
-              <div class="badge">
-                  <span class="sale-badge">NORMAL</span>
-              </div>
-              <div class="action">
-                  <button onclick="addProductToCart()" class="action-bt add-sale-to-cart">
-                      <span class="action-bt-label ">Add to cart</span>
-                      <img src="img/icon-normal/add-to-cart-icon.svg" alt="">
-                  </button>
-              </div>
-              <a href="product.html"><img src="img/product/product-6.jpg"
-                      alt="top-month-sellers6"></a>
-          </div>
-          <div class="card-info">
-              <div class="categories">
-                  <a class="categories-label categories-product-sale" href="">
-                      Men
-                  </a>
-              </div>
-              <div class="product-name product-sale-name">
-                  <a class="product-name-label" href="">
-                      Floral Dress
-                  </a>
-              </div>
-              <div class="price">
-                  <span class="price-label product-normal-price">$40.00</span>
-              </div>
-          </div>
-      </div>
-  </div>
   </section>
 </body>
 

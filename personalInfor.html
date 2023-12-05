@@ -36,7 +36,7 @@
   <script defer src="js/addToCart.js"></script>
   <script defer src="js/loginuser-loginadmin.js"></script>
   <link rel="stylesheet" href="style/search.css">
-  <link rel="stylesheet" href="style/historyOrdered.css">
+  <link rel="stylesheet" href="style/personalinfor.css">
 </head>
 
 <body>
@@ -308,136 +308,48 @@
   <div class="nav"></div>
   <div class="active-item"></div>
 
-  <h3 class="myAccount" style="margin-top: 25px;">My Account</h3>
-
+  <h3 style="margin-top: 35px;">My Account</h3>
   <section class="pageaccount">
     <div class="container">
       <div class="sbar">
-        <div onclick="personalInfor()" class="personal-infor ibar">Personal Infor</div>
-        <div class="ordered ibar active"><a href="historyOrder.html">Ordered</a></div>
+        <div onclick="personalInfor()" class="personal-infor ibar  active">Personal Infor</div>
+        <div class="ordered ibar"><a href="historyOrder.html">Ordered</a></div>
         <div class="logout ibar " onclick="LOGOUT()">Logout</div>
       </div>
       <div class="detailbar">
-        <div class="ordered-detail">
-          <div class="container">
-            <div class="ord-row-1">
-              <div class="ship-date">
-                <span>Ship date :</span>
-                <span class="date">23-10-2023</span>
-              </div>
-              <div class="status-ord">
-                Status :
-                <span>Waiting</span>
-              </div>
-              <span class="price-ord">
-                Price :
-                <span>250$</span>
-              </span>
-            </div>
-            <div class="ord-row-2">
-              <span class="img-ord">
-                <img src="img/product/product-4.jpg" alt="">
-              </span>
-              <span class="img-ord">
-                <img src="img/product/product-5.jpg" alt="">
-              </span>
-              <span class="img-ord">
-                <img src="img/product/product-6.jpg" alt="">
-              </span>
-              <span class="img-ord more-details">
-                +2 <br> more
-              </span>
-              <span onclick="orderDetails()" class="btn-ord-detail">
-                Order Details
-              </span>
-            </div>
+        <div class="personal-name">
+          <div class="first-name title">
+            First name *
+            <br>
+            <input type="text" class="fname in" value="Phuc">
+          </div>
+          <div class="last-name title">
+            Last name *
+            <br>
+            <input type="text" class="lname in" value="Lam">
           </div>
         </div>
-        <div class="ordered-detail">
-          <div class="container">
-            <div class="ord-row-1">
-              <div class="ship-date">
-                <span>Ship date :</span>
-                <span class="date">23-11-2023</span>
-              </div>
-              <div class="status-ord">
-                Status :
-                <span>Success</span>
-              </div>
-              <span class="price-ord">
-                Price :
-                <span>250$</span>
-              </span>
-            </div>
-            <div class="ord-row-2">
-              <span class="img-ord">
-                <img src="img/product/product-1.jpg" alt="">
-              </span>
-              <span class="img-ord">
-                <img src="img/product/product-4.jpg" alt="">
-              </span>
-              <span class="img-ord">
-                <img src="img/product/product-6.jpg" alt="">
-              </span>
-              <span class="img-ord more-details">
-                +2 <br> more
-              </span>
-              <span onclick="orderDetails()" class="btn-ord-detail">
-                Order Details
-              </span>
-            </div>
+        <div class="personal-email">
+          Email address
+          <br>
+          <input type="text" class="email in" value="phuclam04@gamil.com">
+        </div>
+        <div class="personal-address">
+          Address
+          <br>
+          <input type="text" class="address in" value="Phuong 5 , Quan 7 ,TPHCM">
+        </div>
+        <div class="personal-phone-dob">
+          <div class="phone title">
+            Phone number
+            <br>
+            <input type="text" class="phone-number in" value="0123456789">
           </div>
         </div>
-        <div class="ordered-detail">
-          <div class="container">
-            <div class="ord-row-1">
-              <div class="ship-date">
-                <span>Ship date :</span>
-                <span class="date">24-11-2023</span>
-              </div>
-              <div class="status-ord">
-                Status :
-                <span>Success</span>
-              </div>
-              <span class="price-ord">
-                Price :
-                <span>250$</span>
-              </span>
-            </div>
-            <div class="ord-row-2">
-              <span class="img-ord">
-                <img src="img/product/product-4.jpg" alt="">
-              </span>
-              <span class="img-ord">
-                <img src="img/product/product-5.jpg" alt="">
-              </span>
-              <span class="img-ord">
-                <img src="img/product/product-1.jpg" alt="">
-              </span>
-              <span class="img-ord more-details">
-                +2 <br> more
-              </span>
-              <span onclick="orderDetails()" class="btn-ord-detail">
-                Order Details
-              </span>
-            </div>
-          </div>
+        <div onclick="saveChanges()" class="personal-save">
+          <div class="btn-save in">Save Change</div>
         </div>
-        <ul>
-          <li>
-            <img src="img/icon-normal/next.svg" alt="">
-          </li>
-          <li class="active">1</li>
-          <li>2</li>
-          <li>3</li>
-          <li>4</li>
-          <li>5</li>
-          <li>
-            <img src="img/icon-normal/previous.svg" alt="">
-          </li>
-        </ul>
       </div>
-    </div>
   </section>
 </body>
 

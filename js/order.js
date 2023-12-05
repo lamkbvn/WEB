@@ -29,5 +29,5 @@ function orderSuccess() {
 };
 function Order() {
     alert("Order Succesfull");
-    window.location.href = 'index.html';
+    window.location.href = 'index1.html';
 }
