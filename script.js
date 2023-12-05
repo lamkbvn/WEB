@@ -86,6 +86,11 @@ let sectionCart = document.querySelector(".section-cart");
 let overlayCart = document.querySelector(".overlay-cart");
 let exitCart = document.querySelector(".exit-cart");
 btnCart.onclick = function () {
+  if(!checkhref1())
+  {
+      alert("Please log in");
+      return ;
+  }
   sectionCart.classList.remove("hidden-form");
 };
 
