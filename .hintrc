@@ -18,6 +18,18 @@
         "select-name": "off",
         "label": "off"
       }
+    ],
+    "axe/name-role-value": [
+      "default",
+      {
+        "button-name": "off"
+      }
+    ],
+    "axe/aria": [
+      "default",
+      {
+        "aria-required-children": "off"
+      }
     ]
   }
 }

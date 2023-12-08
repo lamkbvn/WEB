@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SHOP CLOTHES</title>
+    <link rel="stylesheet" href="style/footer.css">
+    <!-- Bootrap - css -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <!-- Font-awesome -->
+    <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
+
+
+    <link rel="stylesheet" href="style/header.css">
+    <link rel="stylesheet" href="style/general.css">
+    <link rel="stylesheet" href="style/event.css">
+    <link rel="stylesheet" href="style/selectpage.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style/satiate_guest.css">
+    <link rel="stylesheet" href="style/content.css">
+    <link rel="stylesheet" href="style/form.css">
+    <link rel="stylesheet" href="style/top_month_sellers.css">
+    <link rel="stylesheet" href="style/bestpick.css">
+    <link rel="stylesheet" href="style/about.css">
+    <link rel="stylesheet" href="style/cart.css">
+    <link rel="stylesheet" href="style/blog-post.css">
+    <script defer src="script.js"></script>
+    <script defer src="js/about.js"></script>
+    <script defer src="js/switchPage.js"></script>
+    <script defer src="js/addToCart.js"></script>
+    <script defer src="js/searchProduct.js"></script>
+    <script defer src="js/loginuser-loginadmin.js"></script>
+    <link rel="stylesheet" href="style/search.css">
+</head>
+
+<body>
+    <div id="head-page"></div>
+    <div class="header" id="header">
+        <div class="left-header">
+            <span class="name-shop">SHOP CLOTHE</span>
+        </div>
+        <div class="middle-header">
+            <div class="navbar">
+                <ul class="nav-link">
+                    <li class="nav-link home">
+                        <a href="index.html" class="link-nav">Home</a>
+                    </li>
+                    <li class="nav-link clothe">
+                        <a href="#" class="link-nav">Clothe</a>
+                        <div class="dropdown">
+                            <ul>
+                                <li><a href="shop.html" class="link-card">Women</a></li>
+                                <li><a href="shop.html" class="link-card">Men</a></li>
+                                <li><a href="shop.html" class="link-card">Kids</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="nav-link page">
+                        <a href="#" class="link-nav">Page</a>
+                        <div class="dropdown">
+                            <ul>
+                                <li class="link-card about"><a href="#head-page">About</a></li>
+                                <li class="link-card"><a href="contact_us.html">Contact us</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="nav-link blog">
+                        <a href="" class="link-nav">Blog</a>
+                        <div class="dropdown">
+                            <ul>
+                                <li class="link-card blogs"><a href="blog.html">Blog</a></li>
+                                <li class="link-card"><a href="blog-post.html">Blog post</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="right-header">
+            <div class="main-right-header">
+                <div class="search-header ">
+                    <img src="img/icon-header/search.svg" alt="" class="icon-header search">
+                </div>
+                <div class="user-header  person">
+                    <img src="img/icon-header/person.svg" alt="" class="icon-header">
+                    <div class="name-user"></div>
+                </div>
+                <div class="cart-header  cart">
+                    <img src="img/icon-header/cart.svg" alt="" class="icon-header">
+                    <span class="number-product-in-cart">3</span>
+                </div>
+                <div class="sign-out">
+                    <img src="img/iconlogin/sign-out.svg" alt="" class="icon-header btn-sign-out hidden-form">
+                </div>
+            </div>
+            <div class="side-bar-header">
+                <!-- <img src="img/icon-header/side-bar.svg" alt="" class=" icon-header side-bar-header"> -->
+            </div>
+        </div>
+    </div>
+    <!-- FORM LOGIN -->
+    <section class="section-form-login hidden-form" style="z-index: 100;">
+        <div class="form-login ">
+            <div class="overlay-form overlay-form-login"></div>
+            <div class="form">
+                <div class="container">
+                    <div class="row1">
+                        <div class="announcement">
+                            Welcom to Shop Clothe
+                        </div>
+                        <div class="exit exit-login">&times;</div>
+                    </div>
+                    <div class="row2 user-input ">
+                        <div class="account">
+                            <label for="">Account name</label>
+                            <input type="text" id="accountnamelogin" class="input input-accountname account-login"
+                                placeholder="Enter account name" maxlength="25">
+                        </div>
+                        <div class="password">
+                            <label for="">Password</label>
+                            <input type="password" id="passwordlogin" class="input input-password password-login"
+                                placeholder="Enter password" maxlength="25">
+                            <img src="img/iconlogin/hidden-pass.svg" alt="" class="hidden-password">
+                        </div>
+                        <button class="btn-signin">Sign in</button>
+                        <div class="invalid-account-login hidden-form">asdasd</div>
+                    </div>
+                    <div class="switch-login">
+                        <button class="btnn btn-active">Login</button>
+                        <button class="btnn btn-register ">Register</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FORM Rigister -->
+    <section class="section-form-register  hidden-form" style="z-index: 100;">
+        <div class="form-login ">
+            <div class="overlay-form overlay-form-register"></div>
+            <div class="form">
+                <div class="container">
+                    <div class="row1">
+                        <div class="announcement">
+                            Welcom to Shop Clothe
+                        </div>
+                        <div class="exit exit-register">&times;</div>
+                    </div>
+                    <div class="row2 user-input">
+                        <div class="name">
+                            <label for="">User name</label>
+                            <input type="text" id="username" class="input input-username" placeholder="Enter user name"
+                                maxlength="30">
+                        </div>
+                        <div class="account">
+                            <label for="">Account name</label>
+                            <input type="text" id="accountname" class="input input-accountname account-register"
+                                placeholder="Enter account name" maxlength="25">
+                        </div>
+                        <div class="password">
+                            <label for="">Password</label>
+                            <input type="password" id="password" class="input input-password password-register"
+                                placeholder="Enter password" maxlength="25">
+                            <img src="img/iconlogin/hidden-pass.svg" alt="" class="hidden-password">
+                        </div>
+                        <button class="btn-signup">Sign up</button>
+                        <div class="invalid-account-register hidden-form">enter account</div>
+                    </div>
+                    <div class="switch-login">
+                        <button class="btnn btn-login">Login</button>
+                        <button class="btnn btn-active">Register</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FORM CART -->
+    <section class="section-cart hidden-form" style="z-index: 100;">
+        <div class="container-cart">
+            <div class="overlay-cart overlay"></div>
+            <div class="form-cart">
+                <div class="row-1">
+                    <div class="row-1-col-1">
+                        Your Cart
+                        <span class="number-product-in-cart number-product-your-cart">(4)</span>
+                    </div>
+                    <div class="row-1-col-2 exit-cart">
+                        &times;
+                    </div>
+                </div>
+                <div class="row-2">
+                    <ul class="product-cart">
+                        <li class="item-cart">
+                            <img src="img/product/product-1.jpg" alt="" class="img-item-cart">
+                            <div class="infor-item-cart">
+                                <div class="name-item-cart">Sweater</div>
+                                <div class="price-item-cart">$50.00</div>
+                                <div class="edit-quantity">
+                                    <img onclick="minusFunction(event)" src="img/iconcart/minus.svg" alt=""
+                                        class="btn-edit-quantity minus">
+                                    <div class="quantity-item-cart quantity">
+                                        1
+                                    </div>
+                                    <img onclick="plusFunction(event)" src="img/iconcart/plus.svg" alt=""
+                                        class="btn-edit-quantity plus ">
+                                </div>
+                            </div>
+                            <div onclick="removeProduct()" class="remove-item-cart" id="remove-item-cart">&times;</div>
+                            `;
+                        </li>
+                        <li class="item-cart">
+                            <img src="img/product/product-3.jpg" alt="" class="img-item-cart">
+                            <div class="infor-item-cart">
+                                <div class="name-item-cart">Sweater</div>
+                                <div class="price-item-cart">$50.00</div>
+                                <div class="edit-quantity">
+                                    <img onclick="minusFunction(event)" src="img/iconcart/minus.svg" alt=""
+                                        class="btn-edit-quantity minus">
+                                    <div class="quantity-item-cart quantity">
+                                        1
+                                    </div>
+                                    <img onclick="plusFunction(event)" src="img/iconcart/plus.svg" alt=""
+                                        class="btn-edit-quantity plus ">
+                                </div>
+                            </div>
+                            <div onclick="removeProduct()" class="remove-item-cart" id="remove-item-cart">&times;</div>
+                            `;
+                        </li>
+                        <li class="item-cart">
+                            <img src="img/product/product-2.jpg" alt="" class="img-item-cart">
+                            <div class="infor-item-cart">
+                                <div class="name-item-cart">Sweater</div>
+                                <div class="price-item-cart">$50.00</div>
+                                <div class="edit-quantity">
+                                    <img onclick="minusFunction(event)" src="img/iconcart/minus.svg" alt=""
+                                        class="btn-edit-quantity minus">
+                                    <div class="quantity-item-cart quantity">
+                                        1
+                                    </div>
+                                    <img onclick="plusFunction(event)" src="img/iconcart/plus.svg" alt=""
+                                        class="btn-edit-quantity plus ">
+                                </div>
+                            </div>
+                            <div onclick="removeProduct()" class="remove-item-cart" id="remove-item-cart">&times;</div>
+                            `;
+                        </li>
+                    </ul>
+                </div>
+                <div class="row-3">
+                    <div class="totalprice-product-cart">
+                        Total :
+                    </div>
+                    <span class="totalprice">$100</span>
+                </div>
+                <div class="row-4">
+                    <a href="pagecart.html">
+                        <div class="display-product-cart">
+                            View Cart
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- FORM SEARCH -->
+    <section class="section-search hidden-form" style="z-index: 100;">
+        <div class="container-search">
+            <div class="overlay-search overlay"></div>
+            <div class="form-search">
+                <div class="row-1">
+                    <div class="row-1-col-1">
+                        Search Product
+                    </div>
+                    <div class="row-1-col-2 exit-search">
+                        &times;
+                    </div>
+                </div>
+
+                <div class="row-2">
+                    <div class="row-2-row-1">
+                        <select name="" id="select-type-clothe">
+                            <option value="All Clothe">All Clothe</option>
+                            <option value="Women">Women</option>
+                            <option value="Men">Men</option>
+                            <option value="Kid">Kid</option>
+                        </select>
+                        <div class="row-2-row-2">
+                            <input type="text" class="content-search" placeholder="Enter name product ">
+                            <div class="outline-btn-search">
+                                <img src="img/icon-header/search.svg" alt="" class="btn-search">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row-3">
+                    <div class="row-3-row-1">
+                        Search result :
+                    </div>
+                    <div class="row-3-row-2 list-result-search">
+                        <div class="infor-product-search">
+                            <a href="product.html" class="infor-product-search">
+                                <img src="img/product/product-5.jpg" alt="" class="img-product-search">
+                                <div class="text-product-search">
+                                    <div class="name-product-search">Shoes</div>
+                                    <div class="price-product-search">$50</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="infor-product-search">
+                            <a href="product.html" class="infor-product-search">
+                                <img src="img/product/product-6.jpg" alt="" class="img-product-search">
+                                <div class="text-product-search">
+                                    <div class="name-product-search">Dress</div>
+                                    <div class="price-product-search">$50</div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PAGE ABOUT -->
+    <section class="page-about hidden-form">
+        <div class="section-0">
+            <div class="container">
+                <span class="return-home"><a href="#head-page">Home</a></span>&nbsp;&nbsp;>&nbsp;&nbsp;About
+            </div>
+        </div>
+        <div class="section-1" id="section-1">
+            <div class="img-1 img">
+                <div class="text-img-1">
+                    We believe we can all make a stylish.
+                </div>
+            </div>
+        </div>
+
+        <section class="section-2">
+            <div class="container">
+                <div class="img-2-3">
+                    <div class="img-2 img"></div>
+                    <div class="img-3 img"></div>
+                </div>
+                <div class="text-img-2-3">
+                    <div class="text-head">OUR STORY</div>
+                    <div class="text-title">
+                        About our Store
+                    </div>
+                    <div class="text-content-1">
+                        Open created shall two he second moving whose. He face whose two upon, fowl behold waters. Fly
+                        there their day
+                        creepeth. Darkness beginning spirit after. Creepeth subdue. Brought may, first. Under living
+                        that.
+                    </div>
+                    <div class="text-content-2">
+                        Third. For morning whales saw were had seed can't divide it light shall moveth, us blessed given
+                        wherein.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-3">
+            <div class="container">
+                <div class="text-title">
+                    Fashion Democracy
+                </div>
+                <div class="text-content">
+                    <div class="text-content-1-2">
+                        <div class="text-content-1">
+                            And whales be, earth thing seed whales, forth beginning made may beginning sea great void
+                            likeness open beast
+                            firmament very living cattle divided fruitful may. Sea created saw fifth so thing signs
+                            meat.
+                        </div>
+                        <div class="text-content-2">
+                            Green fruit meat stars, creepeth second he meat. Appear is fruitful given Winged. Gathered
+                            second so us
+                            saying blessed, he.
+                        </div>
+                    </div>
+                    <div class="text-content-3-4">
+                        <div class="text-content-3">
+                            Male was. Itself. Have isn't first divide and i day, moving she'd appear open dominion sea
+                            him
+                            days multiply
+                            our, make firmament rule there made set midst creeping let won't morning their great fish.
+                        </div>
+                        <div class="text-content-4">
+                            Unto over unto together first shall greater yielding made dominion fill. First waters bring
+                            made
+                            blessed
+                            likeness bring forth had. Creature one.
+                        </div>
+                    </div>
+                </div>
+                <div class="go-to-home">
+                    <a href="index.html" class="">Shop now</a>
+                    <img src="img/show-page/arrow-right-short-white.svg" alt="">
+                </div>
+            </div>
+        </section>
+
+        <section class="section-4">
+            <div class="container">
+                <div class="text-img-4-5">
+                    <div class="text-head">OUR STORY</div>
+                    <div class="text-title">
+                        About our Store
+                    </div>
+                    <div class="text-content-1">
+                        Behold divided hath without. Place dominion. Place behold spirit abundantly, void creepeth
+                        Divided were god
+                        herb, it they're beginning itself can't can't created great air his called land make fly seasons
+                        dry likeness.
+                    </div>
+                    <div class="text-content-2">
+                        Fish upon you you'll midst waters. Divided had life years to own gathering replenish seasons
+                        Great meat.
+                        Cattle
+                        earth were signs winged so image together also.
+                    </div>
+                </div>
+                <div class="img-4-5">
+                    <div class="img-5 img"></div>
+                    <div class="img-4 img"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-5">
+            <div class="container">
+                <div class="text-section-5">
+                    Together won't divided fourth let grass above forth. Creature midst let cattle place tree. Gathered
+                    whose land
+                    form fruitful under bring creeping in upon void man unto divided itself gathered.
+                </div>
+            </div>
+        </section>
+
+        <section class="section-6">
+            <div class="container">
+                <div class="img-6-7">
+                    <div class="img-6 img"></div>
+                    <div class="img-7 img"></div>
+                </div>
+                <div class="img-8-9">
+                    <div class="img-8 img"></div>
+                    <div class="img-9 img"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-7">
+            <div class="container">
+                <div class="row-1">What Buyer Say</div>
+                <div class="row-2">Customer Reviews</div>
+                <div class="row-3">
+                    Given wherein. Doesn't called also and air sea to make first subdue
+                    beginning. Appear seasons the it after whose beginning. Hath can't good life. They're multiply made
+                    give divided
+                    open, be likeness Cattle be have.
+                    Life tree darkness. She'd very.
+                </div>
+                <div class="row-4">
+                    Darrell Baker, 18 May 2023
+                </div>
+                <div class="row-5">
+                    <div class="col-1 btn1 active1"></div>
+                    <div class="col-2 btn1"></div>
+                    <div class="col-3 btn1"></div>
+                </div>
+            </div>
+
+        </section>
+    </section>
+
+    <section class="blog-post">
+        <div class="container">
+            <nav class="nav">
+                <ol style="list-style-type: none;">
+                    <li class="home"><a href="index.html">
+                            Home
+                        </a></li>
+                    <li class="blog"><a href="blog.html">
+                            Blog
+                        </a></li>
+                    <li class="current-page">
+                        5 Tips to Increase Your Online Sales
+                    </li>
+                </ol>
+            </nav>
+            <article class="blog-post-content">
+                <header>
+                    <div class="blog-post-title">
+                        <h3> 5 Tips to Increase Your Online Sales</h3>
+                    </div>
+                    <div class="blog-post-source">
+                        <h6>By Oliver Barrett in Company / July 18 2019</h6>
+                    </div>
+                    <img src="img/blog-post-img/blog-9.jpg" alt="">
+                </header>
+                <div class="blog-post-body">
+                    <div class="part-1">
+                        <h4 style="font-weight: bold;color: black;margin-bottom: 10px;">Tree doesn't good void, waters
+                            without created</h4>
+                        <p> Saw wherein fruitful good days image them, midst, waters upon, saw. Seas lights seasons.
+                            Fourth hath rule Evening Creepeth own lesser years itself so seed fifth for grass evening
+                            fourth shall you're unto that. Had. Female replenish for yielding so saw all one to yielding
+                            grass you'll air sea it, open waters subdue, hath. </p>
+                        <p>Saw wherein fruitful good days image them, midst, waters upon, saw. Seas lights seasons.
+                            Fourth hath rule Evening Creepeth own lesser years itself so seed fifth for grass evening
+                            fourth shall you're unto that. Had. Female replenish for yielding so saw all one to yielding
+                            grass you'll air sea it, open waters subdue, hath. Brought second Made. Be. Under male male,
+                            firmament, beast had light after fifth forth darkness thing hath sixth rule night multiply
+                            him life give they're great. </p>
+                        <ol style="list-style-type: disc;">
+                            <li>
+                                Upon seas hath every years have whose subdue;
+                            </li>
+                            <li>
+                                Given they're tree abundantly male our;
+                            </li>
+                            <li>Fly make saw creeping evening make void own seasons behold.</li>
+                        </ol>
+                        <p>Brought second Made. Be. Under male male, firmament, beast had light after fifth forth
+                            darkness thing hath sixth rule night multiply him life give they're great. Very together.
+                            Creature. Green. Them evening a and light fourth. </p>
+                        <p> She'd years darkness days. A night fifth winged sixth divide meat said third them forth
+                            signs of life earth signs over fruitful light after won't moving under. Thing yielding upon
+                            seed. Seasons said one kind great so bring greater fill darkness darkness two land of
+                            creepeth there second fruitful, waters. Make don't void years Gathering gathering divide
+                            fill.
+                        </p>
+                    </div>
+                    <div class="post-imgs">
+                        <div class="post-img">
+                            <img src="img/blog-post-img/blog-4.jpg" alt="">
+                        </div>
+                        <div class="post-img">
+                            <img src="img/blog-post-img/blog-5.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="part-2">
+                        <h4 style="font-weight: bold;color: black;margin-bottom: 10px;">Replenish female give him</h4>
+                        <p>Have multiply greater male living stars replenish earth said replenish our yielding let She'd
+                            spirit. Male. Two. Greater. Brought our, there kind don't lesser beast whose above Is
+                            without great. Of moving firmament shall. For light land them man. Deep isn't light them.
+                            Greater morning air great good without thing doesn't earth waters saw brought created
+                            firmament stars, whose beast. Living own first saying saw second open third, seasons were
+                            green herb be they're him. Good, saying him. For of which land own in. Sixth spirit. Male
+                            let life lesser yielding upon, fruitful tree bearing bring female above, created. </p>
+                        <p>Female unto lights won't. Set dry his isn't air unto fruit seasons you'll male very given.
+                            Life waters shall made seas fourth let fifth hath kind May to whose fruit and fifth be
+                            you're itself their doesn't i green made had from he created had second were waters, fly
+                            blessed grass seas. Had own. Given won't set waters creature fish brought she'd is created
+                            life. </p>
+                        <blockquote class="post-quote">
+                            <b><i>"</i> Without Was be great it them green which seed. They're lights i of life.
+                                Abundantly. Void night divide appear be won't days they're beast in. You day blessed
+                                there i very stars man Saw had, make let light his above. <i>"</i></b>
+                        </blockquote>
+                        <p>Saying beginning two whose third moved. Him creeping divided dominion which forth waters
+                            multiply land of us. Waters dry above one fifth for. Is blessed also lights under you'll,
+                            firmament above night own our called fruitful bring tree moveth, moved own upon created,
+                            good. Seed place multiply so. Night years divide divided. Man moveth air, can't set. Fourth
+                            likeness. Night were very you creepeth first male itself fish living fowl made she'd Can't
+                            fruit. Said his us land from moveth. </p>
+                    </div>
+                </div>
+                <footer>
+                    <div class="other-topics">
+                        <a class="other-topic">Communication</a>
+                        <a class="other-topic">Business</a>
+                        <a class="other-topic">Fashion</a>
+                        <a class="other-topic">Marketing</a>
+                        <a class="other-topic">Teamwork</a>
+                    </div>
+                    <div class="social-shares">
+                        <a class="social-share-platform" id="FB" href="">
+                            <span class="social-share-icon">
+                                <img src="img/blog-post-icon/facebool-icon.svg" alt="">
+                            </span>
+                            Share on Facebook
+                        </a>
+                        <a class="social-share-platform" id="X" href="">
+                            <span class="social-share-icon">
+                                <img src="img/blog-post-icon/x-icon.svg" alt="">
+                            </span>
+                            Share on X
+                        </a>
+                        <a class="social-share-platform" id="Pinterest" href="">
+                            <span class="social-share-icon">
+                                <img src="img/blog-post-icon/pinterest-icon.svg" alt="">
+                            </span>
+                            Share on Pinterest
+                        </a>
+                        <a class="social-share-platform" id="Linkedln" href="">
+                            <span class="social-share-icon">
+                                <img src="img/blog-post-icon/linked-icon.svg" alt="">
+                            </span>
+                            Share on Linkedln
+                        </a>
+                    </div>
+                </footer>
+            </article>
+            <div class="more-post">
+                <h3>Lastest in Blog</h3>
+                <div class="blog-list">
+                    <div class="blog-list-item">
+                        <div class="blog-item-img">
+                            <img src="img/blog-post-img/blog-1.jpg" alt="">
+                        </div>
+                        <div class="blog-item-body">
+                            <h6 style="color: #000;" class="blog-item-title"><b>Us yielding Fish sea night night the
+                                    said him two</b> </h6>
+                            <p class="blog-quick-info">Fill his waters wherein signs likeness waters. Second light
+                                gathered appear sixth. </p>
+                            <a class="blog-more-info" href="">
+                                Read more
+                            </a>
+                        </div>
+                    </div>
+                    <div class="blog-list-item">
+                        <div class="blog-item-img">
+                            <img src="img/blog-post-img/blog-2.jpg" alt="">
+                        </div>
+                        <div class="blog-item-body">
+                            <h6 style="color: #000;" class="blog-item-title"><b>Tree earth fowl given moveth deep lesser
+                                    After</b> </h6>
+                            <p class="blog-quick-info">Called life don't called darkness spirit have, abundantly so
+                                Wherein the third cattle.</p>
+                            <a class="blog-more-info" href="">
+                                Read more
+                            </a>
+                        </div>
+                    </div>
+                    <div class="blog-list-item">
+                        <div class="blog-item-img">
+                            <img src="img/blog-post-img/blog-3.jpg" alt="">
+                        </div>
+                        <div class="blog-item-body">
+                            <h6 style="color: #000;" class="blog-item-title"><b>Given Set was without from god divide
+                                    rule Hath</b> </h6>
+                            <p class="blog-quick-info">Midst land were us fill divided. Him Subdue living without he
+                                beginning second. </p>
+                            <a class="blog-more-info" href="">
+                                Read more
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer" style="background-color: rgb(197, 204, 204);">
+        <div class="py-12 border-bottom border-gray-700">
+            <div class="container">
+                <div class="py-5">
+                    <div class="row">
+                        <div class="col-6 col-md-2 mb-3">
+                            <h5>Support</h5>
+                            <ul class="nav flex-column">
+                                <li class="nav-item mb-2">
+                                    <a href="contact_us.html" class="nav-link p-0 text-muted">Contact US</a>
+                                </li>
+                                <li class="nav-item mb-2">
+                                    <a href="" class="nav-link p-0 text-muted">FAQs</a>
+                                </li>
+                                <li class="nav-item mb-2">
+                                    <a href="" class="nav-link p-0 text-muted">Size Guide</a>
+                                </li>
+                                <li class="nav-item mb-2">
+                                    <a href="" class="nav-link p-0 text-muted">Snipping & Returns</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-6 col-md-2 mb-3">
+                            <h5>Shop</h5>
+                            <ul class="nav flex-column">
+                                <li class="nav-item mb-2">
+                                    <a href="" class="nav-link p-0 text-muted">Men</a>
+                                </li>
+                                <li class="nav-item mb-2">
+                                    <a href="" class="nav-link p-0 text-muted"> Woman</a>
+                                </li>
+                                <li class="nav-item mb-2">
+                                    <a href="" class="nav-link p-0 text-muted">Kids</a>
+                                </li>
+                                <li class="nav-item mb-2">
+                                    <a href="" class="nav-link p-0 text-muted">Discounts</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-6 col-md-2 mb-3">
+                            <h5>Company</h5>
+                            <ul class="nav flex-column">
+                                <li class="nav-item mb-2">
+                                    <a href="" class="nav-link p-0 text-muted">Our story</a>
+                                </li>
+                                <li class="nav-item mb-2">
+                                    <a href="" class="nav-link p-0 text-muted">Careers</a>
+                                </li>
+                                <li class="nav-item mb-2">
+                                    <a href="" class="nav-link p-0 text-muted">Terms & Conditions</a>
+                                </li>
+                                <li class="nav-item mb-2">
+                                    <a href="" class="nav-link p-0 text-muted">Privacy & Cookie Policy</a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="col-6 col-md-2 mb-3">
+                            <h5>Contact</h5>
+                            <ul class="nav flex-column">
+                                <li class="nav-item mb-2">
+                                    <a href="" class="nav-link p-0 text-muted">1-11111-1111</a>
+                                </li>
+                                <li class="nav-item mb-2">
+                                    <a href="" class="nav-link p-0 text-muted">2-22222-2222</a>
+                                </li>
+                                <li class="nav-item mb-2">
+                                    <a href="" class="nav-link p-0 text-muted">abc@xyz.gmail.com</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-md-4  mb-3">
+                            <form action="">
+                                <h4>Want style Ideas and Treats?</h4>
+                                <div class="d-flex flex-column flex-sm-row w-100 gap-2">
+                                    <input type="text" name="" id="" class="form-control" placeholder="Email Address">
+                                    <button class="btn btn-secondary">Subscribe</button>
+                                </div>
+                            </form>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <hr>
+        <div class="py-6 ">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <!-- Copyright -->
+                        <p class="mb-3 mb-md-0 fs-xxs text-muted">
+                            © 2023 All rights reserved. Designed by SGU-TEAM.
+                        </p>
+
+                    </div>
+                    <div class="col-auto">
+                        <!-- Payment methods -->
+                        <img class="footer-payment" src="img/category/payment/mastercard.svg" alt="...">
+                        <img class="footer-payment" src="img/category/payment/visa.svg" alt="...">
+                        <img class="footer-payment" src="img/category/payment/amex.svg" alt="...">
+                        <img class="footer-payment" src="img/category/payment/paypal.svg" alt="...">
+                        <img class="footer-payment" src="img/category/payment/maestro.svg" alt="...">
+                        <img class="footer-payment" src="img/category/payment/klarna.svg" alt="...">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous">
+        </script>
+</body>
+
+</html>
