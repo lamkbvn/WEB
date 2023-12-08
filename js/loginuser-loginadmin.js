@@ -7,7 +7,7 @@ let hidlog = document.querySelector('.hid-log');
 let hidreg = document.querySelector('.hid-reg');
 
 
-let currentName  = "User";
+let currentName  = "Phuc Lam";
 let currentUser ;
 let currentPassword ;
 let an = true;
@@ -65,7 +65,6 @@ function LOGIN(){
     sectionFormLogin.classList.add('hidden-form');
     body.style.overflow = '';
     invalidAccountLogin.innerHTML ='';
-    nameUser.innerHTML = currentName;
     btnSignOut.classList.remove('hidden-form');
     alert('Sign in success');
     window.location ="index1.html";
@@ -111,12 +110,9 @@ function LOGUP(){
       return;
     }
 
-    currentName = name.value;
-    currentUser = accountregister.value;
-    currentPassword = passwordregister.value;
+    
     alert("Sign up success");
     window.location = "index1.html";
-    nameUser.innerHTML = name.value;
     sectionFormRegister.classList.add('hidden-form');
     body.style.overflow = '';
     btnSignOut.classList.remove('hidden-form');
