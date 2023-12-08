@@ -115,6 +115,7 @@ function LOGUP(){
     currentUser = accountregister.value;
     currentPassword = passwordregister.value;
     alert("Sign up success");
+    window.location = "index1.html";
     nameUser.innerHTML = name.value;
     sectionFormRegister.classList.add('hidden-form');
     body.style.overflow = '';
